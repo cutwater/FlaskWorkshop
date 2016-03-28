@@ -1,5 +1,13 @@
+##############
 Flask Workshop
-==============
+##############
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
+   :includehidden:
+
+   introduction
+   how-web-works
+   installation
+   python-intro
+   flask-intro
