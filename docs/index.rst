@@ -11,3 +11,4 @@ Flask Workshop
    installation
    python-intro
    flask-intro
+   writing-first-app
