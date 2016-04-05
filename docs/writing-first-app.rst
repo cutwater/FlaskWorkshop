@@ -80,3 +80,45 @@ at the source code line by line and check how it works.
 Templates
 =========
 
+Create directory ``templates`` near your ``app.py`` file.
+Create file ``templates/index.html`` that contains the following code:
+
+.. code-block:: html
+
+   <!DOCTYPE html>
+   <html lang="en">
+   <head>
+       <meta charset="UTF-8">
+       <title>My First Template</title>
+   </head>
+   <body>
+       <h1>Page title</h1>
+       <p>Some text here</p>
+   </body>
+   </html>
+
+To display this code update your ``app.py``.
+
+.. code-block:: python
+   :emphasize-lines: 2,9
+
+   from flask import Flask
+   from flask import render_template
+
+   app = Flask(__name__)
+
+
+   @app.route('/')
+   def index():
+       return render_template('index.html')
+
+
+   if __name__ == '__main__':
+       app.run()
+
+Now run ``app.py`` and check the result in your browser. The page should look
+similar to this example:
+
+.. image:: image/screenshot/flask-first-template.png
+
+# TODO: Add explanation
