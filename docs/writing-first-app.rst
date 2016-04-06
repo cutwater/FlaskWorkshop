@@ -66,7 +66,7 @@ at the source code line by line and check how it works.
    will know, that for all requests to ``/`` path it should call function
    ``index``.
 
-# TODO: Describe the following log:
+.. todo:: Describe the following log:
 
 .. image:: image/screenshot/google-favicon.png
 
@@ -121,4 +121,4 @@ similar to this example:
 
 .. image:: image/screenshot/flask-first-template.png
 
-# TODO: Add explanation
+.. todo:: Add explanation

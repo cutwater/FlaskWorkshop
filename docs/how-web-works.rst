@@ -25,19 +25,19 @@ either physically (usually with an Ethernet cable) or wirelessly
 (for example with WiFi or Bluetooth systems).
 All modern computers can sustain any of those connections.
 
-*#TODO: INSERT PICTURE*
+.. todo:: Insert picture
 
 Such a network is not limited to two computers. You can connect as many
 computers as you wish. But it gets complicated quickly. If you're trying
 to connect, say, ten computers, you need 45 cables, with nine plugs per
 computer!
 
-*#TODO: INSERT PICTURE*
+.. todo:: Insert picture
 
 Network of networks
 ===================
 
-*TBD*
+.. todo:: TBD
 
 Finding computers
 =================
@@ -61,7 +61,7 @@ Clients and servers
 Computers connected to the Web are called clients and servers.
 A simplified diagram of how they interact might look like this:
 
-*#TODO: INSERT PICTURE*
+.. todo:: Insert picture
 
 * Clients are the typical Web user's Internet-connected devices
   (for example, your computer connected to your Wi-Fi, or your phone

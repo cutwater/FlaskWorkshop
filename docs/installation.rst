@@ -8,39 +8,39 @@ Python
 Windows
 -------
 
-*TBD*
+.. todo:: TBD
 
 MacOS
 -----
 
-*TBD*
+.. todo:: TBD
 
 Linux
 -----
 
-*TBD*
+.. todo:: TBD
 
 Flask
 =====
 
-*TBD*
+.. todo:: TBD
 
 Code editors
 ============
 
-*TBD*
+.. todo:: TBD
 
 Atom
 ----
 
-*TBD*
+.. todo:: TBD
 
 Sublime Text 3
 --------------
 
-*TBD*
+.. todo:: TBD
 
 PyCharm
 -------
 
-*TBD*
+.. todo:: TBD
