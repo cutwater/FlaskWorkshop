@@ -11,3 +11,4 @@ Flask Workshop
    python-intro
    flask-intro
    writing-first-app
+   templates
