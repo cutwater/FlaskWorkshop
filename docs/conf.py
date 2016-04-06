@@ -13,9 +13,10 @@
 # All configuration values have a default; values that are commented out
 # serve to show the default.
 
-import sys
-import os
-import sphinx_rtd_theme
+# import sys
+# import os
+
+import alabaster
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
@@ -31,7 +32,8 @@ import sphinx_rtd_theme
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-    'sphinx.ext.todo'
+    'sphinx.ext.todo',
+    'alabaster',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -111,15 +113,18 @@ todo_include_todos = True
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
-html_theme = "sphinx_rtd_theme"
+html_theme = "alabaster"
+
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
 # documentation.
-#html_theme_options = {}
+html_theme_options = {
+    'github_button': False,
+}
 
 # Add any paths that contain custom themes here, relative to this directory.
-html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
+html_theme_path = [alabaster.get_path()]
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
@@ -156,7 +161,12 @@ html_static_path = ['_static']
 #html_use_smartypants = True
 
 # Custom sidebar templates, maps document names to template names.
-#html_sidebars = {}
+html_sidebars = {
+    '**': [
+        'about.html',
+        'navigation.html',
+    ]
+}
 
 # Additional templates that should be rendered to pages, maps page names to
 # template names.
