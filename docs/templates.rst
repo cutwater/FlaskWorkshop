@@ -40,6 +40,30 @@ template file:
        <p>It works!</p>
    </html>
 
+Now we need tell Flask to display this template. Update your ``app.py``:
+
+.. code-block:: python
+   :emphasize-lines: 2,9
+
+   from flask import Flask
+   from flask import render_template
+
+   app = Flask(__name__)
+
+
+   @app.route('/')
+   def index():
+       return render_template('index.html')
+
+
+   if __name__ == '__main__':
+       app.run()
+
+Now run ``app.py`` and see how your website looks now: http://127.0.0.1:5000/
+
+
+.. todo:: Add screenshot
+
 It worked! Nice work there :)
 
 * The most basic tag, ``<html>``, is always the beginning of any webpage
@@ -48,6 +72,55 @@ It worked! Nice work there :)
   ``</html>``.
 * ``<p>`` is a tag for paragraph elements; ``</p>`` closes each paragraph.
 
+Head & body
+===========
+
+Each HTML page is also divided into two elements: **head** and **body**.
+
+* **head** is an element that contains information about the document that
+  is not displayed on the screen.
+* **body** is an element that contains everything else that is displayed
+  as part of the web page.
+
+We use ``<head>`` to tell the browser about the configuration of the page,
+and ``<body>`` to tell it what's actually on the page.
+
+For example, you can put a webpage title element inside the <head>, like this:
+
+.. code-block:: html
+
+   <html>
+   <head>
+       <title>My First Template</title>
+   </head>
+   <body>
+       <h1>Hi there!</h1>
+       <p>It works!</p>
+   </body>
+   </html>
+
+.. todo:: Add screenshot
+
+Notice how the browser has understood that "My First template" is the title
+of your page? It has interpreted ``<title>My First Template</title>``
+and placed the text in the title bar of your browser
+(it will also be used for bookmarks and so on).
+
+Probably you have also noticed that each opening tag is matched
+by a closing tag, with a /, and that elements are nested
+(i.e. you can't close a particular tag until all the ones that were
+inside it have been closed too).
+
+It's like putting things into boxes. You have one big box, ``<html></html>``;
+inside it there is ``<body></body>``, and that contains still smaller boxes:
+``<p></p>``.
+
+You need to follow these rules of closing tags, and of nesting
+elements - if you don't, the browser may not be able to interpret
+them properly and your page will display incorrectly.
+
+A complete example
+==================
 
 .. code-block:: html
 
