@@ -10,5 +10,7 @@ Flask Workshop
    installation
    python-intro
    flask-intro
-   writing-first-app
-   templates
+   flask-first-app
+   flask-templates
+   flask-models
+   deploy
