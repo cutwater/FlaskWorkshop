@@ -92,8 +92,8 @@ Create file ``templates/index.html`` that contains the following code:
        <title>My First Template</title>
    </head>
    <body>
-       <h1>Page title</h1>
-       <p>Some text here</p>
+       <h1>Hi there!</h1>
+       <p>It works!</p>
    </body>
    </html>
 
