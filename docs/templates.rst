@@ -40,6 +40,14 @@ template file:
        <p>It works!</p>
    </html>
 
+It worked! Nice work there :)
+
+* The most basic tag, ``<html>``, is always the beginning of any webpage
+  and ``</html>`` is always the end. As you can see, the whole content
+  of the website goes between the beginning tag ``<html>`` and closing tag
+  ``</html>``.
+* ``<p>`` is a tag for paragraph elements; ``</p>`` closes each paragraph.
+
 
 .. code-block:: html
 
