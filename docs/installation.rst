@@ -183,7 +183,7 @@ PyCharm
 
 You may download from the official web-site .. _a link: https://www.jetbrains.com/pycharm/download/
 
-.. image:: complexLook@2x.jpg
+.. image:: pycharm.jpg
 
 
 Why are we installing a code editor?
