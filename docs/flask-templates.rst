@@ -62,7 +62,7 @@ Now we need tell Flask to display this template. Update your ``app.py``:
 Now run ``app.py`` and see how your website looks now: http://127.0.0.1:5000/
 
 
-.. todo:: Add screenshot
+.. image:: image/screenshot/flask-first-template-1.png
 
 It worked! Nice work there :)
 
@@ -99,7 +99,7 @@ For example, you can put a webpage title element inside the <head>, like this:
    </body>
    </html>
 
-.. todo:: Add screenshot
+.. image:: image/screenshot/flask-first-template-2.png
 
 Notice how the browser has understood that "My First template" is the title
 of your page? It has interpreted ``<title>My First Template</title>``
