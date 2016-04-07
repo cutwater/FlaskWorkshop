@@ -153,7 +153,7 @@ It comes with built-in package manager to extend it, smart autocompletion, file 
 
 You may download from the official web-site .. _a link: https://atom.io/
 
-.. image:: atom.png
+.. image:: image/atom.png
 
 Sublime Text 3
 --------------
@@ -168,7 +168,7 @@ It looks beautiful and you can tweak the appearance to make it more comfortable 
 
 You may download from the official web-site .. _a link: https://www.sublimetext.com/
 
-.. image:: sublimetext.png
+.. image:: image/sublimetext.png
 
 PyCharm
 -------
@@ -183,7 +183,7 @@ PyCharm
 
 You may download from the official web-site .. _a link: https://www.jetbrains.com/pycharm/download/
 
-.. image:: pycharm.jpg
+.. image:: image/pycharm.jpg
 
 
 Why are we installing a code editor?
