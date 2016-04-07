@@ -5,6 +5,12 @@ Installation
 Python
 ======
 
+But first, let us tell you what *Python* is. **Python** is a very popular programming language that can be used for creating websites, games, scientific software, graphics, and much, much more.
+
+Python originated in the late 1980s and its main goal is to be readable by human beings (not only machines). 
+
+This is why it looks much simpler than other programming languages. This makes it easy to learn, but don't worry, Python is also really powerful!
+
 Windows
 -------
 
@@ -89,8 +95,9 @@ If you are using Mac OS, then you can install virtualenv using easy_install:
 
 ``$ sudo easy_install virtualenv``
 
-If you are using Microsoft Windows or any operating system that does not provide an official virtualenv package, then
-you have a slightly more complicated install procedure.
+If you are using Microsoft Windows or any operating system that does not provide an official virtualenv package, 
+
+then you have a slightly more complicated install procedure.
 
 After *virtualenv* has been installed, simply run the console and create your own environment. 
 
@@ -126,19 +133,64 @@ A few seconds later and you are good to go.
 Code editors
 ============
 
-.. todo:: TBD
+Now is time to write your first line of code, so it's time to download a code editor.
+
+There are a lot of different editors and it largely boils down to personal preference.
+
+Most Python programmers use complex but extremely powerful IDEs (Integrated Development Environments),such as PyCharm.
+
 
 Atom
 ----
 
-.. todo:: TBD
+*Atom* is a cross-platform code editor created by developers for developers.
+
+It is open source, and much like WordPress, Atom users can submit packages and themes for the software.
+
+It looks pretty and you can change the appearance by installing themes. 
+
+It comes with built-in package manager to extend it, smart autocompletion, file system browser, multiple panes, find and replace.
+
+You may download from the official web-site .. _a link: https://atom.io/
+
+.. image:: atom.png
 
 Sublime Text 3
 --------------
 
-.. todo:: TBD
+*Sublime Text* is a cross-platform code editor for Mac, Windows, and Linux.
+
+It comes with all the features you would expect from a powerful code editor and then some more.
+
+It looks beautiful and you can tweak the appearance to make it more comfortable for you.
+
+*Sublime Text* comes with advanced code editor features which allow you to autofill, autocomplete, reference function in a file, multiple selection, split editing, and many more.
+
+You may download from the official web-site .. _a link: https://www.sublimetext.com/
+
+.. image:: sublimetext.png
 
 PyCharm
 -------
 
-.. todo:: TBD
+*PyCharm* editor is a powerful tool for creating and modifying source code.
+
+*PyCharm* is designed by programmers, for programmers. It provides code analysis, a graphical debugger, an integrated unit tester, integration with version control systems (VCSes), and supports web development with Django. 
+
+*PyCharm* is developed by the Czech company JetBrains.
+
+*PyCharm* is an Integrated Development Environment (IDE) used for programming in Python.
+
+You may download from the official web-site .. _a link: https://www.jetbrains.com/pycharm/download/
+
+.. image:: complexLook@2x.jpg
+
+
+Why are we installing a code editor?
+------------------------------------
+
+You might be wondering why we are installing this special code editor software, rather than using something like Word or Notepad.
+
+The first is that code needs to be plain text, and the problem with programs like Word and Textedit is that they don't actually produce plain text, they produce rich text (with fonts and formatting), using custom formats like RTF (Rich Text Format).
+
+The second reason is that code editors are specialised for editing code, so they can provide helpful features like highlighting code with colour according to its meaning, or automatically closing quotes for you.
