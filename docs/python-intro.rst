@@ -848,7 +848,7 @@ that, so let's use it in a loop:::
 The ``for`` statement behaves similarly to the ``if`` statement; code below
 both of these need to be indented four spaces.
 
-Here is the full code that will be in the file:
+Here is the full code that will be in the file::
 
     def hi(name):
         print('Hi ' + name + '!')
