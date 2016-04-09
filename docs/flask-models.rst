@@ -2,9 +2,6 @@
 Flask models
 ============
 
-.. todo:: Describe how to install Flask-SQLAlchemy and create models
-
-Install ``Flask-SQLAlchemy`` package::
-
-    pip install flask-sqlalchemy
-
+What we want to create now is something that will store all the
+tasks in our application. But to be able to do that we need to talk a
+little bit about things called objects.
