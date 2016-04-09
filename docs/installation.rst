@@ -147,10 +147,8 @@ folder within::
     $ cd myproject
 
     $ virtualenv venv
-
-*New python executable in venv/bin/python*
-
-*Installing distribute............done.*
+    New python executable in venv/bin/python
+    Installing distribute............done.
 
 You have to activate the corresponding environment. On MacOS and Linux, do
 the following::
