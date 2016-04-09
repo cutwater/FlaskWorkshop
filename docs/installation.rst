@@ -5,6 +5,31 @@ Installation
 Python
 ======
 
+**Python** is a widely used `high-level <https://en.wikipedia.org/wiki/High-level_programming_language>`_,
+`general-purpose <https://en.wikipedia.org/wiki/General-purpose_programming_language>`_,
+`interpreted <https://en.wikipedia.org/wiki/Interpreter_%28computing%29>`_,
+`dynamic programming language <https://en.wikipedia.org/wiki/Dynamic_programming_language>`_.
+
+*Python* was conceived in the late 1980s,and its implementation was started in
+December 1989 by `Guido van Rossum <https://en.wikipedia.org/wiki/Guido_van_Rossum>`_
+at CWI in the Netherlands as a successor to the `ABC language <https://en.wikipedia.org/wiki/ABC_%28programming_language%29>`_
+(itself inspired by SETL).
+
+Van Rossum is Python's principal author, and his continuing central role in deciding
+the direction of Python is reflected in the title given to him by the Python community.
+
+*Python* has a large `standard library <https://en.wikipedia.org/wiki/Standard_library>`_,
+commonly cited as one of Python's greatest strengths, providing tools suited to many tasks.
+
+*Python* is intended to be a highly readable language.
+
+*Python* uses `whitespace <https://en.wikipedia.org/wiki/Whitespace_character>`_
+indentation, rather than `curly braces <https://en.wikipedia.org/wiki/Curly_bracket_programming_language>`_
+or keywords, to delimit `blocks <https://en.wikipedia.org/wiki/Block_%28programming%29>`_ ;
+this feature is also termed the off-side rule. An increase in indentation comes
+after certain statements; a decrease in indentation signifies the end of the current block.
+
+
 Windows
 -------
 
@@ -78,17 +103,16 @@ Setuptools & Pip
 
 You can download, install and uninstall any compliant Python software product
 with a single command.
-
 It also enables you to add this network installation capability to your own
 Python software with very little work.
 
 Python 2.7.9 and later (on the python2 series), and Python 3.4 and later
-include *pip* by default. To see if ``pip`` is installed, open a console and run::
+include *pip* by default. To see if *pip* is installed, open a console and run::
 
-    $ command -v pip
+    $ which pip
 
-To install ``pip``, follow the official pip installation guide
-`PIP <https://pip.pypa.io/en/latest/installing/>`_
+To install *pip*, follow the official pip
+`installation guide <https://pip.pypa.io/en/latest/installing/>`_.
 
 This will automatically install the latest version of setuptools.
 
