@@ -8,10 +8,8 @@ Python
 Windows
 -------
 
-.. todo:: TBD
-
 First, you need to download Python for Windows from the official Website
-`<https://www.python.org/downloads/>`_.
+`<https://www.python.org/ftp/python/3.5.1/python-3.5.1-amd64.exe>`_.
 
 The Windows version is provided as an executable installer (**.exe** file).
 To install it manually, just double-click the file.
@@ -47,25 +45,29 @@ Package
 ^^^^^^^
 
 You need to download Python for MacOS from the official Website
-.. _a link: https://www.python.org/downloads/release/python-351/
+`python-3.5.1-macosx10.6.pkg <https://www.python.org/ftp/python/3.5.1/python-3.5.1-macosx10.6.pkg>`_
 
-After that double-click to open it and than double-click *Python.mpkg* to run the installer.
+After that double-click to open it and than double-click
+``python-3.5.1-macosx10.6.pkg`` to run the installer.
 
-For verify that installation was completed successful you shoul open *Terminal* application and run the command:
+For verify that installation was completed successful you should
+open *Terminal* application and run the command::
 
-``python3 --version``
+    python3 --version
 
-You must see something like this *Python 3.5.1*.
+You must see something like this::
+
+    $ python --version
+    Python 3.5.1
 
 Linux
 -----
 
-.. todo:: TBD
+It's very likely that you already have Python installed out of the box.
+To check if you have installed and see which version of Python you have,
+open a console and type the following command::
 
-It's very likely that you already have Python installed out of the box. To check if you have installed
-and see which version of Python you have, open a console and type the following command:
-
-``python3 --version``
+    python3 --version
 
 You must see something like this *Python 3.5.1*.
 
