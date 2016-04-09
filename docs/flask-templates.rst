@@ -136,28 +136,5 @@ A complete example
    </body>
    </html>
 
-To display this code update your ``app.py``.
+.. todo:: Add explanation (DOCTYPE, meta charset, html language)
 
-.. code-block:: python
-   :emphasize-lines: 2,9
-
-   from flask import Flask
-   from flask import render_template
-
-   app = Flask(__name__)
-
-
-   @app.route('/')
-   def index():
-       return render_template('index.html')
-
-
-   if __name__ == '__main__':
-       app.run()
-
-Now run ``app.py`` and check the result in your browser. The page should look
-similar to this example:
-
-.. image:: image/screenshot/flask-first-template-3.png
-
-.. todo:: Add explanation
