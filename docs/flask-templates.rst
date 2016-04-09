@@ -16,11 +16,11 @@ What's HTML?
 HTML is a simple code that is interpreted by your web browser - such as Chrome,
 Firefox or Safari - to display a webpage for the user.
 
-HTML stands for "HyperText Markup Language". HyperText means it's a type of
-text that supports hyperlinks between pages. Markup means we have taken a
+HTML stands for "HyperText Markup Language". *HyperText* means it's a type of
+text that supports hyperlinks between pages. *Markup* means we have taken a
 document and marked it up with code to tell something (in this case, a browser)
-how to interpret the page. HTML code is built with tags, each one starting
-with < and ending with >. These tags represent markup elements.
+how to interpret the page. HTML code is built with *tags*, each one starting
+with < and ending with >. These tags represent markup *elements*.
 
 Your first template
 ===================
@@ -176,6 +176,21 @@ character handling in documents using different scripts.
 Customizing template
 ====================
 
+You can now have a little fun and try to customize your template!
+Here are a few useful tags for that:
+
+* ``<h1>A heading</h1>`` - for your most important heading
+* ``<h2>A sub-heading</h2>`` for a heading at the next level
+* ``<h3>A sub-sub-heading</h3>`` ... and so on, up to ``<h6>``
+* ``<em>text</em>`` emphasizes your text
+* ``<strong>text</strong>`` strongly emphasizes your text
+* ``<br />`` goes to another line (you can't put anything inside br)
+* ``<a href="http://google.com">link</a>`` creates a link
+* ``<ul><li>first item</li><li>second item</li></ul>``
+  makes a list, just like this one!
+* ``<div></div>`` defines a section of the page
+
+
 .. code-block:: html
 
     <!DOCTYPE html>
@@ -183,34 +198,41 @@ Customizing template
     <head>
         <meta charset="UTF-8">
         <title>My First Template</title>
-        <style>
-            .task-done {
-                text-decoration: line-through;
-                color: lightgray;
-            }
-        </style>
     </head>
     <body>
-        <h1>TODO App</h1>
-        <div class="task-list">
-            <div class="task">
-                <input type="checkbox">
-                Write static template with items.
-            </div>
-            <div class="task">
-                <input type="checkbox">
-                Display items from the database.
-            </div>
-            <div class="task">
-                <input type="checkbox">
-                Add items using form.
-            </div>
-            <div class="task task-done">
-                <input type="checkbox" checked>
-                Create first Flask application.
-            </div>
-
+        <h1><a href="">TODO App</a></h1>
+        <div>
+            <input type="checkbox">
+            Write static template with items.
+        </div>
+        <div>
+            <input type="checkbox">
+            Display items from the database.
+        </div>
+        <div>
+            <input type="checkbox">
+            Add items using form.
+        </div>
+        <div>
+            <input type="checkbox" checked>
+            Create first Flask application.
         </div>
     </body>
     </html>
 
+We've created three one ``h1`` and four ``div`` sections here.
+
+* The ``h1`` element contains the title of our application.
+* Four ``div`` elements contain our tasks with text,
+  and a checkbox to mark task as done or not done.
+
+It gives us this effect:
+
+.. image:: image/screenshot/todo-index-1.png
+
+Looks nice. But so far, our template only ever displays exactly the same
+information - whereas earlier we were talking about templates as allowing
+us to display different information in the same format.
+
+What we really want to do is display real tasks
+and that's where we're going next.
