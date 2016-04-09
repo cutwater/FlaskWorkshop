@@ -158,6 +158,6 @@ To display this code update your ``app.py``.
 Now run ``app.py`` and check the result in your browser. The page should look
 similar to this example:
 
-.. image:: image/screenshot/flask-first-template.png
+.. image:: image/screenshot/flask-first-template-3.png
 
 .. todo:: Add explanation
