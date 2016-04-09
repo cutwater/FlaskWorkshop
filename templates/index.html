@@ -3,9 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <title>My First Template</title>
+    <style>
+        .task-done {
+            text-decoration: line-through;
+            color: lightgray;
+        }
+    </style>
 </head>
 <body>
-    <h1>Hi there!</h1>
-    <p>It works!</p>
+    <h1>TODO App</h1>
+    <div class="task-list">
+        <div class="task">
+            <input type="checkbox">
+            Write static template with items.
+        </div>
+        <div class="task">
+            <input type="checkbox">
+            Display items from the database.
+        </div>
+        <div class="task">
+            <input type="checkbox">
+            Add items using form.
+        </div>
+        <div class="task task-done">
+            <input type="checkbox" checked>
+            Create first Flask application.
+        </div>
+    </div>
+    <button>Add task</button>
 </body>
 </html>

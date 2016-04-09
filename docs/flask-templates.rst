@@ -122,7 +122,13 @@ them properly and your page will display incorrectly.
 A complete example
 ==================
 
+The example above was not complete. Many browsers will display this page
+in a correct way. This happens because browsers trying to be
+tolerant to code mistakes or missing parts. The following example shows
+how valid HTML page should look like:
+
 .. code-block:: html
+   :emphasize-lines: 1,4
 
    <!DOCTYPE html>
    <html lang="en">
@@ -136,5 +142,75 @@ A complete example
    </body>
    </html>
 
-.. todo:: Add explanation (DOCTYPE, meta charset, html language)
+Document type
+^^^^^^^^^^^^^
+
+The doctype for HTML5 is very simple.
+To indicate that your HTML content uses HTML5, simply use::
+
+    <!DOCTYPE html>
+
+Doing so will cause even browsers that don't presently support HTML5
+to enter into standards mode, which means that they'll interpret
+the long-established parts of HTML in an HTML5-compliant way while
+ignoring the new features of HTML5 they don't support.
+
+This is much simpler than the former doctypes, and shorter,
+making it easier to remember and reducing the amount of bytes
+that must be downloaded.
+
+Character set
+^^^^^^^^^^^^^
+The first thing done on a page is usually indicating the character
+set that is used. In previous versions of HTML, it was done using
+a very complex ``<meta>`` element. Now, it is very simple::
+
+   <meta charset="UTF-8">
+
+Place this right after your ``<head>``, as some browsers restart the parsing
+of an HTML document if the declared charset is different from what they
+had anticipated. Also, if you are not currently using ``UTF-8``, it's
+recommended that you switch to it in your Web pages, as it simplifies
+character handling in documents using different scripts.
+
+Customizing template
+====================
+
+.. code-block:: html
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>My First Template</title>
+        <style>
+            .task-done {
+                text-decoration: line-through;
+                color: lightgray;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>TODO App</h1>
+        <div class="task-list">
+            <div class="task">
+                <input type="checkbox">
+                Write static template with items.
+            </div>
+            <div class="task">
+                <input type="checkbox">
+                Display items from the database.
+            </div>
+            <div class="task">
+                <input type="checkbox">
+                Add items using form.
+            </div>
+            <div class="task task-done">
+                <input type="checkbox" checked>
+                Create first Flask application.
+            </div>
+
+        </div>
+    </body>
+    </html>
 
