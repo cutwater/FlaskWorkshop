@@ -13,4 +13,5 @@ Flask Workshop
    flask-first-app
    flask-templates
    flask-models
+   flask-forms
    deploy

@@ -88,3 +88,5 @@ Accessing the data in database is easy as a pie::
     >>> tasks = Task.query.all()
     >>> print(tasks)
     [<Task 1, 'Write static template with items.'>, <Task 2, 'Display items from the database.'>]
+
+.. todo:: Describe how to display items from database in the template.
