@@ -65,7 +65,6 @@ To create the initial database, just import the db object from an interactive
 Python shell and run the ``SQLAlchemy.create_all()`` method to create the
 tables and database::
 
-    $ python
     >>> from app import db
     >>> db.create_all()
 
