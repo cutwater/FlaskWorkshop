@@ -69,7 +69,7 @@
 <li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="how-web-works.html">How Web works</a></li>
 <li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="cli-intro.html">Introduction to the command-line interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cli-intro.html">Introduction to CLI</a></li>
 <li class="toctree-l1"><a class="reference internal" href="python-intro.html">Introduction to Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="flask-intro.html">Introduction to Flask</a></li>
 <li class="toctree-l1"><a class="reference internal" href="flask-first-app.html">Writing first application</a></li>
@@ -94,9 +94,18 @@
       role="menu"
       aria-labelledby="dLabelLocalToc"><ul>
 <li><a class="reference internal" href="#">Deploy</a><ul>
-<li><a class="reference internal" href="#why-is-deployment-necessary">Why is deployment necessary?</a></li>
-<li><a class="reference internal" href="#set-up">Set up</a></li>
-<li><a class="reference internal" href="#creating-application">Creating Application</a></li>
+<li><a class="reference internal" href="#requirements-txt">requirements.txt</a></li>
+<li><a class="reference internal" href="#procfile">Procfile</a></li>
+<li><a class="reference internal" href="#the-runtime-txt-file">The runtime.txt file</a></li>
+<li><a class="reference internal" href="#configuration">Configuration</a><ul>
+<li><a class="reference internal" href="#heroku-account">Heroku account</a></li>
+<li><a class="reference internal" href="#git-repository">Git repository</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#create-heroku-application">Create Heroku application</a></li>
+<li><a class="reference internal" href="#enable-postgresql">Enable PostgreSQL</a></li>
+<li><a class="reference internal" href="#deploy-to-heroku">Deploy to Heroku!</a></li>
+<li><a class="reference internal" href="#visit-your-application">Visit your application</a></li>
 </ul>
 </li>
 </ul>
@@ -148,37 +157,182 @@
       
   <div class="section" id="deploy">
 <h1>Deploy<a class="headerlink" href="#deploy" title="Permalink to this headline">¶</a></h1>
-<p>In this tutorial we are going to deploy a Flask application to Heroku.
-Here&#8217;s what we&#8217;re going to need for this tutorial:</p>
-<ul class="simple">
-<li>A free <a class="reference external" href="https://signup.heroku.com/dc">Heroku account</a>.</li>
-<li>Python version 2.7 installed locally - see the installation guides for
-<a class="reference internal" href="installation.html#install-macos"><span>MacOS</span></a>, <a class="reference internal" href="installation.html#install-windows"><span>Windows</span></a>, and <a class="reference internal" href="installation.html#install-linux"><span>Linux</span></a>.</li>
-<li><a class="reference internal" href="installation.html#install-pip"><span>Setuptools &amp; Pip</span></a> locally. See the Python install guides above for
-installation instructions.</li>
-<li>Virtualenv installed locally. Accomplish this by running <code class="docutils literal"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">virtualenv</span></code></li>
-</ul>
-<div class="section" id="why-is-deployment-necessary">
-<h2>Why is deployment necessary?<a class="headerlink" href="#why-is-deployment-necessary" title="Permalink to this headline">¶</a></h2>
-<p>Your web application must live somewhere other than your own desktop or laptop.
-A production environment is the version of your current application and its
-associated data.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Based on tutorial <a class="reference external" href="http://tutorial.djangogirls.org/en/">Django Girls</a>
+licensed under <a class="reference external" href="http://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA 4.0</a>:</p>
 </div>
-<div class="section" id="set-up">
-<h2>Set up<a class="headerlink" href="#set-up" title="Permalink to this headline">¶</a></h2>
-<p>You should go to <a class="reference external" href="https://www.heroku.com/">https://www.heroku.com/</a> and follow the steps create a free
-account.</p>
-<p>Also, you must download and install the Heroku Toolbelt from the official
-web-cite <a class="reference external" href="https://toolbelt.heroku.com/debian">https://toolbelt.heroku.com/debian</a></p>
-<p>Now you may use <code class="docutils literal"><span class="pre">heroku</span></code> in your command line.</p>
-<p>Now you should Login to Heroku using your email address and password you used
-when creating Heroku account:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span>$heroku login
+<p>Until now, your website was only available on your computer.
+Now you will learn how to deploy it! Deploying is the process of publishing
+your application on the Internet so people can finally go and see your app.</p>
+<p>As you learned, a website has to be located on a server.
+There are a lot of server providers available on the internet.
+We will use one that has a relatively simple deployment process:
+Heroku. Heroku is free for small applications that don&#8217;t have too many
+visitors so it&#8217;ll definitely be enough for you now.</p>
+<p>We will be following this tutorial:
+<a class="reference external" href="https://devcenter.heroku.com/articles/getting-started-with-python">https://devcenter.heroku.com/articles/getting-started-with-python</a>,
+but we pasted it here so it&#8217;s easier for you.</p>
+<div class="section" id="requirements-txt">
+<h2>requirements.txt<a class="headerlink" href="#requirements-txt" title="Permalink to this headline">¶</a></h2>
+<p>If you didn&#8217;t create one before, we need to create a requirements.txt
+file to tell Heroku what Python packages need to be installed on our server.</p>
+<p>But first, Heroku needs us to install a few new packages.
+Go to your console with virtualenv activated and type this:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>pip install gunicorn
+</pre></div>
+</div>
+<p>After the installation is finished run this command:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>pip freeze &gt; requirements.txt
+</pre></div>
+</div>
+<p>Open this file and add the following line at the bottom:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>psycopg2==2.6.1
 </pre></div>
 </div>
 </div>
-<div class="section" id="creating-application">
-<h2>Creating Application<a class="headerlink" href="#creating-application" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="procfile">
+<h2>Procfile<a class="headerlink" href="#procfile" title="Permalink to this headline">¶</a></h2>
+<p>Another thing Heroku wants is a Procfile.
+This tells Heroku which commands to run in order to start our website.
+Open up your code editor, create a file called Procfile in <strong>FIXME: app</strong>
+directory and add this line:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>web: gunicorn app
+</pre></div>
+</div>
+<p>This line means that we&#8217;re going to be deploying a web application,
+and we&#8217;ll do that by running the command <code class="docutils literal"><span class="pre">gunicorn</span> <span class="pre">app</span></code>
+(gunicorn is a program that&#8217;s like a more powerful version of Flask&#8217;s
+development server).</p>
+<p>Then save it. Done!</p>
+</div>
+<div class="section" id="the-runtime-txt-file">
+<h2>The runtime.txt file<a class="headerlink" href="#the-runtime-txt-file" title="Permalink to this headline">¶</a></h2>
+<p>We also need to tell Heroku which Python version we want to use.
+This is done by creating a runtime.txt in the app directory
+using your editor&#8217;s &#8220;new file&#8221; command, and putting the following text
+(and nothing else!) inside:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>python-3.5.1
+</pre></div>
+</div>
+</div>
+<div class="section" id="configuration">
+<h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
+<p>Because Heroku wants to use Postgres while we use SQLite for example,
+it wants us to use different settings from the ones we use on our locally
+(on our computer).</p>
+<p>Heroku passes database configuration to application
+using environment variables. Update your <code class="docutils literal"><span class="pre">app.py</span></code> the following way:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+
+<span class="c1"># ...</span>
+
+<span class="n">app</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;SQLALCHEMY_DATABASE_URI&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
+    <span class="s1">&#39;DATABASE_URL&#39;</span><span class="p">,</span> <span class="s1">&#39;sqlite:///todo.db&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="section" id="heroku-account">
+<h3>Heroku account<a class="headerlink" href="#heroku-account" title="Permalink to this headline">¶</a></h3>
+<p>You need to install your Heroku toolbelt which you can find here
+(you can skip the installation if you&#8217;ve already installed it during setup):
+<a class="reference external" href="https://toolbelt.heroku.com/">https://toolbelt.heroku.com/</a></p>
+<p>After restarting your command prompt, don&#8217;t forget to go to your
+<code class="docutils literal"><span class="pre">todoapp</span></code> folder again and activate your <code class="docutils literal"><span class="pre">virtualenv</span></code>!
+(Hint: Check the Django installation chapter)</p>
+<p>Then authenticate your Heroku account on your computer by running
+this command:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>$ heroku login
+</pre></div>
+</div>
+<p>In case you don&#8217;t have an SSH key this command will automatically
+create one. SSH keys are required to push code to the Heroku.</p>
+</div>
+<div class="section" id="git-repository">
+<h3>Git repository<a class="headerlink" href="#git-repository" title="Permalink to this headline">¶</a></h3>
+<p>Heroku uses git for its deployments. First you need to create a local
+repository, if you haven&#8217;t done this already:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>$ git config --global user.name &quot;Your Name&quot;
+$ git config --global user.email you@example.com
+$ git init
+</pre></div>
+</div>
+<p>Create the file named <code class="docutils literal"><span class="pre">.gitignore</span></code> in your application directory and
+add add the following lines to that file:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>*.pyc
+__pycache__
+*.db
+venv
+</pre></div>
+</div>
+<p>And commit your changes:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>$ git status
+$ git add -A .
+$ git commit -m &quot;Commit files for Heroku&quot;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="create-heroku-application">
+<h2>Create Heroku application<a class="headerlink" href="#create-heroku-application" title="Permalink to this headline">¶</a></h2>
+<p>To create a Heroku application run:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>$ heroku create
+</pre></div>
+</div>
+<p>Heroku will pick an unused name for you
+(probably something like <code class="docutils literal"><span class="pre">desolate-lowlands-28090</span></code></p>
+<p>If you ever feel like changing the name of your Heroku application,
+you can do so at any time with this command
+(replace <code class="docutils literal"><span class="pre">the-new-name</span></code> with the new name you want to use):</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>$ heroku apps:rename the-new-name
+</pre></div>
+</div>
+</div>
+<div class="section" id="enable-postgresql">
+<h2>Enable PostgreSQL<a class="headerlink" href="#enable-postgresql" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python"><div class="highlight"><pre><span></span>$ heroku addons:create heroku-postgresql:hobby-dev
+</pre></div>
+</div>
+</div>
+<div class="section" id="deploy-to-heroku">
+<h2>Deploy to Heroku!<a class="headerlink" href="#deploy-to-heroku" title="Permalink to this headline">¶</a></h2>
+<p>That was a lot of configuration and installing, right?
+But you only need to do that once! Now you can deploy!</p>
+<p>When you ran heroku create, it automatically added the Heroku
+remote for our app to our repository.
+Now we can do a simple git push to deploy our application:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>$ git push heroku master
+</pre></div>
+</div>
+</div>
+<div class="section" id="visit-your-application">
+<h2>Visit your application<a class="headerlink" href="#visit-your-application" title="Permalink to this headline">¶</a></h2>
+<p>If you don&#8217;t know the name of your application simply run:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>$ heroku apps:info
+</pre></div>
+</div>
+<p>Open your application in the browser via URL like
+<code class="docutils literal"><span class="pre">https://&lt;appname&gt;.herokuapp.com/</span></code>, and at the moment you will probably
+see an error page.</p>
+<p>The error you saw was because we when we deployed to Heroku, we created
+a new database and it&#8217;s empty. We need to run the <code class="docutils literal"><span class="pre">create_all()</span></code>,
+just like we did on our local server.</p>
+<p>This time, it comes via a special command-line on our own computer,
+<code class="docutils literal"><span class="pre">heroku</span> <span class="pre">run</span></code>:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>$ heroku run python
+</pre></div>
+</div>
+<p>It will open python in the interactive mode on the remote side, so you can
+execute:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">app</span> <span class="kn">import</span> <span class="n">db</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">db</span><span class="o">.</span><span class="n">create_all</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Now restart your application:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>$ heroku restart
+</pre></div>
+</div>
+<p>Refresh it in your browser, and there you go!
+You now know how to deploy your application in the Internet.</p>
 </div>
 </div>
 

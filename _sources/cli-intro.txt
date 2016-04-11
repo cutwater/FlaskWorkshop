@@ -1,6 +1,6 @@
-==========================================
-Introduction to the command-line interface
-==========================================
+===================
+Introduction to CLI
+===================
 
 .. note::
 
@@ -25,7 +25,7 @@ What is the command line?
 The window, which is usually called the **command line** or
 **command-line interface**, is a text-based application for viewing,
 handling, and manipulating files on your computer. Much like Windows
-Explorer or Finder on Mac, but without the graphical interface. Other
+Explorer or Finder on OS X, but without the graphical interface. Other
 names for the command line are: *cmd*, *CLI*, *prompt*, *console* or
 *terminal*.
 
@@ -40,13 +40,13 @@ Windows
 
 Go to Start menu → All Programs → Accessories → Command Prompt.
 
-Mac OS X
+OS X
 --------
 
 Applications → Utilities → Terminal.
 
-Linux
------
+GNU/Linux
+---------
 
 It's probably under Applications → Accessories → Terminal, but that may
 depend on your system. If it's not there, just Google it :)
@@ -57,7 +57,7 @@ Prompt
 You now should see a white or black window that is waiting for your
 commands.
 
-If you're on Mac or Linux, you probably see ``$``, just like this::
+If you're on OS X or GNU/Linux, you probably see ``$``, just like this::
 
     $
 
@@ -102,7 +102,7 @@ And then hit ``enter``. This is our result::
 As you can see, the computer has just printed your username. Neat,
 huh?:)
 
-.. note::
+.. important::
 
     Try to type each command, do not copy-paste. You'll remember more
     this way!
@@ -183,9 +183,9 @@ Windows::
 
 Here it is!
 
-.. note::
+.. tip::
 
-    PRO tip: if you type ``cd D`` and then hit ``tab`` on your keyboard,
+    If you type ``cd D`` and then hit ``tab`` on your keyboard,
     the command line will automatically autofill the rest of the name so
     you can navigate faster. If there is more than one folder starting
     with "D", hit the ``tab`` button twice to get a list of options.
@@ -207,9 +207,9 @@ This little command will create a folder with the name ``practice`` on
 your desktop. You can check if it's there just by looking on your
 Desktop or by running a ``ls`` or ``dir`` command! Try it :)
 
-.. note::
+.. tip::
 
-    **PRO tip:** If you don't want to type the same commands over and over,
+    If you don't want to type the same commands over and over,
     try pressing the ``up arrow`` and ``down arrow`` on your keyboard to
     cycle through recently used commands.
 
@@ -223,7 +223,7 @@ create a directory called ``test``. Use ``cd`` and ``mkdir`` commands.
 Solution:
 ~~~~~~~~~
 
-Linux/OS X::
+GNU/Linux or OS X::
 
     $ cd practice
     $ mkdir test
@@ -276,7 +276,7 @@ Now time to delete the ``practice`` directory:
     irrecoverable, meaning *deleted files will be gone forever*! So, be
     very careful with this command.
 
-Linux/OS X::
+GNU/Linux or OS X::
 
     $ rm -r practice
 
@@ -287,7 +287,7 @@ Windows::
 
 Done! To be sure it's actually deleted, let's check it:
 
-Linux/OS X::
+GNU/Linux or OS X::
 
     $ ls
 
@@ -301,7 +301,7 @@ Exit
 That's it for now! You can safely close the command line now. Let's do
 it the hacker way, alright?:)
 
-Linux/OS X::
+GNU/Linux or OS X::
 
     $ exit
 
@@ -316,23 +316,23 @@ Summary
 
 Here is a summary of some useful commands:
 
-+---------------------+----------------------------+---------------------------+-----------------------------------------------------------------------------------------------------+
-| Command (Windows)   | Command (Mac OS / Linux)   | Description               | Example                                                                                             |
-+=====================+============================+===========================+=====================================================================================================+
-| exit                | exit                       | close the window          | ``exit``                                                                                            |
-+---------------------+----------------------------+---------------------------+-----------------------------------------------------------------------------------------------------+
-| cd                  | cd                         | change directory          | ``cd test``                                                                                         |
-+---------------------+----------------------------+---------------------------+-----------------------------------------------------------------------------------------------------+
-| dir                 | ls                         | list directories/files    | ``dir``                                                                                             |
-+---------------------+----------------------------+---------------------------+-----------------------------------------------------------------------------------------------------+
-| copy                | cp                         | copy file                 | ``copy c:\test\test.txt c:\windows\test.txt``                                                       |
-+---------------------+----------------------------+---------------------------+-----------------------------------------------------------------------------------------------------+
-| move                | mv                         | move file                 | ``move c:\test\test.txt c:\windows\test.txt``                                                       |
-+---------------------+----------------------------+---------------------------+-----------------------------------------------------------------------------------------------------+
-| mkdir               | mkdir                      | create a new directory    | ``mkdir testdirectory``                                                                             |
-+---------------------+----------------------------+---------------------------+-----------------------------------------------------------------------------------------------------+
-| del                 | rm                         | delete a directory/file   | ``del c:\test\test.txt``                                                                            |
-+---------------------+----------------------------+---------------------------+-----------------------------------------------------------------------------------------------------+
++---------------------+-----------------------------+---------------------------+-----------------------------------------------------------------------------------------------------+
+| Command (Windows)   | Command (OS X or GNU/Linux) | Description               | Example                                                                                             |
++=====================+=============================+===========================+=====================================================================================================+
+| exit                | exit                        | close the window          | ``exit``                                                                                            |
++---------------------+-----------------------------+---------------------------+-----------------------------------------------------------------------------------------------------+
+| cd                  | cd                          | change directory          | ``cd test``                                                                                         |
++---------------------+-----------------------------+---------------------------+-----------------------------------------------------------------------------------------------------+
+| dir                 | ls                          | list directories/files    | ``dir``                                                                                             |
++---------------------+-----------------------------+---------------------------+-----------------------------------------------------------------------------------------------------+
+| copy                | cp                          | copy file                 | ``copy c:\test\test.txt c:\windows\test.txt``                                                       |
++---------------------+-----------------------------+---------------------------+-----------------------------------------------------------------------------------------------------+
+| move                | mv                          | move file                 | ``move c:\test\test.txt c:\windows\test.txt``                                                       |
++---------------------+-----------------------------+---------------------------+-----------------------------------------------------------------------------------------------------+
+| mkdir               | mkdir                       | create a new directory    | ``mkdir testdirectory``                                                                             |
++---------------------+-----------------------------+---------------------------+-----------------------------------------------------------------------------------------------------+
+| del                 | rm                          | delete a directory/file   | ``del c:\test\test.txt``                                                                            |
++---------------------+-----------------------------+---------------------------+-----------------------------------------------------------------------------------------------------+
 
 These are just a very few of the commands you can run in your command
 line, but you're not going to use anything more than that today.

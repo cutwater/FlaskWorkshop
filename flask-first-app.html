@@ -69,7 +69,7 @@
 <li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="how-web-works.html">How Web works</a></li>
 <li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="cli-intro.html">Introduction to the command-line interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cli-intro.html">Introduction to CLI</a></li>
 <li class="toctree-l1"><a class="reference internal" href="python-intro.html">Introduction to Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="flask-intro.html">Introduction to Flask</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="">Writing first application</a></li>
@@ -151,8 +151,11 @@
 <p class="last">Based on tutorial <a class="reference external" href="http://tutorial.djangogirls.org/en/">Django Girls</a>
 licensed under <a class="reference external" href="http://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA 4.0</a>:</p>
 </div>
-<p>Create directory <code class="docutils literal"><span class="pre">FlaskWorkshop</span></code> and go to this directory.</p>
-<p>Create a new file <code class="docutils literal"><span class="pre">app.py</span></code> with contents:</p>
+<p>If you have already created your project directory during
+the <a class="reference internal" href="installation.html#page-installation"><span>Installation</span></a> page, then just go to this directory
+and open it in your favorite text editor.
+Otherwise create a directory <code class="docutils literal"><span class="pre">todoapp</span></code> and open it.</p>
+<p>Create a new file <code class="docutils literal"><span class="pre">app.py</span></code> in this directory with contents:</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span>
 
 <span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="n">__name__</span><span class="p">)</span>
@@ -210,16 +213,6 @@ will know, that for all requests to <code class="docutils literal"><span class="
 <code class="docutils literal"><span class="pre">index</span></code>.</p>
 </li>
 </ol>
-<div class="admonition-todo admonition" id="index-0">
-<p class="first admonition-title">Todo</p>
-<p class="last">Describe the following log:</p>
-</div>
-<img alt="_images/google-favicon.png" src="_images/google-favicon.png" />
-<div class="highlight-python"><div class="highlight"><pre><span></span>* Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
-127.0.0.1 - - [29/Mar/2016 14:46:53] &quot;GET / HTTP/1.1&quot; 200 -
-127.0.0.1 - - [29/Mar/2016 14:46:54] &quot;GET /favicon.ico HTTP/1.1&quot; 404 -
-</pre></div>
-</div>
 </div>
 </div>
 

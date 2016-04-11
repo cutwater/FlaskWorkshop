@@ -59,7 +59,24 @@ Now let's create a new view:
             return redirect(url_for('index'))
         return render_template('task_edit.html', form=form)
 
-.. todo:: Describe function
+In this step you learned how to use ``request`` object and two new functions
+``redirect`` and ``url_for``.
+
+* For web applications it’s crucial to react to the data a client sent
+  to the server. In Flask this information is provided by the global
+  ``request`` object. If you have some experience with Python you
+  might be wondering how that object can be global and how Flask manages
+  to still be threadsafe. The answer is context locals.
+* ``url_for()`` function is used to build a URL to a specific function
+  (like ``index()`` or ``create_task()``). It accepts the name of the function
+  as first argument and a number of keyword arguments, each corresponding
+  to the variable part of the URL rule.
+* ``redirect()`` function is used to tell the browser to follow another
+  endpoint and open a user different page. You can also abort request
+  with an error using ``abort()`` function.
+
+You can find more information about these and many other functions
+in the Flask's `documentation <http://flask.pocoo.org/docs/0.10/quickstart/>`_.
 
 And template ``task_edit.html``:
 
@@ -100,13 +117,17 @@ to your ``index.html``.
 Organizing templates
 ====================
 
+.. note::
+    Based on `The Django Book <http://www.djangobook.com/en/2.0/index.html>`_
+    licensed under `
+
 You may noticed that we’ve just duplicated a lot of HTML.
 
 Our template examples so far have been tiny HTML snippets,
 but in the real world, you’ll be using Flask’s template system
 to create entire HTML pages. This leads to a common Web development problem:
 across a Web site, how does one reduce the duplication and redundancy
-of common page areas, such as sitewide navigation?
+of common page areas, such as site-wide navigation?
 
 Imagine if we had a more typical site, including a navigation bar,
 a few style sheets, perhaps some JavaScript – we’d end up putting all

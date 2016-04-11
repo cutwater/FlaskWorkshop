@@ -19,7 +19,7 @@ computer. You should already know how to do that -- you learned it in the
 Once you're ready, follow the instructions below.
 
 We want to open up a Python console, so type in ``python`` on Windows or
-``python3`` on Mac OS/Linux and hit ``enter``::
+``python3`` on OS X or GNU/Linux and hit ``enter``::
 
     $ python3
     Python 3.4.3 (...)
@@ -34,8 +34,8 @@ means that for now we may only use commands in the Python language. You don't
 have to type in ``>>>`` - Python will do that for you.
 
 If you want to exit the Python console at any point, just type ``exit()`` or
-use the shortcut ``Ctrl + Z`` for Windows and ``Ctrl + D`` for Mac/Linux.
-Then you won't see ``>>>`` any longer.
+use the shortcut ``Ctrl + Z`` for Windows and ``Ctrl + D`` for OS X or
+GNU/Linux. Then you won't see ``>>>`` any longer.
 
 For now, we don't want to exit the Python console. We want to learn more about
 it. Let's start with something really simple. For example, try typing some
@@ -156,7 +156,9 @@ It worked! We used the ``str`` function inside of the ``len`` function.
 * The ``str`` function converts things into **strings**
 * The ``int`` function converts things into **integers**
 
-   Important: we can convert numbers into text, but we can't necessarily
+.. important::
+
+   It is possible to  convert numbers into text, but we can't necessarily
    convert text into numbers - what would `int('hello')` be anyway?
 
 Variables
@@ -490,7 +492,7 @@ you an answer! Pretty smart, right?
 Have you heard of the expression "comparing apples to oranges"? Let's try the
 Python equivalent::
 
-    >>> 1 > 'django'
+    >>> 1 > 'string'
     Traceback (most recent call last):
       File "<stdin>", line 1, in <module>
     TypeError: unorderable types: int() > str()
@@ -567,7 +569,7 @@ section. We'll need to open the editor now and write some code into a new
 file::
 
     $ python
-    print('Hello, Django girls!')
+    print('Hello, World!')
 
 
 Obviously, you're a pretty seasoned Python developer now, so feel free to
@@ -594,11 +596,11 @@ the command line section, use the terminal to **change directories** to the
 desktop. (**Note**:  Replace ``<your_name>`` including the ``<`` and ``>`` with
 your user name)
 
-On a **Mac**, the command will look something like this::
+On a **OS X**, the command will look something like this::
 
     $ cd /Users/<your_name>/Desktop
 
-On **Linux**, it will be like this (the word "Desktop" might be translated to your
+On **GNU/Linux**, it will be like this (the word "Desktop" might be translated to your
 language)::
 
     $ cd /home/<your_name>/Desktop
@@ -612,7 +614,7 @@ If you get stuck, just ask for help.
 Now use Python to execute the code in the file like this::
 
     $ python3 python_intro.py
-    Hello, Django girls!
+    Hello, World!
 
 Alright! You just ran your first Python program that was saved to a file.
 Feel awesome?

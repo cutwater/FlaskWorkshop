@@ -7,9 +7,12 @@ Writing first application
     Based on tutorial `Django Girls <http://tutorial.djangogirls.org/en/>`_
     licensed under `CC-BY-SA 4.0 <http://creativecommons.org/licenses/by-sa/4.0/>`_:
 
-Create directory ``FlaskWorkshop`` and go to this directory.
+If you have already created your project directory during
+the :ref:`page-installation` page, then just go to this directory
+and open it in your favorite text editor.
+Otherwise create a directory ``todoapp`` and open it.
 
-Create a new file ``app.py`` with contents:
+Create a new file ``app.py`` in this directory with contents:
 
 .. code-block:: python
 
@@ -70,13 +73,3 @@ at the source code line by line and check how it works.
    that registers function ``index`` as a request handler. So from now Flask
    will know, that for all requests to ``/`` path it should call function
    ``index``.
-
-.. todo:: Describe the following log:
-
-.. image:: image/screenshot/google-favicon.png
-
-::
-
-    * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
-    127.0.0.1 - - [29/Mar/2016 14:46:53] "GET / HTTP/1.1" 200 -
-    127.0.0.1 - - [29/Mar/2016 14:46:54] "GET /favicon.ico HTTP/1.1" 404 -

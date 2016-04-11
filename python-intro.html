@@ -31,7 +31,7 @@
     <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
     <link rel="top" title="Flask Workshop 0.1 documentation" href="index.html" />
     <link rel="next" title="Introduction to Flask" href="flask-intro.html" />
-    <link rel="prev" title="Introduction to the command-line interface" href="cli-intro.html" />
+    <link rel="prev" title="Introduction to CLI" href="cli-intro.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
@@ -69,7 +69,7 @@
 <li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="how-web-works.html">How Web works</a></li>
 <li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="cli-intro.html">Introduction to the command-line interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cli-intro.html">Introduction to CLI</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="">Introduction to Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="flask-intro.html">Introduction to Flask</a></li>
 <li class="toctree-l1"><a class="reference internal" href="flask-first-app.html">Writing first application</a></li>
@@ -129,7 +129,7 @@
               
                 
   <li>
-    <a href="cli-intro.html" title="Previous Chapter: Introduction to the command-line interface"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; Introduction ...</span>
+    <a href="cli-intro.html" title="Previous Chapter: Introduction to CLI"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; Introduction ...</span>
     </a>
   </li>
   <li>
@@ -179,10 +179,10 @@ Carrots: <a class="reference external" href="https://github.com/ggcarrots/django
 <h2>Python prompt<a class="headerlink" href="#python-prompt" title="Permalink to this headline">¶</a></h2>
 <p>To start playing with Python, we need to open up a <strong>command line</strong> on your
 computer. You should already know how to do that &#8211; you learned it in the
-<a class="reference internal" href="cli-intro.html"><em>Introduction to the command-line interface</em></a> chapter.</p>
+<a class="reference internal" href="cli-intro.html"><em>Introduction to CLI</em></a> chapter.</p>
 <p>Once you&#8217;re ready, follow the instructions below.</p>
 <p>We want to open up a Python console, so type in <code class="docutils literal"><span class="pre">python</span></code> on Windows or
-<code class="docutils literal"><span class="pre">python3</span></code> on Mac OS/Linux and hit <code class="docutils literal"><span class="pre">enter</span></code>:</p>
+<code class="docutils literal"><span class="pre">python3</span></code> on OS X or GNU/Linux and hit <code class="docutils literal"><span class="pre">enter</span></code>:</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span>$ python3
 Python 3.4.3 (...)
 Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;license&quot; for more information.
@@ -196,8 +196,8 @@ Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;licen
 means that for now we may only use commands in the Python language. You don&#8217;t
 have to type in <code class="docutils literal"><span class="pre">&gt;&gt;&gt;</span></code> - Python will do that for you.</p>
 <p>If you want to exit the Python console at any point, just type <code class="docutils literal"><span class="pre">exit()</span></code> or
-use the shortcut <code class="docutils literal"><span class="pre">Ctrl</span> <span class="pre">+</span> <span class="pre">Z</span></code> for Windows and <code class="docutils literal"><span class="pre">Ctrl</span> <span class="pre">+</span> <span class="pre">D</span></code> for Mac/Linux.
-Then you won&#8217;t see <code class="docutils literal"><span class="pre">&gt;&gt;&gt;</span></code> any longer.</p>
+use the shortcut <code class="docutils literal"><span class="pre">Ctrl</span> <span class="pre">+</span> <span class="pre">Z</span></code> for Windows and <code class="docutils literal"><span class="pre">Ctrl</span> <span class="pre">+</span> <span class="pre">D</span></code> for OS X or
+GNU/Linux. Then you won&#8217;t see <code class="docutils literal"><span class="pre">&gt;&gt;&gt;</span></code> any longer.</p>
 <p>For now, we don&#8217;t want to exit the Python console. We want to learn more about
 it. Let&#8217;s start with something really simple. For example, try typing some
 math, like <code class="docutils literal"><span class="pre">2</span> <span class="pre">+</span> <span class="pre">3</span></code> and hit <code class="docutils literal"><span class="pre">enter</span></code>:</p>
@@ -305,16 +305,15 @@ as a string? Strings have a length, right?:</p>
 </div>
 <p>It worked! We used the <code class="docutils literal"><span class="pre">str</span></code> function inside of the <code class="docutils literal"><span class="pre">len</span></code> function.
 <code class="docutils literal"><span class="pre">str()</span></code> converts everything to strings.</p>
-<ul>
-<li><p class="first">The <code class="docutils literal"><span class="pre">str</span></code> function converts things into <strong>strings</strong></p>
-</li>
-<li><p class="first">The <code class="docutils literal"><span class="pre">int</span></code> function converts things into <strong>integers</strong></p>
-<blockquote>
-<div><p>Important: we can convert numbers into text, but we can&#8217;t necessarily
-convert text into numbers - what would <cite>int(&#8216;hello&#8217;)</cite> be anyway?</p>
-</div></blockquote>
-</li>
+<ul class="simple">
+<li>The <code class="docutils literal"><span class="pre">str</span></code> function converts things into <strong>strings</strong></li>
+<li>The <code class="docutils literal"><span class="pre">int</span></code> function converts things into <strong>integers</strong></li>
 </ul>
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<p class="last">It is possible to  convert numbers into text, but we can&#8217;t necessarily
+convert text into numbers - what would <cite>int(&#8216;hello&#8217;)</cite> be anyway?</p>
+</div>
 </div>
 <div class="section" id="variables">
 <h2>Variables<a class="headerlink" href="#variables" title="Permalink to this headline">¶</a></h2>
@@ -620,7 +619,7 @@ be True in order for the whole command to be True</li>
 </ul>
 <p>Have you heard of the expression &#8220;comparing apples to oranges&#8221;? Let&#8217;s try the
 Python equivalent:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="mi">1</span> <span class="o">&gt;</span> <span class="s1">&#39;django&#39;</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="mi">1</span> <span class="o">&gt;</span> <span class="s1">&#39;string&#39;</span>
 <span class="gt">Traceback (most recent call last):</span>
   File <span class="nb">&quot;&lt;stdin&gt;&quot;</span>, line <span class="m">1</span>, in <span class="n">&lt;module&gt;</span>
 <span class="gr">TypeError</span>: <span class="n">unorderable types: int() &gt; str()</span>
@@ -691,7 +690,7 @@ few tasks, so we&#8217;ll quickly need to:</p>
 section. We&#8217;ll need to open the editor now and write some code into a new
 file:</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span>$ python
-print(&#39;Hello, Django girls!&#39;)
+print(&#39;Hello, World!&#39;)
 </pre></div>
 </div>
 <p>Obviously, you&#8217;re a pretty seasoned Python developer now, so feel free to
@@ -716,11 +715,11 @@ reasons we use a code editor.</p>
 the command line section, use the terminal to <strong>change directories</strong> to the
 desktop. (<strong>Note</strong>:  Replace <code class="docutils literal"><span class="pre">&lt;your_name&gt;</span></code> including the <code class="docutils literal"><span class="pre">&lt;</span></code> and <code class="docutils literal"><span class="pre">&gt;</span></code> with
 your user name)</p>
-<p>On a <strong>Mac</strong>, the command will look something like this:</p>
+<p>On a <strong>OS X</strong>, the command will look something like this:</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span>$ cd /Users/&lt;your_name&gt;/Desktop
 </pre></div>
 </div>
-<p>On <strong>Linux</strong>, it will be like this (the word &#8220;Desktop&#8221; might be translated to your
+<p>On <strong>GNU/Linux</strong>, it will be like this (the word &#8220;Desktop&#8221; might be translated to your
 language):</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span>$ cd /home/&lt;your_name&gt;/Desktop
 </pre></div>
@@ -732,7 +731,7 @@ language):</p>
 <p>If you get stuck, just ask for help.</p>
 <p>Now use Python to execute the code in the file like this:</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span>$ python3 python_intro.py
-Hello, Django girls!
+Hello, World!
 </pre></div>
 </div>
 <p>Alright! You just ran your first Python program that was saved to a file.

@@ -69,7 +69,7 @@
 <li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="how-web-works.html">How Web works</a></li>
 <li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="cli-intro.html">Introduction to the command-line interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cli-intro.html">Introduction to CLI</a></li>
 <li class="toctree-l1"><a class="reference internal" href="python-intro.html">Introduction to Python</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="">Introduction to Flask</a></li>
 <li class="toctree-l1"><a class="reference internal" href="flask-first-app.html">Writing first application</a></li>
@@ -163,7 +163,7 @@ exist that can handle that.</p>
 to your application as if it was implemented in Flask itself.
 Numerous extensions provide database integration, form validation,
 upload handling, various open authentication technologies, and more.</p>
-<p>The most convenient way to install Flask is to use a virtual environment (<a class="reference internal" href="installation.html#install-virtualenv"><span>Flask</span></a>).
+<p>The most convenient way to install Flask is to use a virtual environment (<a class="reference internal" href="installation.html#install-virtualenv"><span>Virtualenv</span></a>).
 A virtual environment is a private copy of the Python interpreter onto which
 you can install packages privately without installed in your system.</p>
 <div class="section" id="why-do-you-need-a-framework">
@@ -183,21 +183,21 @@ And Flask is something that helps you create the content.</p>
 </div>
 <div class="section" id="why-is-flask-a-good-web-framework-choice">
 <h2>Why is Flask a good web framework choice?<a class="headerlink" href="#why-is-flask-a-good-web-framework-choice" title="Permalink to this headline">¶</a></h2>
-<p><a class="reference internal" href="installation.html#install-virtualenv"><span>Flask</span></a> is considered more <a class="reference external" href="http://blog.startifact.com/posts/older/what-is-pythonic.html">Pythonic</a>
+<p><a class="reference internal" href="installation.html#install-virtualenv"><span>Virtualenv</span></a> is considered more <a class="reference external" href="http://blog.startifact.com/posts/older/what-is-pythonic.html">Pythonic</a>
 than Django because Flask web application code is in most cases more explicit.
 <em>Flask</em> is easy to get started with as a beginner because there is little
 boilerplate code for getting a simple app up and running.</p>
 <p>For example, here&#8217;s a valid <code class="docutils literal"><span class="pre">&quot;hello</span> <span class="pre">world&quot;</span></code> web application with Flask:</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span>
-<span class="hll"><span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="n">__name__</span><span class="p">)</span>
-</span>
+<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="n">__name__</span><span class="p">)</span>
+
 <span class="nd">@app.route</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">hello_world</span><span class="p">():</span>
     <span class="k">return</span> <span class="s1">&#39;Hello World!&#39;</span>
 
 <span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
-<span class="hll">    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
-</span></pre></div>
+    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+</pre></div>
 </div>
 </div>
 </div>

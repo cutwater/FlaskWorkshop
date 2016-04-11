@@ -69,7 +69,7 @@
 <li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="how-web-works.html">How Web works</a></li>
 <li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="cli-intro.html">Introduction to the command-line interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cli-intro.html">Introduction to CLI</a></li>
 <li class="toctree-l1"><a class="reference internal" href="python-intro.html">Introduction to Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="flask-intro.html">Introduction to Flask</a></li>
 <li class="toctree-l1"><a class="reference internal" href="flask-first-app.html">Writing first application</a></li>
@@ -152,16 +152,16 @@
 <p class="last">Based on tutorial <a class="reference external" href="http://tutorial.djangogirls.org/en/">Django Girls</a>
 licensed under <a class="reference external" href="http://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA 4.0</a>:</p>
 </div>
-<p>What we want to create now is something that will store all the
-tasks in our application. But to be able to do that we need to talk a
-little bit about things called objects.</p>
+<p>What we want to create now is something that will store all the tasks in our
+application. But to be able to do that we need to talk a little bit about things
+called objects.</p>
 <p>A model in Flask is a special kind of object - it is saved in the database.
 A database is a collection of data. This is a place in which you will store
 information about users, tasks, your blog posts, etc.</p>
 <p>We will be using a SQLite database to store our data.
 It&#8217;ll be enough for us right now.</p>
-<p>You can think of a model in the database as a spreadsheet
-with columns (fields) and rows (data).</p>
+<p>You can think of a model in the database as a spreadsheet with columns (fields)
+and rows (data).</p>
 <div class="section" id="installing-flask-sqlalchemy">
 <h2>Installing Flask-SQLAlchemy<a class="headerlink" href="#installing-flask-sqlalchemy" title="Permalink to this headline">¶</a></h2>
 <p>Flask-SQLAlchemy is an extension for Flask that adds support for SQLAlchemy
@@ -179,7 +179,7 @@ defaults and extra helpers that make it easier to accomplish common tasks.</p>
 is to create your Flask application, load the configuration of choice
 and then create the SQLAlchemy object by passing it the application.</p>
 <p>Once created, that object then contains all the functions and helpers
-from both sqlalchemy and sqlalchemy.orm. Furthermore it provides a class
+from both <code class="docutils literal"><span class="pre">sqlalchemy</span></code> and <code class="docutils literal"><span class="pre">sqlalchemy.orm</span></code>. Furthermore it provides a class
 called Model that is a declarative base which can be used to declare models:</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span>
 <span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">render_template</span>
@@ -284,8 +284,8 @@ tasks variable and you will be able to use it in your <code class="docutils lite
 Easy, isn&#8217;t it? But wait, we can display the data, but cannot edit it.
 And doing it manually as we did using Python&#8217;s interactive is the best way
 to do it.</p>
-<p>So next we will show you how to add new tasks and edit existing tasks
-in your web application using forms.</p>
+<p>So next we will show you how to add new tasks and edit existing tasks in your
+web application using forms.</p>
 </div>
 </div>
 

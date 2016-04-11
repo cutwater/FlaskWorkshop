@@ -30,7 +30,7 @@
     <script type="text/javascript" src="_static/bootstrap-3.3.6/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
     <link rel="top" title="Flask Workshop 0.1 documentation" href="index.html" />
-    <link rel="next" title="Introduction to the command-line interface" href="cli-intro.html" />
+    <link rel="next" title="Introduction to CLI" href="cli-intro.html" />
     <link rel="prev" title="How Web works" href="how-web-works.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
@@ -69,7 +69,7 @@
 <li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="how-web-works.html">How Web works</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="cli-intro.html">Introduction to the command-line interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cli-intro.html">Introduction to CLI</a></li>
 <li class="toctree-l1"><a class="reference internal" href="python-intro.html">Introduction to Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="flask-intro.html">Introduction to Flask</a></li>
 <li class="toctree-l1"><a class="reference internal" href="flask-first-app.html">Writing first application</a></li>
@@ -96,17 +96,16 @@
 <li><a class="reference internal" href="#">Installation</a><ul>
 <li><a class="reference internal" href="#python">Python</a><ul>
 <li><a class="reference internal" href="#windows">Windows</a></li>
-<li><a class="reference internal" href="#macos">MacOS</a><ul>
+<li><a class="reference internal" href="#os-x">OS X</a><ul>
 <li><a class="reference internal" href="#homebrew-preferred">Homebrew (preferred)</a></li>
 <li><a class="reference internal" href="#package">Package</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#linux">Linux</a><ul>
+<li><a class="reference internal" href="#gnu-linux">GNU/Linux</a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#setuptools-pip">Setuptools &amp; Pip</a></li>
-</ul>
-</li>
-</ul>
-</li>
+<li><a class="reference internal" href="#virtualenv">Virtualenv</a></li>
 <li><a class="reference internal" href="#flask">Flask</a></li>
 <li><a class="reference internal" href="#code-editors">Code editors</a><ul>
 <li><a class="reference internal" href="#atom">Atom</a></li>
@@ -130,7 +129,7 @@
     </a>
   </li>
   <li>
-    <a href="cli-intro.html" title="Next Chapter: Introduction to the command-line interface"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">Introduction ... &raquo;</span>
+    <a href="cli-intro.html" title="Next Chapter: Introduction to CLI"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">Introduction ... &raquo;</span>
     </a>
   </li>
               
@@ -165,7 +164,7 @@
     <div class="col-md-12 content">
       
   <div class="section" id="installation">
-<h1>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h1>
+<span id="page-installation"></span><h1>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="python">
 <h2>Python<a class="headerlink" href="#python" title="Permalink to this headline">¶</a></h2>
 <p><strong>Python</strong> is a widely used <a class="reference external" href="https://en.wikipedia.org/wiki/High-level_programming_language">high-level</a>,
@@ -199,8 +198,8 @@ e.g. Python version 3.5 will install at <code class="docutils literal"><span cla
 so that you can have multiple versions of Python on the same system without
 conflicts.</p>
 </div>
-<div class="section" id="macos">
-<span id="install-macos"></span><h3>MacOS<a class="headerlink" href="#macos" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="os-x">
+<span id="install-macos"></span><h3>OS X<a class="headerlink" href="#os-x" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="homebrew-preferred">
 <h4>Homebrew (preferred)<a class="headerlink" href="#homebrew-preferred" title="Permalink to this headline">¶</a></h4>
 <p>First, you need to install a package manager <a class="reference external" href="http://brew.sh/">Homebrew</a>.</p>
@@ -217,7 +216,7 @@ and run:</p>
 </div>
 <div class="section" id="package">
 <h4>Package<a class="headerlink" href="#package" title="Permalink to this headline">¶</a></h4>
-<p>You need to download Python for MacOS from the official Website
+<p>You need to download Python for OS X from the official Website
 <a class="reference external" href="https://www.python.org/ftp/python/3.5.1/python-3.5.1-macosx10.6.pkg">python-3.5.1-macosx10.6.pkg</a></p>
 <p>After that double-click to open it and than double-click
 <code class="docutils literal"><span class="pre">python-3.5.1-macosx10.6.pkg</span></code> to run the installer.</p>
@@ -233,8 +232,8 @@ Python 3.5.1
 </div>
 </div>
 </div>
-<div class="section" id="linux">
-<span id="install-linux"></span><h3>Linux<a class="headerlink" href="#linux" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="gnu-linux">
+<span id="install-linux"></span><h3>GNU/Linux<a class="headerlink" href="#gnu-linux" title="Permalink to this headline">¶</a></h3>
 <p>It&#8217;s very likely that you already have Python installed out of the box.
 To check if you have installed and see which version of Python you have,
 open a console and type the following command:</p>
@@ -243,33 +242,38 @@ open a console and type the following command:</p>
 </div>
 <p>You must see something like this <code class="docutils literal"><span class="pre">Python</span> <span class="pre">3.5.1</span></code>.</p>
 <p>You do not need to install or configure anything else to use Python.</p>
+</div>
+</div>
 <div class="section" id="setuptools-pip">
-<span id="install-pip"></span><h4>Setuptools &amp; Pip<a class="headerlink" href="#setuptools-pip" title="Permalink to this headline">¶</a></h4>
+<span id="install-pip"></span><h2>Setuptools &amp; Pip<a class="headerlink" href="#setuptools-pip" title="Permalink to this headline">¶</a></h2>
 <p>You can download, install and uninstall any compliant Python software product
 with a single command.
 It also enables you to add this network installation capability to your own
 Python software with very little work.</p>
 <p>Python 2.7.9 and later (on the python2 series), and Python 3.4 and later
-include <em>pip</em> by default. To see if <em>pip</em> is installed, open a console and run:</p>
+include <strong>pip</strong> by default. To see if <strong>pip</strong> is installed, open a console and run:</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span>$ which pip
 </pre></div>
 </div>
-<p>To install <em>pip</em>, follow the official pip
+<p>To install <strong>pip</strong>, follow the official pip
 <a class="reference external" href="https://pip.pypa.io/en/latest/installing/">installation guide</a>.</p>
 <p>This will automatically install the latest version of setuptools.</p>
 </div>
-</div>
-</div>
-<div class="section" id="flask">
-<span id="install-virtualenv"></span><h2>Flask<a class="headerlink" href="#flask" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="virtualenv">
+<span id="install-virtualenv"></span><h2>Virtualenv<a class="headerlink" href="#virtualenv" title="Permalink to this headline">¶</a></h2>
 <p><strong>Virtualenv</strong> is probably what you want to use during development.</p>
-<p>Most Linux distributions provide a package for virtualenv. For example,
+<p>Most GNU/Linux distributions provide a package for virtualenv. For example,
 Ubuntu users can install it with this command:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>$ sudo pip install virtualenv
+</pre></div>
+</div>
+<p>Or using Ubuntu (Debian) package manager
+(not recommended, usually out of date):</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span>$ sudo apt-get install python-virtualenv
 </pre></div>
 </div>
-<p>If you are using Mac OS, then you can install virtualenv using easy_install:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span>$ sudo easy_install virtualenv
+<p>If you are using OS X, then you can install virtualenv using pip:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>$ pip install virtualenv
 </pre></div>
 </div>
 <p>If you are using Microsoft Windows or any operating system that does not
@@ -279,16 +283,16 @@ complicated install procedure.</p>
 own environment.</p>
 <p>Usually in such cases, I create the <code class="docutils literal"><span class="pre">project</span> <span class="pre">folder</span></code>, and in it - a  <code class="docutils literal"><span class="pre">venv</span></code>
 folder within:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span>$ mkdir myproject
+<div class="highlight-python"><div class="highlight"><pre><span></span>$ mkdir todoapp
 
-$ cd myproject
+$ cd todoapp
 
 $ virtualenv venv
 New python executable in venv/bin/python
 Installing distribute............done.
 </pre></div>
 </div>
-<p>You have to activate the corresponding environment. On MacOS and Linux, do
+<p>You have to activate the corresponding environment. On OS X and GNU/Linux, do
 the following:</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span>$ source venv/bin/activate
 </pre></div>
@@ -298,6 +302,9 @@ the following:</p>
 </pre></div>
 </div>
 <p>Either way, you should now be using your virtualenv.</p>
+</div>
+<div class="section" id="flask">
+<h2>Flask<a class="headerlink" href="#flask" title="Permalink to this headline">¶</a></h2>
 <p>Now you can just enter the following command to get Flask activated in your
 virtualenv:</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span>$ pip install Flask
@@ -326,7 +333,8 @@ file system browser, multiple panes, find and replace.</p>
 </div>
 <div class="section" id="sublime-text-3">
 <h3>Sublime Text 3<a class="headerlink" href="#sublime-text-3" title="Permalink to this headline">¶</a></h3>
-<p><strong>Sublime Text</strong> is a cross-platform code editor for Mac, Windows, and Linux.</p>
+<p><strong>Sublime Text</strong> is a cross-platform code editor for OS X, Windows, and
+GNU/Linux.</p>
 <p>It comes with all the features you would expect from a powerful code editor and
 then some more.</p>
 <p>It looks beautiful and you can tweak the appearance to make it more comfortable
@@ -354,7 +362,7 @@ in Python.</p>
 <p>You might be wondering why we are installing this special code editor software,
 rather than using something like Word or Notepad.</p>
 <p>The first is that code needs to be plain text, and the problem with programs like
-Word and Textedit is that they don&#8217;t actually produce plain text, they produce
+Word and Text edit is that they don&#8217;t actually produce plain text, they produce
 rich text (with fonts and formatting), using custom formats like RTF (Rich Text Format).</p>
 <p>The second reason is that code editors are specialised for editing code, so they
 can provide helpful features like highlighting code with colour according to its

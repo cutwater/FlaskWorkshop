@@ -1,3 +1,5 @@
+.. _page-installation:
+
 ============
 Installation
 ============
@@ -49,8 +51,8 @@ conflicts.
 
 .. _install-macos:
 
-MacOS
------
+OS X
+----
 
 Homebrew (preferred)
 ^^^^^^^^^^^^^^^^^^^^
@@ -71,7 +73,7 @@ This will take a minute or more.
 Package
 ^^^^^^^
 
-You need to download Python for MacOS from the official Website
+You need to download Python for OS X from the official Website
 `python-3.5.1-macosx10.6.pkg <https://www.python.org/ftp/python/3.5.1/python-3.5.1-macosx10.6.pkg>`_
 
 After that double-click to open it and than double-click
@@ -89,8 +91,8 @@ You must see something like this::
 
 .. _install-linux:
 
-Linux
------
+GNU/Linux
+---------
 
 It's very likely that you already have Python installed out of the box.
 To check if you have installed and see which version of Python you have,
@@ -105,7 +107,7 @@ You do not need to install or configure anything else to use Python.
 .. _install-pip:
 
 Setuptools & Pip
-^^^^^^^^^^^^^^^^
+================
 
 You can download, install and uninstall any compliant Python software product
 with a single command.
@@ -113,31 +115,35 @@ It also enables you to add this network installation capability to your own
 Python software with very little work.
 
 Python 2.7.9 and later (on the python2 series), and Python 3.4 and later
-include *pip* by default. To see if *pip* is installed, open a console and run::
+include **pip** by default. To see if **pip** is installed, open a console and run::
 
     $ which pip
 
-To install *pip*, follow the official pip
+To install **pip**, follow the official pip
 `installation guide <https://pip.pypa.io/en/latest/installing/>`_.
 
 This will automatically install the latest version of setuptools.
 
 .. _install-virtualenv:
 
-Flask
-=====
-
+Virtualenv
+==========
 
 **Virtualenv** is probably what you want to use during development.
 
-Most Linux distributions provide a package for virtualenv. For example,
+Most GNU/Linux distributions provide a package for virtualenv. For example,
 Ubuntu users can install it with this command::
+
+    $ sudo pip install virtualenv
+
+Or using Ubuntu (Debian) package manager
+(not recommended, usually out of date)::
 
     $ sudo apt-get install python-virtualenv
 
-If you are using Mac OS, then you can install virtualenv using easy_install::
+If you are using OS X, then you can install virtualenv using pip::
 
-    $ sudo easy_install virtualenv
+    $ pip install virtualenv
 
 If you are using Microsoft Windows or any operating system that does not
 provide an official virtualenv package, then you have a slightly more
@@ -149,15 +155,15 @@ own environment.
 Usually in such cases, I create the ``project folder``, and in it - a  ``venv``
 folder within::
 
-    $ mkdir myproject
+    $ mkdir todoapp
 
-    $ cd myproject
+    $ cd todoapp
 
     $ virtualenv venv
     New python executable in venv/bin/python
     Installing distribute............done.
 
-You have to activate the corresponding environment. On MacOS and Linux, do
+You have to activate the corresponding environment. On OS X and GNU/Linux, do
 the following::
 
     $ source venv/bin/activate
@@ -167,6 +173,9 @@ If you are a Windows user, the following command is for you::
     $ venv\scripts\activate
 
 Either way, you should now be using your virtualenv.
+
+Flask
+=====
 
 Now you can just enter the following command to get Flask activated in your
 virtualenv::
@@ -211,7 +220,8 @@ You may download from the official web-site `Atom <https://atom.io/>`_
 Sublime Text 3
 --------------
 
-**Sublime Text** is a cross-platform code editor for Mac, Windows, and Linux.
+**Sublime Text** is a cross-platform code editor for OS X, Windows, and
+GNU/Linux.
 
 It comes with all the features you would expect from a powerful code editor and
 then some more.
@@ -253,7 +263,7 @@ You might be wondering why we are installing this special code editor software,
 rather than using something like Word or Notepad.
 
 The first is that code needs to be plain text, and the problem with programs like
-Word and Textedit is that they don't actually produce plain text, they produce 
+Word and Text edit is that they don't actually produce plain text, they produce
 rich text (with fonts and formatting), using custom formats like RTF (Rich Text Format).
 
 The second reason is that code editors are specialised for editing code, so they

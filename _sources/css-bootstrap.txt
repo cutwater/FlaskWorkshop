@@ -72,9 +72,6 @@ code editor.
 We won't be going too deep into customizing and learning about CSS here.
 It's pretty easy and you can learn it on your own after this workshop.
 
-.. todo:: There is a recommendation for a free course to learn more at
-    the end of this page.
-
 But let's do at least a little. Maybe we could change the color of our header?
 To understand colors, computers use special codes.
 These codes start with # followed by 6 letters (A-F) and numbers (0-9).
