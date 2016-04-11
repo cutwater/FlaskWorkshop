@@ -22,14 +22,14 @@ Simple network
 
 When two computers need to communicate, you have to link them,
 either physically (usually with an Ethernet cable) or wirelessly
-(for example with WiFi or Bluetooth systems).
+(for example with Wi-Fi or Bluetooth systems).
 All modern computers can sustain any of those connections.
 
 .. todo:: Insert picture
 
 Such a network is not limited to two computers. You can connect as many
 computers as you wish. But it gets complicated quickly. If you're trying
-to connect, say, ten computers, you need 45 cables, with nine plugs per
+to connect, for example, ten computers, you need 45 cables, with nine plugs per
 computer!
 
 .. todo:: Insert picture
@@ -67,8 +67,8 @@ A simplified diagram of how they interact might look like this:
   (for example, your computer connected to your Wi-Fi, or your phone
   connected to your mobile network) and Web-accessing software available
   on those devices (usually a web browser like Firefox or Chrome).
-* Servers are computers that store webpages, sites, or apps.
-  When a client device wants to access a webpage, a copy of the webpage
+* Servers are computers that store web-pages, sites, or apps.
+  When a client device wants to access a web-page, a copy of the web-page
   is downloaded from the server onto the client machine to be displayed
   in the user's web browser.
 
@@ -132,7 +132,7 @@ This is called an IP address, and it represents a unique location on the Web.
 However, it's not very easy to remember, is it?
 That's why Domain Name Servers were invented.
 These are special servers that match up a web address you type into y
-our browser (like ``google.com``) to the website's real (IP) address.
+our browser (like ``google.com``) to the web-site's real (IP) address.
 
 Websites can be reached directly via their IP addresses.
 Try going to the Google website by typing ``216.58.214.238``
