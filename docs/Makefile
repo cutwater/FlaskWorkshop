@@ -49,7 +49,8 @@ help:
 
 .PHONY: clean
 clean:
-	rm -rf $(BUILDDIR)/*
+	rm -rf $(BUILDDIR)/doctress
+	rm -rf $(BUILDDIR)/html/*
 
 .PHONY: html
 html:

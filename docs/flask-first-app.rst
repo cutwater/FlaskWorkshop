@@ -7,9 +7,12 @@ Writing first application
     Based on tutorial `Django Girls <http://tutorial.djangogirls.org/en/>`_
     licensed under `CC-BY-SA 4.0 <http://creativecommons.org/licenses/by-sa/4.0/>`_:
 
-Create directory ``FlaskWorkshop`` and go to this directory.
+If you have already created your project directory during
+the :ref:`page-installation` page, then just go to this directory
+and open it in your favorite text editor.
+Otherwise create a directory ``todoapp`` and open it.
 
-Create a new file ``app.py`` with contents:
+Create a new file ``app.py`` in this directory with contents:
 
 .. code-block:: python
 

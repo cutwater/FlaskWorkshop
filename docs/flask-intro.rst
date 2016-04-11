@@ -55,7 +55,6 @@ boilerplate code for getting a simple app up and running.
 For example, here's a valid ``"hello world"`` web application with Flask:
 
 .. code-block:: python
-   :emphasize-lines: 2,9
 
    from flask import Flask
    app = Flask(__name__)

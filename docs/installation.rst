@@ -1,3 +1,5 @@
+.. _page-installation:
+
 ============
 Installation
 ============
@@ -105,7 +107,7 @@ You do not need to install or configure anything else to use Python.
 .. _install-pip:
 
 Setuptools & Pip
-^^^^^^^^^^^^^^^^
+================
 
 You can download, install and uninstall any compliant Python software product
 with a single command.
@@ -113,31 +115,35 @@ It also enables you to add this network installation capability to your own
 Python software with very little work.
 
 Python 2.7.9 and later (on the python2 series), and Python 3.4 and later
-include *pip* by default. To see if *pip* is installed, open a console and run::
+include **pip** by default. To see if **pip** is installed, open a console and run::
 
     $ which pip
 
-To install *pip*, follow the official pip
+To install **pip**, follow the official pip
 `installation guide <https://pip.pypa.io/en/latest/installing/>`_.
 
 This will automatically install the latest version of setuptools.
 
 .. _install-virtualenv:
 
-Flask
-=====
-
+Virtualenv
+==========
 
 **Virtualenv** is probably what you want to use during development.
 
 Most GNU/Linux distributions provide a package for virtualenv. For example,
 Ubuntu users can install it with this command::
 
+    $ sudo pip install virtualenv
+
+Or using Ubuntu (Debian) package manager
+(not recommended, usually out of date)::
+
     $ sudo apt-get install python-virtualenv
 
-If you are using OS X, then you can install virtualenv using easy_install::
+If you are using OS X, then you can install virtualenv using pip::
 
-    $ sudo easy_install virtualenv
+    $ pip install virtualenv
 
 If you are using Microsoft Windows or any operating system that does not
 provide an official virtualenv package, then you have a slightly more
@@ -149,9 +155,9 @@ own environment.
 Usually in such cases, I create the ``project folder``, and in it - a  ``venv``
 folder within::
 
-    $ mkdir myproject
+    $ mkdir todoapp
 
-    $ cd myproject
+    $ cd todoapp
 
     $ virtualenv venv
     New python executable in venv/bin/python
@@ -167,6 +173,9 @@ If you are a Windows user, the following command is for you::
     $ venv\scripts\activate
 
 Either way, you should now be using your virtualenv.
+
+Flask
+=====
 
 Now you can just enter the following command to get Flask activated in your
 virtualenv::
