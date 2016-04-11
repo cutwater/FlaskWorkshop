@@ -21,6 +21,6 @@ When you finish this tutorial, you will have a simple and working "TODO" web
 application. You will learn how to make it available in the Internet, so will be
 able to share your work with your friends and family.
 
-.. todo:: ADD Screenshort
-
+.. image:: image/screenshot/flask-css-complete-1.png
+   :width: 640px
 

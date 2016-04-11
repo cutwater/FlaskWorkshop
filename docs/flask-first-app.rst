@@ -70,13 +70,3 @@ at the source code line by line and check how it works.
    that registers function ``index`` as a request handler. So from now Flask
    will know, that for all requests to ``/`` path it should call function
    ``index``.
-
-.. todo:: Describe the following log:
-
-.. image:: image/screenshot/google-favicon.png
-
-::
-
-    * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
-    127.0.0.1 - - [29/Mar/2016 14:46:53] "GET / HTTP/1.1" 200 -
-    127.0.0.1 - - [29/Mar/2016 14:46:54] "GET /favicon.ico HTTP/1.1" 404 -

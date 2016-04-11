@@ -17,28 +17,6 @@ but the way it works hasn't changed that much: Internet is a way to connect
 computers all together and ensure that, whatever happens, they find a way
 to stay connected.
 
-Simple network
-==============
-
-When two computers need to communicate, you have to link them,
-either physically (usually with an Ethernet cable) or wirelessly
-(for example with Wi-Fi or Bluetooth systems).
-All modern computers can sustain any of those connections.
-
-.. todo:: Insert picture
-
-Such a network is not limited to two computers. You can connect as many
-computers as you wish. But it gets complicated quickly. If you're trying
-to connect, for example, ten computers, you need 45 cables, with nine plugs per
-computer!
-
-.. todo:: Insert picture
-
-Network of networks
-===================
-
-.. todo:: TBD
-
 Finding computers
 =================
 
@@ -61,7 +39,7 @@ Clients and servers
 Computers connected to the Web are called clients and servers.
 A simplified diagram of how they interact might look like this:
 
-.. todo:: Insert picture
+.. image:: image/client-server.png
 
 * Clients are the typical Web user's Internet-connected devices
   (for example, your computer connected to your Wi-Fi, or your phone
