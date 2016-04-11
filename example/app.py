@@ -1,3 +1,5 @@
+import os
+
 from wtforms import Form, BooleanField, TextAreaField
 from wtforms import validators
 
@@ -6,8 +8,9 @@ from flask import render_template
 from flask import request, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
 
-app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///todo.db'
+application = app = Flask(__name__)
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get(
+    'DATABASE_URL', 'sqlite:///todo.db')
 db = SQLAlchemy(app)
 
 

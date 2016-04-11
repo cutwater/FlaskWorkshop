@@ -100,6 +100,10 @@ to your ``index.html``.
 Organizing templates
 ====================
 
+.. note::
+    Based on `The Django Book <http://www.djangobook.com/en/2.0/index.html>`_
+    licensed under `
+
 You may noticed that we’ve just duplicated a lot of HTML.
 
 Our template examples so far have been tiny HTML snippets,
