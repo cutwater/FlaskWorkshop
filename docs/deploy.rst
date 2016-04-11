@@ -2,7 +2,6 @@
 Deploy
 ======
 
-
 In this tutorial we are going to deploy a Flask application to Heroku.
 Here's what we're going to need for this tutorial:
 
@@ -13,6 +12,13 @@ Here's what we're going to need for this tutorial:
   installation instructions.
 * Virtualenv installed locally. Accomplish this by running ``pip install virtualenv``
 
+
+Why is deployment necessary?
+----------------------------
+
+Your web application must live somewhere other than your own desktop or laptop.
+A production environment is the version of your current application and its
+associated data.
 
 Set up
 ------
