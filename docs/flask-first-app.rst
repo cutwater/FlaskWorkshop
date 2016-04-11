@@ -9,7 +9,7 @@ Writing first application
 
 Create directory ``FlaskWorkshop`` and go to this directory.
 
-Crete a new file ``app.py`` with contents:
+Create a new file ``app.py`` with contents:
 
 .. code-block:: python
 
