@@ -89,13 +89,33 @@ Now just add:
 
 to your ``index.html``.
 
-.. todo:: Describe the magic.
-
 
 Organizing templates
 ====================
 
-Create a new template file ``layout.html``
+You may noticed that we’ve just duplicated a lot of HTML.
+
+Our template examples so far have been tiny HTML snippets,
+but in the real world, you’ll be using Flask’s template system
+to create entire HTML pages. This leads to a common Web development problem:
+across a Web site, how does one reduce the duplication and redundancy
+of common page areas, such as sitewide navigation?
+
+Imagine if we had a more typical site, including a navigation bar,
+a few style sheets, perhaps some JavaScript – we’d end up putting all
+sorts of redundant HTML into each template.
+
+In essence, template inheritance lets you build a base "skeleton" template
+that contains all the common parts of your site and defines "blocks"
+that child templates can override.
+
+Flask’s template inheritance system solves these problems.
+
+The first step is to define a base template – a skeleton of your page that
+child templates will later fill in. Here’s a base template for our
+ongoing example:
+
+Create a new template file and call it ``layout.html``.
 
 .. code-block:: html+jinja
 
@@ -110,6 +130,13 @@ Create a new template file ``layout.html``
         {% endblock %}
     </body>
     </html>
+
+This template defines a simple HTML skeleton document that we’ll use for
+all the pages on the site. It’s the job of child templates to override,
+or add to, or leave alone the contents of the blocks.
+
+Now that we have this base template, we can modify our existing
+``index.html`` template to use it:
 
 .. code-block:: html+jinja
 
@@ -127,6 +154,8 @@ Create a new template file ``layout.html``
         </div>
         <a href="{{ url_for('create_task') }}">New task</a>
     {% endblock %}
+
+And now let's do the same for our ``task_edit.html`` template:
 
 .. code-block:: html+jinja
 
@@ -150,6 +179,11 @@ Create a new template file ``layout.html``
         </form>
     {% endblock %}
 
+Isn’t this beautiful? Each template contains only the code that’s unique
+to that template. No redundancy needed.
+If you need to make a site-wide design change, just make the change
+to ``layout.html``, and all of the other templates will immediately
+reflect the change.
 
 .. _WTForms: http://wtforms.readthedocs.org/en/latest/
 .. _Flask-WTF: https://flask-wtf.readthedocs.org/en/latest/
