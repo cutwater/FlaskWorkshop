@@ -122,6 +122,7 @@ To install *pip*, follow the official pip
 
 This will automatically install the latest version of setuptools.
 
+.. _install-virtualenv:
 
 Flask
 =====
@@ -247,7 +248,7 @@ Git
 ====
 
 **Git** is a widely used `source code management system <https://en.wikipedia.org/wiki/Version_control_system>`_
-for `software development<https://en.wikipedia.org/wiki/Software_development>`_.
+for `software development <https://en.wikipedia.org/wiki/Software_development>`_.
 
 **Git** was initially designed and developed in 2005 by Linux kernel developers
 (including Linus Torvalds) for Linux kernel development.
