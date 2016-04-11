@@ -119,6 +119,30 @@ A complete example looks like:
 
     # ...
 
+Now you can update template to generate items dynamically:
+
+.. code-block:: html+jinja
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>TODO App</title>
+    </head>
+    <body>
+        <h1><a href="">TODO App</a></h1>
+        <div class="task-list">
+            {% for task in tasks %}
+            <div class="task">
+                <input type="checkbox" {% if task.is_done %}checked{% endif %}>
+                {{ task.content }}
+            </div>
+            {% endfor %}
+        </div>
+    </body>
+    </html>
+
+
 Congratulations! Now you have an application that stores data in the database.
 Easy, isn't it? But wait, we can display the data, but cannot edit it.
 And doing it manually as we did using Python's interactive is the best way

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TODO App</title>
+</head>
+<body>
+    <h1>New task</h1>
+    <form method="POST" action="">
+        <ul>
+        {% for field, errors in form.errors.items() %}
+            {% for error in errors %}
+            <li>{{ form[field].label.text }}: {{ error }}</li>
+            {% endfor %}
+        {% endfor %}
+        </ul>
+        <div>{{ form.content.label }} {{ form.content }}</div>
+        <div>{{ form.is_done.label }} {{ form.is_done }}</div>
+        <input type="submit" value="Create" />
+    </form>
+</body>
+</html>

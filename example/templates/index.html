@@ -9,7 +9,7 @@
     <div class="task-list">
         {% for task in tasks %}
         <div class="task">
-            <input type="checkbox">
+            <input type="checkbox" {% if task.is_done %}checked{% endif %}>
             {{ task.content }}
         </div>
         {% endfor %}
