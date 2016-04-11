@@ -2,6 +2,11 @@
 Make app look fancy
 ===================
 
+.. note::
+
+    Based on tutorial `Django Girls <http://tutorial.djangogirls.org/en/>`_
+    licensed under `CC-BY-SA 4.0 <http://creativecommons.org/licenses/by-sa/4.0/>`_:
+
 Our application still looks pretty ugly, right?
 Time to make it nice! We will use CSS for that.
 

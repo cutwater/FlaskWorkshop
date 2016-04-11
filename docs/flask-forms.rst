@@ -2,6 +2,11 @@
 Flask forms
 ===========
 
+.. note::
+
+    Based on tutorial `Django Girls <http://tutorial.djangogirls.org/en/>`_
+    licensed under `CC-BY-SA 4.0 <http://creativecommons.org/licenses/by-sa/4.0/>`_:
+
 The next thing we want to do on our website is create a nice way to
 add and edit tasks. With forms we will have absolute power over our
 interface - we can do almost anything we can imagine!

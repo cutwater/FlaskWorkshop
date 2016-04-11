@@ -2,6 +2,11 @@
 Introduction to Flask
 =====================
 
+.. note::
+
+    Based on tutorial `Django Girls <http://tutorial.djangogirls.org/en/>`_
+    licensed under `CC-BY-SA 4.0 <http://creativecommons.org/licenses/by-sa/4.0/>`_:
+
 `Flask`_ is a microframework for building web applications using Python
 programming language written by Armin Ronacher. For Flask microframework
 means that it aims to keep the core simple but extensible.

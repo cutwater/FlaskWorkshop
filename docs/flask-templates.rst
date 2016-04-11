@@ -2,6 +2,11 @@
 Flask templates
 ===============
 
+.. note::
+
+    Based on tutorial `Django Girls <http://tutorial.djangogirls.org/en/>`_
+    licensed under `CC-BY-SA 4.0 <http://creativecommons.org/licenses/by-sa/4.0/>`_:
+
 A template is a file that we can re-use to present different information
 in a consistent format - for example, you could use a template to help
 you write a letter, because although each letter might contain a different

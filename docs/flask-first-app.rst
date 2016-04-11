@@ -2,6 +2,11 @@
 Writing first application
 =========================
 
+.. note::
+
+    Based on tutorial `Django Girls <http://tutorial.djangogirls.org/en/>`_
+    licensed under `CC-BY-SA 4.0 <http://creativecommons.org/licenses/by-sa/4.0/>`_:
+
 Create directory ``FlaskWorkshop`` and go to this directory.
 
 Crete a new file ``app.py`` with contents:

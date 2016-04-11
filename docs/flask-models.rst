@@ -2,6 +2,12 @@
 Flask models
 ============
 
+.. note::
+
+    Based on tutorial `Django Girls <http://tutorial.djangogirls.org/en/>`_
+    licensed under `CC-BY-SA 4.0 <http://creativecommons.org/licenses/by-sa/4.0/>`_:
+
+
 What we want to create now is something that will store all the
 tasks in our application. But to be able to do that we need to talk a
 little bit about things called objects.
