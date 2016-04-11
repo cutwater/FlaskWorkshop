@@ -91,5 +91,65 @@ to your ``index.html``.
 
 .. todo:: Describe the magic.
 
+
+Organizing templates
+====================
+
+Create a new template file ``layout.html``
+
+.. code-block:: html+jinja
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>TODO App{% block title %}{% endblock %}</title>
+    </head>
+    <body>
+        {% block body %}
+        {% endblock %}
+    </body>
+    </html>
+
+.. code-block:: html+jinja
+
+    {% extends 'layout.html' %}
+
+    {% block body %}
+        <div class="task-list">
+            <h1><a href="">TODO App</a></h1>
+            {% for task in tasks %}
+            <div class="task">
+                <input type="checkbox" {% if task.is_done %}checked{% endif %}>
+                {{ task.content }}
+            </div>
+            {% endfor %}
+        </div>
+        <a href="{{ url_for('create_task') }}">New task</a>
+    {% endblock %}
+
+.. code-block:: html+jinja
+
+    {% extends 'layout.html' %}
+
+    {% block title %} : New task {% endblock %}
+
+    {% block body %}
+        <h1>New task</h1>
+        <form method="POST" action="">
+            <ul>
+            {% for field, errors in form.errors.items() %}
+                {% for error in errors %}
+                <li>{{ form[field].label.text }}: {{ error }}</li>
+                {% endfor %}
+            {% endfor %}
+            </ul>
+            <div>{{ form.content.label }} {{ form.content }}</div>
+            <div>{{ form.is_done.label }} {{ form.is_done }}</div>
+            <input type="submit" value="Create" />
+        </form>
+    {% endblock %}
+
+
 .. _WTForms: http://wtforms.readthedocs.org/en/latest/
 .. _Flask-WTF: https://flask-wtf.readthedocs.org/en/latest/

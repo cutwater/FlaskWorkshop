@@ -14,4 +14,5 @@ Flask Workshop
    flask-templates
    flask-models
    flask-forms
+   css-bootstrap
    deploy
