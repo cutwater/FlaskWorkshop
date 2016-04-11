@@ -1,10 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>My First Template</title>
-</head>
-<body>
+{% extends 'layout.html' %}
+
+{% block body %}
     <h1><a href="">TODO App</a></h1>
     <div class="task-list">
         {% for task in tasks %}
@@ -15,5 +11,4 @@
         {% endfor %}
     </div>
     <a href="{{ url_for('create_task') }}">New task</a>
-</body>
-</html>
+{% endblock %}

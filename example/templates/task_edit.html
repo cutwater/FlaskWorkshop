@@ -1,10 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>TODO App</title>
-</head>
-<body>
+{% extends 'layout.html' %}
+
+{% block title %} : New task{% endblock %}
+
+{% block body %}
     <h1>New task</h1>
     <form method="POST" action="">
         <ul>
@@ -18,5 +16,4 @@
         <div>{{ form.is_done.label }} {{ form.is_done }}</div>
         <input type="submit" value="Create" />
     </form>
-</body>
-</html>
+{% endblock %}
