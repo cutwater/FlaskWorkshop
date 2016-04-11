@@ -8,6 +8,7 @@ Flask Workshop
    introduction
    how-web-works
    installation
+   git-intro
    python-intro
    flask-intro
    flask-first-app
