@@ -5,6 +5,7 @@
 {% block body %}
     <h2>New task</h2>
     <form method="POST" action="">
+        {% if form.errors %}
         <div class="alert alert-danger">
         {% for field, errors in form.errors.items() %}
             {% for error in errors %}
@@ -12,6 +13,7 @@
             {% endfor %}
         {% endfor %}
         </div>
+        {% endif %}
         <div class="form-group {% if form.content.errors %}has-error{% endif %}">
             {{ form.content.label(class_='control-label') }}
             {{ form.content(class_='form-control') }}

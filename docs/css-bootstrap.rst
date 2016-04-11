@@ -187,7 +187,7 @@ For now, just copy and paste it into your ``static/style.css`` file:
 You also need to add classes to your ``task_edit.html`` template:
 
 .. code-block:: html
-
+    
     {% extends 'layout.html' %}
 
     {% block title %} : New task{% endblock %}
@@ -195,6 +195,7 @@ You also need to add classes to your ``task_edit.html`` template:
     {% block body %}
         <h2>New task</h2>
         <form method="POST" action="">
+            {% if form.errors %}
             <div class="alert alert-danger">
             {% for field, errors in form.errors.items() %}
                 {% for error in errors %}
@@ -202,6 +203,7 @@ You also need to add classes to your ``task_edit.html`` template:
                 {% endfor %}
             {% endfor %}
             </div>
+            {% endif %}
             <div class="form-group {% if form.content.errors %}has-error{% endif %}">
                 {{ form.content.label(class_='control-label') }}
                 {{ form.content(class_='form-control') }}
