@@ -14,9 +14,7 @@ Python prompt
 
 To start playing with Python, we need to open up a **command line** on your
 computer. You should already know how to do that -- you learned it in the
-[Intro to Command Line](../intro_to_command_line/README.md) chapter.
-
-.. todo:: Add a page for command line intro
+:doc:`cli-intro` chapter.
 
 Once you're ready, follow the instructions below.
 
@@ -564,9 +562,7 @@ To exit from the Python interpreter that we've been using, simply type the
 
 This will put you back into the command prompt.
 
-.. todo:: Fix the link
-
-Earlier, we picked out a code editor from the [code editor](../code_editor/README.md)
+Earlier, we picked out a code editor from the :ref:`code-editors-section`
 section. We'll need to open the editor now and write some code into a new
 file::
 

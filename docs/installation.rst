@@ -176,6 +176,8 @@ virtualenv::
 A few seconds later and you are good to go.
 
 
+.. _code-editors-section:
+
 Code editors
 ============
 
