@@ -21,7 +21,7 @@ Crete a new file ``app.py`` with contents:
     if __name__ == '__main__':
         app.run()
 
-It's an example of minimal Flask application. Simple isnt't it?
+It's an example of minimal Flask application. Simple, isn't it?
 
 Now you can run it and check how it works::
 
@@ -32,7 +32,7 @@ You should see the following message in the console::
     * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
 
 It means that your application is available by URL ``http://127.0.0.1:5000``.
-So simply copy this URL to your brouwser and you will see the page:
+So simply copy this URL to your browser and you will see the page:
 
 .. image:: image/screenshot/flask-hello-world.png
 
