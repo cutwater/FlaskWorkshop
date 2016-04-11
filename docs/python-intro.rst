@@ -34,7 +34,7 @@ means that for now we may only use commands in the Python language. You don't
 have to type in ``>>>`` - Python will do that for you.
 
 If you want to exit the Python console at any point, just type ``exit()`` or
-use the shortcut ``Ctrl + Z`` for Windows and ``Ctrl + D`` for Mac/Linux.
+use the shortcut ``Ctrl + Z`` for Windows and ``Ctrl + D`` for OS X or Linux.
 Then you won't see ``>>>`` any longer.
 
 For now, we don't want to exit the Python console. We want to learn more about
@@ -596,7 +596,7 @@ the command line section, use the terminal to **change directories** to the
 desktop. (**Note**:  Replace ``<your_name>`` including the ``<`` and ``>`` with
 your user name)
 
-On a **Mac**, the command will look something like this::
+On a **OS X**, the command will look something like this::
 
     $ cd /Users/<your_name>/Desktop
 

@@ -25,7 +25,7 @@ What is the command line?
 The window, which is usually called the **command line** or
 **command-line interface**, is a text-based application for viewing,
 handling, and manipulating files on your computer. Much like Windows
-Explorer or Finder on Mac, but without the graphical interface. Other
+Explorer or Finder on OS X, but without the graphical interface. Other
 names for the command line are: *cmd*, *CLI*, *prompt*, *console* or
 *terminal*.
 
@@ -57,7 +57,7 @@ Prompt
 You now should see a white or black window that is waiting for your
 commands.
 
-If you're on Mac or Linux, you probably see ``$``, just like this::
+If you're on OS X or Linux, you probably see ``$``, just like this::
 
     $
 
