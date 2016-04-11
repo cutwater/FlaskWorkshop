@@ -50,7 +50,7 @@ conflicts.
 .. _install-macos:
 
 OS X
------
+----
 
 Homebrew (preferred)
 ^^^^^^^^^^^^^^^^^^^^

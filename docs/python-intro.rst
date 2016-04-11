@@ -492,7 +492,7 @@ you an answer! Pretty smart, right?
 Have you heard of the expression "comparing apples to oranges"? Let's try the
 Python equivalent::
 
-    >>> 1 > 'django'
+    >>> 1 > 'string'
     Traceback (most recent call last):
       File "<stdin>", line 1, in <module>
     TypeError: unorderable types: int() > str()
@@ -569,7 +569,7 @@ section. We'll need to open the editor now and write some code into a new
 file::
 
     $ python
-    print('Hello, Django girls!')
+    print('Hello, World!')
 
 
 Obviously, you're a pretty seasoned Python developer now, so feel free to
@@ -614,7 +614,7 @@ If you get stuck, just ask for help.
 Now use Python to execute the code in the file like this::
 
     $ python3 python_intro.py
-    Hello, Django girls!
+    Hello, World!
 
 Alright! You just ran your first Python program that was saved to a file.
 Feel awesome?
