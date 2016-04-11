@@ -1,0 +1,11 @@
+header{
+    background-color: #3399ff;
+}
+
+header a {
+    color: #ffffff;
+}
+
+header, section#body {
+    padding-left: 15px;
+}

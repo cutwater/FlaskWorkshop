@@ -126,6 +126,12 @@ Create a new template file and call it ``layout.html``.
         <title>TODO App{% block title %}{% endblock %}</title>
     </head>
     <body>
+        <header>
+        {% block header %}
+            <h1><a href="">TODO App</a></h1>
+        {% endblock %}
+        </header>
+
         {% block body %}
         {% endblock %}
     </body>
@@ -144,7 +150,6 @@ Now that we have this base template, we can modify our existing
 
     {% block body %}
         <div class="task-list">
-            <h1><a href="">TODO App</a></h1>
             {% for task in tasks %}
             <div class="task">
                 <input type="checkbox" {% if task.is_done %}checked{% endif %}>
