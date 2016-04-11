@@ -2,16 +2,17 @@
 Introduction to Python
 ======================
 
+.. note::
 
-    Part of this chapter is based on tutorials by Geek Girls Carrots
-    (https://github.com/ggcarrots/django-carrots).
+    Content in this chapter was borrowed from the tutorials by Geek Girls
+    Carrots: https://github.com/ggcarrots/django-carrots and Django Girls:
+    http://tutorial.djangogirls.org/en/
 
-Let's write some code!
 
 Python prompt
 =============
 
-To start playing with Python, we need to open up a *command line* on your
+To start playing with Python, we need to open up a **command line** on your
 computer. You should already know how to do that -- you learned it in the
 [Intro to Command Line](../intro_to_command_line/README.md) chapter.
 
@@ -20,9 +21,7 @@ computer. You should already know how to do that -- you learned it in the
 Once you're ready, follow the instructions below.
 
 We want to open up a Python console, so type in ``python`` on Windows or
-``python3`` on Mac OS/Linux and hit ``enter``.
-
-::
+``python3`` on Mac OS/Linux and hit ``enter``::
 
     $ python3
     Python 3.4.3 (...)
@@ -42,7 +41,7 @@ Then you won't see ``>>>`` any longer.
 
 For now, we don't want to exit the Python console. We want to learn more about
 it. Let's start with something really simple. For example, try typing some
-math, like ``2 + 3`` and hit ``enter``.::
+math, like ``2 + 3`` and hit ``enter``::
 
     >>> 2 + 3
     5
@@ -50,9 +49,9 @@ math, like ``2 + 3`` and hit ``enter``.::
 Nice! See how the answer popped out? Python knows math! You could try other
 commands like::
 
-  4 * 5
-  5 - 1
-  40 / 2
+    4 * 5
+    5 - 1
+    40 / 2
 
 Have fun with this for a little while and then get back here :).
 
@@ -100,12 +99,12 @@ Nice, huh? To see your name in uppercase letters, simply type::
     >>> "Ola".upper()
     'OLA'
 
-You just used the ``upper`` __method__ on your string! A method (like
+You just used the ``upper`` **method** on your string! A method (like
 ``upper()``) is a sequence of instructions that Python has to perform on a
 given object (``"Ola"``) once you call it.
 
 If you want to know the number of letters contained in your name, there is a
-__function__ for that too!::
+**function** for that too!::
 
     >>> len("Ola")
     3
@@ -114,7 +113,7 @@ Wonder why sometimes you call functions with a ``.`` at the end of a string
 (like ``"Ola".upper()``) and sometimes you first call a function and place the
 string in parentheses? Well, in some cases, functions belong to objects, like
 ``upper()``, which can only be performed on strings. In this case, we call the
-function a __method__. Other times, functions don't belong to anything specific
+function a **method**. Other times, functions don't belong to anything specific
 and can be used on different types of objects, just like ``len()``. That's why
 we're giving ``"Ola"`` as a parameter to the ``len`` function.
 
@@ -156,8 +155,8 @@ as a string? Strings have a length, right?::
 It worked! We used the ``str`` function inside of the ``len`` function.
 ``str()`` converts everything to strings.
 
-* The ``str`` function converts things into __strings__
-* The ``int`` function converts things into __integers__
+* The ``str`` function converts things into **strings**
+* The ``int`` function converts things into **integers**
 
    Important: we can convert numbers into text, but we can't necessarily
    convert text into numbers - what would `int('hello')` be anyway?
@@ -306,9 +305,9 @@ As you can see, you can access different objects in your list by using the
 list's name and the object's index inside of square brackets.
 
 To delete something from your list you will need to use **indexes** as we
-learnt above and the __del__ statement (del is an abbreviation for delete).
+learnt above and the **del** statement (del is an abbreviation for delete).
 Let's try an example and reinforce what we learnt previously; we will be
-deleting the first number of our list.::
+deleting the first number of our list::
 
     >>> print(lottery)
     [59, 42, 30, 19, 12, 3, 199]
@@ -455,7 +454,7 @@ only numbers, but it can also compare method results. Nice, huh?
 
 Do you wonder why we put two equal signs ``==`` next to each other to compare
 if numbers are equal? We use a single ``=`` for assigning values to variables.
-You always, __always__ need to put two ``==`` if you want to check if things
+You always, **always** need to put two ``==`` if you want to check if things
 are equal to each other. We can also state that things are unequal to each
 other. For that, we use the symbol ``!=``, as shown in the example above.
 
@@ -510,7 +509,9 @@ Incidentally, you just learned about a new type of object in Python. It's
 called a **Boolean** -- and it probably is the easiest type there is.
 
 There are only two Boolean objects:
+
 * True
+
 * False
 
 But for Python to understand this, you need to always write it as 'True' (first
@@ -540,7 +541,8 @@ Practice and have fun with Booleans by trying to run the following commands:
 Congrats! Booleans are one of the coolest features in programming, and you just
 learned how to use them!
 
-**Save it!**
+Save it!
+========
 
 So far we've been writing all our python code in the interpreter, which limits
 us to entering one line of code at a time. Normal programs are saved in files
@@ -688,7 +690,8 @@ and executed::
     $ python3 python_intro.py
     Hey Sonja!
 
-See what happened there? ``elif`` lets you add extra conditions that run if the previous conditions fail. 
+See what happened there? ``elif`` lets you add extra conditions that run if
+the previous conditions fail.
 
 You can add as many ``elif`` statements as you like after your initial ``if``
 statement. For example::
@@ -707,8 +710,9 @@ statement. For example::
     else:
         print("My ears are hurting! :(")
 
-Python runs through each test in sequence and prints::
-     
+Python runs through each test in sequence until one of them  passes and then it
+prints::
+
     $ python3 python_intro.py
     Perfect, I can hear all the details
 
@@ -741,7 +745,7 @@ have some parameters. Let's start with an easy one. Replace the code in
     def hi():
         print('Hi there!')
         print('How are you?')
-    
+
     hi()
 
 Okay, our first function is ready!
@@ -758,7 +762,7 @@ Let's run this now and see what happens::
 
 That was easy! Let's build our first function with parameters. We will use the
 previous example - a function that says 'hi' to the person running it - with a
-name:
+name::
 
     def hi(name):
 
@@ -771,7 +775,7 @@ As you can see, we now gave our function a parameter that we called ``name``::
             print('Hi Sonja!')
         else:
             print('Hi anonymous!')
-    
+
     hi()
 
 Remember: The ``print`` function is indented four spaces within the ``if``
@@ -788,7 +792,7 @@ Oops, an error. Luckily, Python gives us a pretty useful error message.
 It tells us that the function ``hi()`` (the one we defined) has one required
 argument (called ``name``) and that we forgot to pass it when calling the
 function.
-Let's fix it at the bottom of the file:
+Let's fix it at the bottom of the file::
 
     hi("Ola")
 
@@ -797,7 +801,7 @@ And run it again::
     $ python3 python_intro.py
     Hi Ola!
 
-And if we change the name?
+And if we change the name?::
 
     hi("Sonja")
 
@@ -820,7 +824,7 @@ condition for each would be hard, right?::
 
     def hi(name):
         print('Hi ' + name + '!')
-    
+
     hi("Rachel")
 
 Let's call the code now::
@@ -852,7 +856,7 @@ Here is the full code that will be in the file::
 
     def hi(name):
         print('Hi ' + name + '!')
-    
+
     girls = ['Rachel', 'Monica', 'Phoebe', 'Ola', 'You']
     for name in girls:
         hi(name)
