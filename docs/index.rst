@@ -18,3 +18,4 @@ Flask Workshop
    css-bootstrap
    git-intro
    deploy
+   whats-next
