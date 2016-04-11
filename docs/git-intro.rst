@@ -34,7 +34,7 @@ and follow the steps.
 Other than that, the defaults are fine. Checkout Windows-style, commit Unix-style
 line endings is good.
 
-MacOS
+OS X
 -----
 
 You may download from the official web-site `<https://git-scm.com/>`_

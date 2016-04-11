@@ -19,7 +19,7 @@ computer. You should already know how to do that -- you learned it in the
 Once you're ready, follow the instructions below.
 
 We want to open up a Python console, so type in ``python`` on Windows or
-``python3`` on Mac OS/Linux and hit ``enter``::
+``python3`` on OS X/Linux and hit ``enter``::
 
     $ python3
     Python 3.4.3 (...)
@@ -156,7 +156,9 @@ It worked! We used the ``str`` function inside of the ``len`` function.
 * The ``str`` function converts things into **strings**
 * The ``int`` function converts things into **integers**
 
-   Important: we can convert numbers into text, but we can't necessarily
+.. important::
+
+   It is possible to  convert numbers into text, but we can't necessarily
    convert text into numbers - what would `int('hello')` be anyway?
 
 Variables

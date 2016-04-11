@@ -1,5 +1,5 @@
 ==========================================
-Introduction to the command-line interface
+Introduction to the CLI
 ==========================================
 
 .. note::
@@ -40,7 +40,7 @@ Windows
 
 Go to Start menu → All Programs → Accessories → Command Prompt.
 
-Mac OS X
+OS X X
 --------
 
 Applications → Utilities → Terminal.
@@ -102,7 +102,7 @@ And then hit ``enter``. This is our result::
 As you can see, the computer has just printed your username. Neat,
 huh?:)
 
-.. note::
+.. important::
 
     Try to type each command, do not copy-paste. You'll remember more
     this way!
@@ -183,9 +183,9 @@ Windows::
 
 Here it is!
 
-.. note::
+.. tip::
 
-    PRO tip: if you type ``cd D`` and then hit ``tab`` on your keyboard,
+    If you type ``cd D`` and then hit ``tab`` on your keyboard,
     the command line will automatically autofill the rest of the name so
     you can navigate faster. If there is more than one folder starting
     with "D", hit the ``tab`` button twice to get a list of options.
@@ -207,9 +207,9 @@ This little command will create a folder with the name ``practice`` on
 your desktop. You can check if it's there just by looking on your
 Desktop or by running a ``ls`` or ``dir`` command! Try it :)
 
-.. note::
+.. tip::
 
-    **PRO tip:** If you don't want to type the same commands over and over,
+    If you don't want to type the same commands over and over,
     try pressing the ``up arrow`` and ``down arrow`` on your keyboard to
     cycle through recently used commands.
 
@@ -317,7 +317,7 @@ Summary
 Here is a summary of some useful commands:
 
 +---------------------+----------------------------+---------------------------+-----------------------------------------------------------------------------------------------------+
-| Command (Windows)   | Command (Mac OS / Linux)   | Description               | Example                                                                                             |
+| Command (Windows)   | Command (OS X / Linux)     | Description               | Example                                                                                             |
 +=====================+============================+===========================+=====================================================================================================+
 | exit                | exit                       | close the window          | ``exit``                                                                                            |
 +---------------------+----------------------------+---------------------------+-----------------------------------------------------------------------------------------------------+

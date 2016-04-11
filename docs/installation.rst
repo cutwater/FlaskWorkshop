@@ -49,7 +49,7 @@ conflicts.
 
 .. _install-macos:
 
-MacOS
+OS X
 -----
 
 Homebrew (preferred)
@@ -71,7 +71,7 @@ This will take a minute or more.
 Package
 ^^^^^^^
 
-You need to download Python for MacOS from the official Website
+You need to download Python for OS X from the official Website
 `python-3.5.1-macosx10.6.pkg <https://www.python.org/ftp/python/3.5.1/python-3.5.1-macosx10.6.pkg>`_
 
 After that double-click to open it and than double-click
@@ -135,7 +135,7 @@ Ubuntu users can install it with this command::
 
     $ sudo apt-get install python-virtualenv
 
-If you are using Mac OS, then you can install virtualenv using easy_install::
+If you are using OS X, then you can install virtualenv using easy_install::
 
     $ sudo easy_install virtualenv
 
@@ -157,7 +157,7 @@ folder within::
     New python executable in venv/bin/python
     Installing distribute............done.
 
-You have to activate the corresponding environment. On MacOS and Linux, do
+You have to activate the corresponding environment. On OS X and Linux, do
 the following::
 
     $ source venv/bin/activate
@@ -211,7 +211,7 @@ You may download from the official web-site `Atom <https://atom.io/>`_
 Sublime Text 3
 --------------
 
-**Sublime Text** is a cross-platform code editor for Mac, Windows, and Linux.
+**Sublime Text** is a cross-platform code editor for OS X, Windows, and Linux.
 
 It comes with all the features you would expect from a powerful code editor and
 then some more.
