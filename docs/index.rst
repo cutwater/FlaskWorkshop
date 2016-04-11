@@ -8,7 +8,6 @@ Flask Workshop
    introduction
    how-web-works
    installation
-   git-intro
    cli-intro
    python-intro
    flask-intro
@@ -17,4 +16,5 @@ Flask Workshop
    flask-models
    flask-forms
    css-bootstrap
+   git-intro
    deploy
