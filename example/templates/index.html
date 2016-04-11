@@ -7,22 +7,12 @@
 <body>
     <h1><a href="">TODO App</a></h1>
     <div class="task-list">
+        {% for task in tasks %}
         <div class="task">
             <input type="checkbox">
-            Write static template with items.
+            {{ task.content }}
         </div>
-        <div class="task">
-            <input type="checkbox">
-            Display items from the database.
-        </div>
-        <div class="task">
-            <input type="checkbox">
-            Add items using form.
-        </div>
-        <div class="task task-done">
-            <input type="checkbox" checked>
-            Create first Flask application.
-        </div>
+        {% endfor %}
     </div>
 </body>
 </html>

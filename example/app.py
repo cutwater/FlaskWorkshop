@@ -19,7 +19,8 @@ class Task(db.Model):
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    tasks = Task.query.all()
+    return render_template('index.html', tasks=tasks)
 
 
 if __name__ == '__main__':

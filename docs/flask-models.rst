@@ -89,4 +89,40 @@ Accessing the data in database is easy as a pie::
     >>> print(tasks)
     [<Task 1, 'Write static template with items.'>, <Task 2, 'Display items from the database.'>]
 
-.. todo:: Describe how to display items from database in the template.
+So you have already inserted some tasks into your database. If everything went
+fine, you should find file ``todo.db`` in your project directory.
+
+Now let's make our application displaying these records. For this you will
+need to make a query and get all records from the database in your ``index``
+view:
+
+#. You need to make a query to get all records from the database as
+   we did this before::
+
+    tasks = Task.query.all()
+
+#. And pass ``tasks`` list to the template, so template will know about
+   tasks variable and you will be able to use it in your ``index.html``::
+
+    return render_template('index.html', tasks=tasks)
+
+A complete example looks like:
+
+.. code-block:: python
+
+    # ...
+
+    @app.route('/')
+    def index():
+        tasks = Task.query.all()
+        return render_template('index.html', tasks=tasks)
+
+    # ...
+
+Congratulations! Now you have an application that stores data in the database.
+Easy, isn't it? But wait, we can display the data, but cannot edit it.
+And doing it manually as we did using Python's interactive is the best way
+to do it.
+
+So next we will show you how to add new tasks and edit existing tasks
+in your web application using forms.
