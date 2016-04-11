@@ -19,7 +19,7 @@ What's HTML?
 ============
 
 HTML is a simple code that is interpreted by your web browser - such as Chrome,
-Firefox or Safari - to display a webpage for the user.
+Firefox or Safari - to display a web-page for the user.
 
 HTML stands for "HyperText Markup Language". *HyperText* means it's a type of
 text that supports hyperlinks between pages. *Markup* means we have taken a
@@ -34,7 +34,9 @@ Creating a template means creating a template file.
 Everything is a file, right? You have probably noticed this already.
 
 Templates are saved in ``templates`` directory.
+
 So create directory ``templates`` near your ``app.py`` file.
+
 Now create file ``templates/index.html`` and add the following code to your
 template file:
 

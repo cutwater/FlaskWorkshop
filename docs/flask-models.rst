@@ -8,9 +8,9 @@ Flask models
     licensed under `CC-BY-SA 4.0 <http://creativecommons.org/licenses/by-sa/4.0/>`_:
 
 
-What we want to create now is something that will store all the
-tasks in our application. But to be able to do that we need to talk a
-little bit about things called objects.
+What we want to create now is something that will store all the tasks in our
+application. But to be able to do that we need to talk a little bit about things
+called objects.
 
 A model in Flask is a special kind of object - it is saved in the database.
 A database is a collection of data. This is a place in which you will store
@@ -19,8 +19,8 @@ information about users, tasks, your blog posts, etc.
 We will be using a SQLite database to store our data.
 It'll be enough for us right now.
 
-You can think of a model in the database as a spreadsheet
-with columns (fields) and rows (data).
+You can think of a model in the database as a spreadsheet with columns (fields)
+and rows (data).
 
 Installing Flask-SQLAlchemy
 ===========================
@@ -43,7 +43,7 @@ is to create your Flask application, load the configuration of choice
 and then create the SQLAlchemy object by passing it the application.
 
 Once created, that object then contains all the functions and helpers
-from both sqlalchemy and sqlalchemy.orm. Furthermore it provides a class
+from both ``sqlalchemy`` and ``sqlalchemy.orm``. Furthermore it provides a class
 called Model that is a declarative base which can be used to declare models::
 
 
@@ -154,5 +154,5 @@ Easy, isn't it? But wait, we can display the data, but cannot edit it.
 And doing it manually as we did using Python's interactive is the best way
 to do it.
 
-So next we will show you how to add new tasks and edit existing tasks
-in your web application using forms.
+So next we will show you how to add new tasks and edit existing tasks in your
+web application using forms.

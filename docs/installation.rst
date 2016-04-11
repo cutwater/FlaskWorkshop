@@ -253,7 +253,7 @@ You might be wondering why we are installing this special code editor software,
 rather than using something like Word or Notepad.
 
 The first is that code needs to be plain text, and the problem with programs like
-Word and Textedit is that they don't actually produce plain text, they produce 
+Word and Text edit is that they don't actually produce plain text, they produce
 rich text (with fonts and formatting), using custom formats like RTF (Rich Text Format).
 
 The second reason is that code editors are specialised for editing code, so they

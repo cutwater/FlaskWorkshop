@@ -106,7 +106,7 @@ Our template examples so far have been tiny HTML snippets,
 but in the real world, you’ll be using Flask’s template system
 to create entire HTML pages. This leads to a common Web development problem:
 across a Web site, how does one reduce the duplication and redundancy
-of common page areas, such as sitewide navigation?
+of common page areas, such as site-wide navigation?
 
 Imagine if we had a more typical site, including a navigation bar,
 a few style sheets, perhaps some JavaScript – we’d end up putting all
