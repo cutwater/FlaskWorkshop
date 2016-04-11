@@ -54,6 +54,8 @@ Now let's create a new view:
             return redirect(url_for('index'))
         return render_template('task_edit.html', form=form)
 
+.. todo:: Describe function
+
 And template ``task_edit.html``:
 
 .. code-block:: html+jinja
