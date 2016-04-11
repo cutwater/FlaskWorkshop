@@ -6,7 +6,7 @@ body {
 header{
     background-color: #3399ff;
     margin-top: 0;
-    padding: 20px 20px 20px 40px;
+    padding: 20px 40px 20px 40px;
 }
 
 header h1, header h1 a, header h1 a:visited, header h1 a:active {
@@ -16,8 +16,7 @@ header h1, header h1 a, header h1 a:visited, header h1 a:active {
 }
 
 section#body {
-    margin-left: 40px;
-    margin-top: 20px;
+    margin: 20px 40px 20px 40px;
 }
 
 .task {

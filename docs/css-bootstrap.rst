@@ -144,3 +144,79 @@ Add this to your CSS, save the file and see how it works!
 
 .. image:: image/screenshot/flask-bootstrap-3.png
 
+As mentioned above, CSS has a concept of classes.
+These allow you to name a part of the HTML code and apply styles only
+to this part, without affecting other parts. This can be super helpful!
+Maybe you have two divs that are doing something different
+A class can help you make them look different.
+
+We will now add declaration blocks to different selectors.
+Selectors starting with ``.`` relate to classes.
+There are many great tutorials and explanations about CSS on the Web
+to help you understand the following code.
+For now, just copy and paste it into your ``static/style.css`` file:
+
+.. code-block:: css
+
+    body {
+        font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva',
+                     'Verdana', sans-serif;
+    }
+
+    header{
+        background-color: #3399ff;
+        margin-top: 0;
+        padding: 20px 40px 20px 40px;
+    }
+
+    header h1, header h1 a, header h1 a:visited, header h1 a:active {
+        color: #ffffff;
+        font-size: 24pt;
+        text-decoration: none;
+    }
+
+    section#body {
+        margin: 20px 40px 20px 40px;
+    }
+
+    .task {
+        margin: 10px 0 10px 0;
+        font-size: 1.2em;
+    }
+
+You also need to add classes to your ``task_edit.html`` template:
+
+.. code-block:: html
+
+    {% extends 'layout.html' %}
+
+    {% block title %} : New task{% endblock %}
+
+    {% block body %}
+        <h2>New task</h2>
+        <form method="POST" action="">
+            <div class="alert alert-danger">
+            {% for field, errors in form.errors.items() %}
+                {% for error in errors %}
+                <p>{{ form[field].label.text }}: {{ error }}</p>
+                {% endfor %}
+            {% endfor %}
+            </div>
+            <div class="form-group {% if form.content.errors %}has-error{% endif %}">
+                {{ form.content.label(class_='control-label') }}
+                {{ form.content(class_='form-control') }}
+            </div>
+            <div class="form-group">
+                {{ form.is_done }}
+                {{ form.is_done.label(class_='control-label') }}
+            </div>
+            <input class="btn btn-primary" type="submit" value="Create" />
+        </form>
+    {% endblock %}
+
+Now refresh your page ange check the result:
+
+.. image:: image/screenshot/flask-css-complete-1.png
+
+.. image:: image/screenshot/flask-css-complete-2.png
+
