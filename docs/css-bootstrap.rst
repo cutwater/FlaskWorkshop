@@ -1,6 +1,6 @@
-=========
-Add style
-=========
+===================
+Make app look fancy
+===================
 
 Our application still looks pretty ugly, right?
 Time to make it nice! We will use CSS for that.
