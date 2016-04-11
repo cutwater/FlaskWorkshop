@@ -92,7 +92,7 @@ Ignoring Files
 
 Git will track changes to all the files and folders in this directory, but
 there are some files we want it to ignore. We do this by creating a file
-called ``.gitignore`` in the base directory.
+called ``.gitignore`` in the ``FlaskWorkshop`` directory.
 
 Open up your editor and create a new file with the following contents::
 
@@ -102,7 +102,7 @@ Open up your editor and create a new file with the following contents::
     /static
     .DS_Store
 
-And save it as ``.gitignore`` in the ``base directory`` folder.
+And save it as ``.gitignore`` in the ``FlaskWorkshop`` folder.
 
 Checking Status of Your Files
 -----------------------------
