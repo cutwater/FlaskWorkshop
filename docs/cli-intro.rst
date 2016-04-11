@@ -1,6 +1,6 @@
-=======================
-Introduction to the CLI
-=======================
+==========================================
+Introduction to the command-line interface
+==========================================
 
 .. note::
 
@@ -68,7 +68,9 @@ On Windows, it's a ``>`` sign, like this::
 Each command will be prepended by this sign and one space, but you don't
 have to type it. Your computer will do it for you :)
 
-    Just a small note: in your case there may be something like
+.. note::
+
+    In your case there may be something like
     ``C:\Users\ola>`` or ``Olas-MacBook-Air:~ ola$`` before the prompt
     sign and that's 100% correct.
 
@@ -131,7 +133,7 @@ command line you usually start at your user's home directory.
 
 .. note::
 
-    ```pwd`` stands for 'print working directory'.
+    ``pwd`` stands for 'print working directory'.
 
 
 List files and directories
@@ -180,6 +182,8 @@ Windows::
     C:\Users\olasitarska\Desktop
 
 Here it is!
+
+.. note::
 
     PRO tip: if you type ``cd D`` and then hit ``tab`` on your keyboard,
     the command line will automatically autofill the rest of the name so
