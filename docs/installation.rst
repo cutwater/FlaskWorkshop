@@ -89,8 +89,8 @@ You must see something like this::
 
 .. _install-linux:
 
-Linux
------
+GNU/Linux
+---------
 
 It's very likely that you already have Python installed out of the box.
 To check if you have installed and see which version of Python you have,
@@ -130,7 +130,7 @@ Flask
 
 **Virtualenv** is probably what you want to use during development.
 
-Most Linux distributions provide a package for virtualenv. For example,
+Most GNU/Linux distributions provide a package for virtualenv. For example,
 Ubuntu users can install it with this command::
 
     $ sudo apt-get install python-virtualenv
@@ -157,7 +157,7 @@ folder within::
     New python executable in venv/bin/python
     Installing distribute............done.
 
-You have to activate the corresponding environment. On OS X and Linux, do
+You have to activate the corresponding environment. On OS X and GNU/Linux, do
 the following::
 
     $ source venv/bin/activate
@@ -211,7 +211,8 @@ You may download from the official web-site `Atom <https://atom.io/>`_
 Sublime Text 3
 --------------
 
-**Sublime Text** is a cross-platform code editor for OS X, Windows, and Linux.
+**Sublime Text** is a cross-platform code editor for OS X, Windows, and
+GNU/Linux.
 
 It comes with all the features you would expect from a powerful code editor and
 then some more.

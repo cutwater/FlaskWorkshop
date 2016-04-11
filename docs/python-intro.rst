@@ -19,7 +19,7 @@ computer. You should already know how to do that -- you learned it in the
 Once you're ready, follow the instructions below.
 
 We want to open up a Python console, so type in ``python`` on Windows or
-``python3`` on OS X/Linux and hit ``enter``::
+``python3`` on OS X or GNU/Linux and hit ``enter``::
 
     $ python3
     Python 3.4.3 (...)
@@ -34,8 +34,8 @@ means that for now we may only use commands in the Python language. You don't
 have to type in ``>>>`` - Python will do that for you.
 
 If you want to exit the Python console at any point, just type ``exit()`` or
-use the shortcut ``Ctrl + Z`` for Windows and ``Ctrl + D`` for OS X or Linux.
-Then you won't see ``>>>`` any longer.
+use the shortcut ``Ctrl + Z`` for Windows and ``Ctrl + D`` for OS X or
+GNU/Linux. Then you won't see ``>>>`` any longer.
 
 For now, we don't want to exit the Python console. We want to learn more about
 it. Let's start with something really simple. For example, try typing some
@@ -600,7 +600,7 @@ On a **OS X**, the command will look something like this::
 
     $ cd /Users/<your_name>/Desktop
 
-On **Linux**, it will be like this (the word "Desktop" might be translated to your
+On **GNU/Linux**, it will be like this (the word "Desktop" might be translated to your
 language)::
 
     $ cd /home/<your_name>/Desktop

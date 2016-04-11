@@ -39,8 +39,8 @@ OS X
 
 You may download from the official web-site `<https://git-scm.com/>`_
 
-Linux
------
+GNU/Linux
+---------
 
 If it isn't installed already, should be available via your package manager::
 
@@ -52,8 +52,9 @@ Starting Git repository
 Initializing a Repository
 -------------------------
 .. note::
-    Check your current working directory with a *pwd* (OSX/Linux) or *cd* (Windows)
-    command before initializing the repository. You should be in the <your-name-of-project> folder.
+    Check your current working directory with a *pwd* (OSX or GNU/Linux) or
+    *cd* (Windows) command before initializing the repository. You should be in
+    the <your-name-of-project> folder.
 
 If you’re starting an existing project in Git, you need to go to the project’s
 directory and type::
