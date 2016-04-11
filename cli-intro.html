@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Introduction to the command-line interface &mdash; Flask Workshop 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.3.6/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.3.6/css/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="Flask Workshop 0.1 documentation" href="index.html" />
+    <link rel="next" title="Introduction to Python" href="python-intro.html" />
+    <link rel="prev" title="Installation" href="installation.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body role="document">
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">
+          Flask Workshop</a>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="index.html">Tutorial navigation <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="how-web-works.html">How Web works</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Introduction to the command-line interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python-intro.html">Introduction to Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="flask-intro.html">Introduction to Flask</a></li>
+<li class="toctree-l1"><a class="reference internal" href="flask-first-app.html">Writing first application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="flask-templates.html">Flask templates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="flask-models.html">Flask models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="flask-forms.html">Flask forms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="css-bootstrap.html">Make app look fancy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="git-intro.html">Introduction to Git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="deploy.html">Deploy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="whats-next.html">What&#8217;s next?</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page navigation <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">Introduction to the command-line interface</a><ul>
+<li><a class="reference internal" href="#what-is-the-command-line">What is the command line?</a></li>
+<li><a class="reference internal" href="#open-the-command-line-interface">Open the command-line interface</a><ul>
+<li><a class="reference internal" href="#windows">Windows</a></li>
+<li><a class="reference internal" href="#mac-os-x">Mac OS X</a></li>
+<li><a class="reference internal" href="#linux">Linux</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#prompt">Prompt</a></li>
+<li><a class="reference internal" href="#your-first-command-yay">Your first command (YAY!)</a></li>
+<li><a class="reference internal" href="#basics">Basics</a><ul>
+<li><a class="reference internal" href="#current-directory">Current directory</a></li>
+<li><a class="reference internal" href="#list-files-and-directories">List files and directories</a></li>
+<li><a class="reference internal" href="#change-current-directory">Change current directory</a></li>
+<li><a class="reference internal" href="#create-directory">Create directory</a></li>
+<li><a class="reference internal" href="#exercise">Exercise!</a><ul>
+<li><a class="reference internal" href="#solution">Solution:</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#clean-up">Clean up</a></li>
+<li><a class="reference internal" href="#exit">Exit</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#summary">Summary</a></li>
+<li><a class="reference internal" href="#ready">Ready?</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="installation.html" title="Previous Chapter: Installation"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; Installation</span>
+    </a>
+  </li>
+  <li>
+    <a href="python-intro.html" title="Next Chapter: Introduction to Python"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">Introduction ... &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="_sources/cli-intro.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 content">
+      
+  <div class="section" id="introduction-to-the-command-line-interface">
+<h1>Introduction to the command-line interface<a class="headerlink" href="#introduction-to-the-command-line-interface" title="Permalink to this headline">¶</a></h1>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Most of the content in this chapter was borrowed from the tutorial by
+Django Girls: <a class="reference external" href="http://tutorial.djangogirls.org/en/">http://tutorial.djangogirls.org/en/</a></p>
+</div>
+<p><strong>Let us introduce you to your first new friend: the command line!</strong></p>
+<p>The following steps will show you how to use the black window all
+hackers use. It might look a bit scary at first but really it&#8217;s just a
+prompt waiting for commands from you.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Please note that throughout this tutorial we use the terms
+&#8216;directory&#8217; and &#8216;folder&#8217; interchangably but they are one and the
+same thing.</p>
+</div>
+<div class="section" id="what-is-the-command-line">
+<h2>What is the command line?<a class="headerlink" href="#what-is-the-command-line" title="Permalink to this headline">¶</a></h2>
+<p>The window, which is usually called the <strong>command line</strong> or
+<strong>command-line interface</strong>, is a text-based application for viewing,
+handling, and manipulating files on your computer. Much like Windows
+Explorer or Finder on Mac, but without the graphical interface. Other
+names for the command line are: <em>cmd</em>, <em>CLI</em>, <em>prompt</em>, <em>console</em> or
+<em>terminal</em>.</p>
+</div>
+<div class="section" id="open-the-command-line-interface">
+<h2>Open the command-line interface<a class="headerlink" href="#open-the-command-line-interface" title="Permalink to this headline">¶</a></h2>
+<p>To start some experiments we need to open our command-line interface
+first.</p>
+<div class="section" id="windows">
+<h3>Windows<a class="headerlink" href="#windows" title="Permalink to this headline">¶</a></h3>
+<p>Go to Start menu → All Programs → Accessories → Command Prompt.</p>
+</div>
+<div class="section" id="mac-os-x">
+<h3>Mac OS X<a class="headerlink" href="#mac-os-x" title="Permalink to this headline">¶</a></h3>
+<p>Applications → Utilities → Terminal.</p>
+</div>
+<div class="section" id="linux">
+<h3>Linux<a class="headerlink" href="#linux" title="Permalink to this headline">¶</a></h3>
+<p>It&#8217;s probably under Applications → Accessories → Terminal, but that may
+depend on your system. If it&#8217;s not there, just Google it :)</p>
+</div>
+</div>
+<div class="section" id="prompt">
+<h2>Prompt<a class="headerlink" href="#prompt" title="Permalink to this headline">¶</a></h2>
+<p>You now should see a white or black window that is waiting for your
+commands.</p>
+<p>If you&#8217;re on Mac or Linux, you probably see <code class="docutils literal"><span class="pre">$</span></code>, just like this:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>$
+</pre></div>
+</div>
+<p>On Windows, it&#8217;s a <code class="docutils literal"><span class="pre">&gt;</span></code> sign, like this:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>&gt;
+</pre></div>
+</div>
+<p>Each command will be prepended by this sign and one space, but you don&#8217;t
+have to type it. Your computer will do it for you :)</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">In your case there may be something like
+<code class="docutils literal"><span class="pre">C:\Users\ola&gt;</span></code> or <code class="docutils literal"><span class="pre">Olas-MacBook-Air:~</span> <span class="pre">ola$</span></code> before the prompt
+sign and that&#8217;s 100% correct.</p>
+</div>
+<p>The part up to and including the <code class="docutils literal"><span class="pre">$</span></code> or the <code class="docutils literal"><span class="pre">&gt;</span></code> is called the
+<em>command line prompt</em>, or <em>prompt</em> for short. It prompts you to input
+something there.</p>
+<p>In the tutorial, when we want you to type in a command, we will include
+the <code class="docutils literal"><span class="pre">$</span></code> or <code class="docutils literal"><span class="pre">&gt;</span></code>, and occasionally more to the left. You can ignore
+the left part and just type in the command which starts after the
+prompt.</p>
+</div>
+<div class="section" id="your-first-command-yay">
+<h2>Your first command (YAY!)<a class="headerlink" href="#your-first-command-yay" title="Permalink to this headline">¶</a></h2>
+<p>Let&#8217;s start with something simple. Type this command:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>$ whoami
+</pre></div>
+</div>
+<p>or:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>&gt; whoami
+</pre></div>
+</div>
+<p>And then hit <code class="docutils literal"><span class="pre">enter</span></code>. This is our result:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>$ whoami
+olasitarska
+</pre></div>
+</div>
+<p>As you can see, the computer has just printed your username. Neat,
+huh?:)</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Try to type each command, do not copy-paste. You&#8217;ll remember more
+this way!</p>
+</div>
+</div>
+<div class="section" id="basics">
+<h2>Basics<a class="headerlink" href="#basics" title="Permalink to this headline">¶</a></h2>
+<p>Each operating system has a slightly different set of commands for the
+command line, so make sure to follow instructions for your operating
+system. Let&#8217;s try this, shall we?</p>
+<div class="section" id="current-directory">
+<h3>Current directory<a class="headerlink" href="#current-directory" title="Permalink to this headline">¶</a></h3>
+<p>It&#8217;d be nice to know where are we now, right? Let&#8217;s see. Type this
+command and hit <code class="docutils literal"><span class="pre">enter</span></code>:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>$ pwd
+/Users/olasitarska
+</pre></div>
+</div>
+<p>If you&#8217;re on Windows:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>&gt; cd
+C:\Users\olasitarska
+</pre></div>
+</div>
+<p>You&#8217;ll probably see something similar on your machine. Once you open the
+command line you usually start at your user&#8217;s home directory.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last"><code class="docutils literal"><span class="pre">pwd</span></code> stands for &#8216;print working directory&#8217;.</p>
+</div>
+</div>
+<div class="section" id="list-files-and-directories">
+<h3>List files and directories<a class="headerlink" href="#list-files-and-directories" title="Permalink to this headline">¶</a></h3>
+<p>So what&#8217;s in it? It&#8217;d be cool to find out. Let&#8217;s see:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>$ ls
+Applications
+Desktop
+Downloads
+Music
+...
+</pre></div>
+</div>
+<p>Windows:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>&gt; dir
+ Directory of C:\Users\olasitarska
+05/08/2014 07:28 PM &lt;DIR&gt;      Applications
+05/08/2014 07:28 PM &lt;DIR&gt;      Desktop
+05/08/2014 07:28 PM &lt;DIR&gt;      Downloads
+05/08/2014 07:28 PM &lt;DIR&gt;      Music
+...
+</pre></div>
+</div>
+</div>
+<div class="section" id="change-current-directory">
+<h3>Change current directory<a class="headerlink" href="#change-current-directory" title="Permalink to this headline">¶</a></h3>
+<p>Now, let&#8217;s go to our Desktop directory:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>$ cd Desktop
+</pre></div>
+</div>
+<p>Windows:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>&gt; cd Desktop
+</pre></div>
+</div>
+<p>Check if it&#8217;s really changed:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>$ pwd
+/Users/olasitarska/Desktop
+</pre></div>
+</div>
+<p>Windows:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>&gt; cd
+C:\Users\olasitarska\Desktop
+</pre></div>
+</div>
+<p>Here it is!</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">PRO tip: if you type <code class="docutils literal"><span class="pre">cd</span> <span class="pre">D</span></code> and then hit <code class="docutils literal"><span class="pre">tab</span></code> on your keyboard,
+the command line will automatically autofill the rest of the name so
+you can navigate faster. If there is more than one folder starting
+with &#8220;D&#8221;, hit the <code class="docutils literal"><span class="pre">tab</span></code> button twice to get a list of options.</p>
+</div>
+</div>
+<div class="section" id="create-directory">
+<h3>Create directory<a class="headerlink" href="#create-directory" title="Permalink to this headline">¶</a></h3>
+<p>How about creating a practice directory on your desktop? You can do it
+this way:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>$ mkdir practice
+</pre></div>
+</div>
+<p>Windows:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>&gt; mkdir practice
+</pre></div>
+</div>
+<p>This little command will create a folder with the name <code class="docutils literal"><span class="pre">practice</span></code> on
+your desktop. You can check if it&#8217;s there just by looking on your
+Desktop or by running a <code class="docutils literal"><span class="pre">ls</span></code> or <code class="docutils literal"><span class="pre">dir</span></code> command! Try it :)</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last"><strong>PRO tip:</strong> If you don&#8217;t want to type the same commands over and over,
+try pressing the <code class="docutils literal"><span class="pre">up</span> <span class="pre">arrow</span></code> and <code class="docutils literal"><span class="pre">down</span> <span class="pre">arrow</span></code> on your keyboard to
+cycle through recently used commands.</p>
+</div>
+</div>
+<div class="section" id="exercise">
+<h3>Exercise!<a class="headerlink" href="#exercise" title="Permalink to this headline">¶</a></h3>
+<p>Small challenge for you: in your newly created <code class="docutils literal"><span class="pre">practice</span></code> directory
+create a directory called <code class="docutils literal"><span class="pre">test</span></code>. Use <code class="docutils literal"><span class="pre">cd</span></code> and <code class="docutils literal"><span class="pre">mkdir</span></code> commands.</p>
+<div class="section" id="solution">
+<h4>Solution:<a class="headerlink" href="#solution" title="Permalink to this headline">¶</a></h4>
+<p>Linux/OS X:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>$ cd practice
+$ mkdir test
+$ ls
+test
+</pre></div>
+</div>
+<p>Windows:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>&gt; cd practice
+&gt; mkdir test
+&gt; dir
+05/08/2014 07:28 PM &lt;DIR&gt;      test
+</pre></div>
+</div>
+<p>Congrats! :)</p>
+</div>
+</div>
+<div class="section" id="clean-up">
+<h3>Clean up<a class="headerlink" href="#clean-up" title="Permalink to this headline">¶</a></h3>
+<p>We don&#8217;t want to leave a mess, so let&#8217;s remove everything we did until
+that point.</p>
+<p>First, we need to get back to Desktop:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>$ cd ..
+</pre></div>
+</div>
+<p>Windows:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>&gt; cd ..
+</pre></div>
+</div>
+<p>Using <code class="docutils literal"><span class="pre">..</span></code> with the <code class="docutils literal"><span class="pre">cd</span></code> command will change your current directory
+to the parent directory (this is the directory that contains your
+current directory).</p>
+<p>Check where you are:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>$ pwd
+/Users/olasitarska/Desktop
+</pre></div>
+</div>
+<p>Windows:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>&gt; cd
+C:\Users\olasitarska\Desktop
+</pre></div>
+</div>
+<p>Now time to delete the <code class="docutils literal"><span class="pre">practice</span></code> directory:</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Deleting files using <code class="docutils literal"><span class="pre">del</span></code>, <code class="docutils literal"><span class="pre">rmdir</span></code> or <code class="docutils literal"><span class="pre">rm</span></code> is
+irrecoverable, meaning <em>deleted files will be gone forever</em>! So, be
+very careful with this command.</p>
+</div>
+<p>Linux/OS X:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>$ rm -r practice
+</pre></div>
+</div>
+<p>Windows:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>&gt; rmdir /S practice
+practice, Are you sure &lt;Y/N&gt;? Y
+</pre></div>
+</div>
+<p>Done! To be sure it&#8217;s actually deleted, let&#8217;s check it:</p>
+<p>Linux/OS X:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>$ ls
+</pre></div>
+</div>
+<p>Windows:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>&gt; dir
+</pre></div>
+</div>
+</div>
+<div class="section" id="exit">
+<h3>Exit<a class="headerlink" href="#exit" title="Permalink to this headline">¶</a></h3>
+<p>That&#8217;s it for now! You can safely close the command line now. Let&#8217;s do
+it the hacker way, alright?:)</p>
+<p>Linux/OS X:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>$ exit
+</pre></div>
+</div>
+<p>Windows:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>&gt; exit
+</pre></div>
+</div>
+<p>Cool, huh?:)</p>
+</div>
+</div>
+<div class="section" id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<p>Here is a summary of some useful commands:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="12%" />
+<col width="16%" />
+<col width="15%" />
+<col width="57%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Command (Windows)</th>
+<th class="head">Command (Mac OS / Linux)</th>
+<th class="head">Description</th>
+<th class="head">Example</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>exit</td>
+<td>exit</td>
+<td>close the window</td>
+<td><code class="docutils literal"><span class="pre">exit</span></code></td>
+</tr>
+<tr class="row-odd"><td>cd</td>
+<td>cd</td>
+<td>change directory</td>
+<td><code class="docutils literal"><span class="pre">cd</span> <span class="pre">test</span></code></td>
+</tr>
+<tr class="row-even"><td>dir</td>
+<td>ls</td>
+<td>list directories/files</td>
+<td><code class="docutils literal"><span class="pre">dir</span></code></td>
+</tr>
+<tr class="row-odd"><td>copy</td>
+<td>cp</td>
+<td>copy file</td>
+<td><code class="docutils literal"><span class="pre">copy</span> <span class="pre">c:\test\test.txt</span> <span class="pre">c:\windows\test.txt</span></code></td>
+</tr>
+<tr class="row-even"><td>move</td>
+<td>mv</td>
+<td>move file</td>
+<td><code class="docutils literal"><span class="pre">move</span> <span class="pre">c:\test\test.txt</span> <span class="pre">c:\windows\test.txt</span></code></td>
+</tr>
+<tr class="row-odd"><td>mkdir</td>
+<td>mkdir</td>
+<td>create a new directory</td>
+<td><code class="docutils literal"><span class="pre">mkdir</span> <span class="pre">testdirectory</span></code></td>
+</tr>
+<tr class="row-even"><td>del</td>
+<td>rm</td>
+<td>delete a directory/file</td>
+<td><code class="docutils literal"><span class="pre">del</span> <span class="pre">c:\test\test.txt</span></code></td>
+</tr>
+</tbody>
+</table>
+<p>These are just a very few of the commands you can run in your command
+line, but you&#8217;re not going to use anything more than that today.</p>
+</div>
+<div class="section" id="ready">
+<h2>Ready?<a class="headerlink" href="#ready" title="Permalink to this headline">¶</a></h2>
+<p>Let&#8217;s dive into Python!</p>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+       This work is licensed under a
+       <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
+       Creative Commons Attribution-ShareAlike 4.0 International License
+       </a>.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.6.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

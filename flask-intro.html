@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Introduction to Flask &mdash; Flask Workshop 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.3.6/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.3.6/css/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="Flask Workshop 0.1 documentation" href="index.html" />
+    <link rel="next" title="Writing first application" href="flask-first-app.html" />
+    <link rel="prev" title="Introduction to Python" href="python-intro.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body role="document">
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">
+          Flask Workshop</a>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="index.html">Tutorial navigation <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="how-web-works.html">How Web works</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cli-intro.html">Introduction to the command-line interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python-intro.html">Introduction to Python</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Introduction to Flask</a></li>
+<li class="toctree-l1"><a class="reference internal" href="flask-first-app.html">Writing first application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="flask-templates.html">Flask templates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="flask-models.html">Flask models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="flask-forms.html">Flask forms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="css-bootstrap.html">Make app look fancy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="git-intro.html">Introduction to Git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="deploy.html">Deploy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="whats-next.html">What&#8217;s next?</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page navigation <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">Introduction to Flask</a><ul>
+<li><a class="reference internal" href="#why-do-you-need-a-framework">Why do you need a framework?</a></li>
+<li><a class="reference internal" href="#why-is-flask-a-good-web-framework-choice">Why is Flask a good web framework choice?</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="python-intro.html" title="Previous Chapter: Introduction to Python"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; Introduction ...</span>
+    </a>
+  </li>
+  <li>
+    <a href="flask-first-app.html" title="Next Chapter: Writing first application"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">Writing first... &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="_sources/flask-intro.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 content">
+      
+  <div class="section" id="introduction-to-flask">
+<h1>Introduction to Flask<a class="headerlink" href="#introduction-to-flask" title="Permalink to this headline">¶</a></h1>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Based on tutorial <a class="reference external" href="http://tutorial.djangogirls.org/en/">Django Girls</a>
+licensed under <a class="reference external" href="http://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA 4.0</a>:</p>
+</div>
+<p><a class="reference external" href="http://flask.pocoo.org/">Flask</a> is a microframework for building web applications using Python
+programming language written by Armin Ronacher. For Flask microframework
+means that it aims to keep the core simple but extensible.
+Flask doesn&#8217;t make decisions for you, such as what database to use.</p>
+<p>By default, Flask does not include a database abstraction layer,
+form validation or anything else where different libraries already
+exist that can handle that.</p>
+<p>Instead, Flask supports extensions to add such functionality
+to your application as if it was implemented in Flask itself.
+Numerous extensions provide database integration, form validation,
+upload handling, various open authentication technologies, and more.</p>
+<p>The most convenient way to install Flask is to use a virtual environment (<a class="reference internal" href="installation.html#install-virtualenv"><span>Flask</span></a>).
+A virtual environment is a private copy of the Python interpreter onto which
+you can install packages privately without installed in your system.</p>
+<div class="section" id="why-do-you-need-a-framework">
+<h2>Why do you need a framework?<a class="headerlink" href="#why-do-you-need-a-framework" title="Permalink to this headline">¶</a></h2>
+<p>Web frameworks encapsulate what developers have learned over the past twenty years
+while programming sites and applications for the web. Frameworks make it easier
+to reuse code for common HTTP operations and to structure projects so other
+developers with knowledge of the framework can quickly build and maintain
+the application.</p>
+<p>To understand what Flask actually is for, we need to take a closer look at the
+servers. The first thing is that the server needs to know that you want it to
+serve you a web-page.</p>
+<p>Imagine a mailbox (port) which is monitored for incoming letters (requests).
+This is done by a web server. The web server reads the letter, and sends a response
+with a web-page. But when you want to send something, you need to have some content.
+And Flask is something that helps you create the content.</p>
+</div>
+<div class="section" id="why-is-flask-a-good-web-framework-choice">
+<h2>Why is Flask a good web framework choice?<a class="headerlink" href="#why-is-flask-a-good-web-framework-choice" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference internal" href="installation.html#install-virtualenv"><span>Flask</span></a> is considered more <a class="reference external" href="http://blog.startifact.com/posts/older/what-is-pythonic.html">Pythonic</a>
+than Django because Flask web application code is in most cases more explicit.
+<em>Flask</em> is easy to get started with as a beginner because there is little
+boilerplate code for getting a simple app up and running.</p>
+<p>For example, here&#8217;s a valid <code class="docutils literal"><span class="pre">&quot;hello</span> <span class="pre">world&quot;</span></code> web application with Flask:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span>
+<span class="hll"><span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="n">__name__</span><span class="p">)</span>
+</span>
+<span class="nd">@app.route</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">hello_world</span><span class="p">():</span>
+    <span class="k">return</span> <span class="s1">&#39;Hello World!&#39;</span>
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+<span class="hll">    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+</span></pre></div>
+</div>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+       This work is licensed under a
+       <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
+       Creative Commons Attribution-ShareAlike 4.0 International License
+       </a>.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.6.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

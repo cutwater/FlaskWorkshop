@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Make app look fancy &mdash; Flask Workshop 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.3.6/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.3.6/css/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="Flask Workshop 0.1 documentation" href="index.html" />
+    <link rel="next" title="Introduction to Git" href="git-intro.html" />
+    <link rel="prev" title="Flask forms" href="flask-forms.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body role="document">
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">
+          Flask Workshop</a>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="index.html">Tutorial navigation <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="how-web-works.html">How Web works</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cli-intro.html">Introduction to the command-line interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python-intro.html">Introduction to Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="flask-intro.html">Introduction to Flask</a></li>
+<li class="toctree-l1"><a class="reference internal" href="flask-first-app.html">Writing first application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="flask-templates.html">Flask templates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="flask-models.html">Flask models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="flask-forms.html">Flask forms</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Make app look fancy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="git-intro.html">Introduction to Git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="deploy.html">Deploy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="whats-next.html">What&#8217;s next?</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page navigation <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">Make app look fancy</a><ul>
+<li><a class="reference internal" href="#what-is-css">What is CSS?</a></li>
+<li><a class="reference internal" href="#let-s-use-bootstrap">Let&#8217;s use Bootstrap!</a></li>
+<li><a class="reference internal" href="#install-bootstrap">Install Bootstrap</a></li>
+<li><a class="reference internal" href="#static-files-in-flask">Static files in Flask</a></li>
+<li><a class="reference internal" href="#your-first-css-file">Your first CSS file</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="flask-forms.html" title="Previous Chapter: Flask forms"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; Flask forms</span>
+    </a>
+  </li>
+  <li>
+    <a href="git-intro.html" title="Next Chapter: Introduction to Git"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">Introduction ... &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="_sources/css-bootstrap.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 content">
+      
+  <div class="section" id="make-app-look-fancy">
+<h1>Make app look fancy<a class="headerlink" href="#make-app-look-fancy" title="Permalink to this headline">¶</a></h1>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Based on tutorial <a class="reference external" href="http://tutorial.djangogirls.org/en/">Django Girls</a>
+licensed under <a class="reference external" href="http://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA 4.0</a>:</p>
+</div>
+<p>Our application still looks pretty ugly, right?
+Time to make it nice! We will use CSS for that.</p>
+<div class="section" id="what-is-css">
+<h2>What is CSS?<a class="headerlink" href="#what-is-css" title="Permalink to this headline">¶</a></h2>
+<p>Cascading Style Sheets (CSS) is a language used for describing the look
+and formatting of a website written in markup language (like HTML).
+Treat it as make-up for our webpage.</p>
+<p>But we don&#8217;t want to start from scratch again, right?
+Once more, we&#8217;ll use something that programmers released on the
+Internet for free. You know, reinventing the wheel is no fun.</p>
+</div>
+<div class="section" id="let-s-use-bootstrap">
+<h2>Let&#8217;s use Bootstrap!<a class="headerlink" href="#let-s-use-bootstrap" title="Permalink to this headline">¶</a></h2>
+<p>Bootstrap is one of the most popular HTML and CSS frameworks for
+developing beautiful websites: <a class="reference external" href="http://getbootstrap.com/">http://getbootstrap.com/</a></p>
+<p>It was written by programmers who worked for Twitter.
+Now it&#8217;s developed by volunteers from all over the world!</p>
+</div>
+<div class="section" id="install-bootstrap">
+<h2>Install Bootstrap<a class="headerlink" href="#install-bootstrap" title="Permalink to this headline">¶</a></h2>
+<p>To install Bootstrap, you need to add this to your <code class="docutils literal"><span class="pre">&lt;head&gt;</span></code> in your
+<code class="docutils literal"><span class="pre">layout.html</span></code> file:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>&lt;link rel=&quot;stylesheet&quot; href=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css&quot;
+      integrity=&quot;sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7&quot;
+      crossorigin=&quot;anonymous&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css&quot;
+      integrity=&quot;sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r&quot;
+      crossorigin=&quot;anonymous&quot;&gt;
+</pre></div>
+</div>
+<p>This doesn&#8217;t add any files to your project. It just points to files that
+exist on the internet. Just go ahead, open your website and refresh the page.
+Here it is!</p>
+<img alt="_images/flask-bootstrap-1.png" src="_images/flask-bootstrap-1.png" />
+</div>
+<div class="section" id="static-files-in-flask">
+<h2>Static files in Flask<a class="headerlink" href="#static-files-in-flask" title="Permalink to this headline">¶</a></h2>
+<p>Dynamic web applications also need static files.
+That’s usually where the CSS and JavaScript files are coming from.
+Ideally your web server is configured to serve them for you,
+but during development Flask can do that as well.</p>
+<p>Just create a folder called <code class="docutils literal"><span class="pre">static</span></code> in your package or next
+to your module and it will be available at <code class="docutils literal"><span class="pre">/static</span></code> on the application.</p>
+</div>
+<div class="section" id="your-first-css-file">
+<h2>Your first CSS file<a class="headerlink" href="#your-first-css-file" title="Permalink to this headline">¶</a></h2>
+<p>Let&#8217;s create a CSS file now, to add your own style to your web-page.
+Create a new file called <code class="docutils literal"><span class="pre">style.css</span></code> inside this <code class="docutils literal"><span class="pre">css</span></code> directory. Ready?</p>
+<p>Time to write some CSS! Open up the <code class="docutils literal"><span class="pre">static/style.css</span></code> file in your
+code editor.</p>
+<p>We won&#8217;t be going too deep into customizing and learning about CSS here.
+It&#8217;s pretty easy and you can learn it on your own after this workshop.</p>
+<div class="admonition-todo admonition" id="index-0">
+<p class="first admonition-title">Todo</p>
+<p class="last">There is a recommendation for a free course to learn more at
+the end of this page.</p>
+</div>
+<p>But let&#8217;s do at least a little. Maybe we could change the color of our header?
+To understand colors, computers use special codes.
+These codes start with # followed by 6 letters (A-F) and numbers (0-9).
+For example, the code for blue is #0000FF.
+You can find the color codes for many colors here: <a class="reference external" href="http://www.colorpicker.com/">http://www.colorpicker.com/</a>.
+You may also use predefined colors, such as <code class="docutils literal"><span class="pre">red</span></code> and <code class="docutils literal"><span class="pre">green</span></code>.</p>
+<p>In your <code class="docutils literal"><span class="pre">static/style.css</span></code> file you should add the following code:</p>
+<div class="highlight-css"><div class="highlight"><pre><span></span><span class="nt">header</span> <span class="p">{</span>
+    <span class="nb">background-color</span><span class="o">:</span> <span class="m">#3399ff</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">header</span> <span class="nt">a</span> <span class="p">{</span>
+    <span class="nb">color</span><span class="o">:</span> <span class="m">#ffffff</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><code class="docutils literal"><span class="pre">header</span> <span class="pre">a</span></code> is a CSS Selector. This means we&#8217;re applying our styles to
+any <code class="docutils literal"><span class="pre">a</span></code> element inside of an <code class="docutils literal"><span class="pre">header</span></code> element.
+So when we have something like:
+<code class="docutils literal"><span class="pre">&lt;header&gt;&lt;h1&gt;&lt;a</span> <span class="pre">href=&quot;&quot;&gt;Title&lt;/a&gt;&lt;/h1&gt;&lt;/header&gt;</span></code>
+the <code class="docutils literal"><span class="pre">a</span></code> a style will apply. In this case, we&#8217;re telling it to change
+its text color to <code class="docutils literal"><span class="pre">#ffffff</span></code>, which is white.
+Of course, you can put your own color here!</p>
+<p>In a CSS file we determine styles for elements in the HTML file.
+The first way we identify elements is with the element name. Y
+ou might remember these as tags from the HTML section.
+Things like <code class="docutils literal"><span class="pre">a</span></code>, <code class="docutils literal"><span class="pre">h1</span></code>, and <code class="docutils literal"><span class="pre">body</span></code> are all examples of element names.</p>
+<p>We also identify elements by the attribute class or the attribute id.
+Class and id are names you give the element by yourself.
+Classes define groups of elements, and ids point to specific elements.
+For example, you could identify the following tag by using the tag name <code class="docutils literal"><span class="pre">a</span></code>,
+the class <code class="docutils literal"><span class="pre">external_link</span></code>, or the id <code class="docutils literal"><span class="pre">link_to_wiki_page</span></code>:</p>
+<div class="highlight-html"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;http://en.wikipedia.org/wiki/Flask&quot;</span>
+   <span class="na">class</span><span class="o">=</span><span class="s">&quot;external_link&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;link_to_wiki_page&quot;</span><span class="p">&gt;</span>
+Flask
+<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>Then, we need to also tell our HTML template that we added some CSS.
+Open the <code class="docutils literal"><span class="pre">templates/layout.html</span></code> file and add this line between
+the <code class="docutils literal"><span class="pre">&lt;head&gt;</span></code> and <code class="docutils literal"><span class="pre">&lt;/head&gt;</span></code>, after the links to the Bootstrap CSS
+files add this line:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>&lt;link rel=&quot;stylesheet&quot; href=&quot;{{ url_for(&#39;static&#39;, filename=&#39;style.css&#39;) }}&quot; /&gt;
+</pre></div>
+</div>
+<p>The browser reads the files in the order they&#8217;re given,
+so we need to make sure this is in the right place.
+Otherwise the code in our file may override code in Bootstrap files.
+We just told our template where our CSS file is located.</p>
+<p>OK, save the file and refresh the site!</p>
+<img alt="_images/flask-bootstrap-2.png" src="_images/flask-bootstrap-2.png" />
+<p>Nice work! Maybe we would also like to give our website a little air
+and increase the margin on the left side? Let&#8217;s try this!</p>
+<div class="highlight-css"><div class="highlight"><pre><span></span><span class="nt">header</span><span class="o">,</span> <span class="nt">section</span><span class="nn">#body</span> <span class="p">{</span>
+    <span class="nb">padding-left</span><span class="o">:</span> <span class="m">15px</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Add this to your CSS, save the file and see how it works!</p>
+<img alt="_images/flask-bootstrap-3.png" src="_images/flask-bootstrap-3.png" />
+<p>As mentioned above, CSS has a concept of classes.
+These allow you to name a part of the HTML code and apply styles only
+to this part, without affecting other parts. This can be super helpful!
+Maybe you have two divs that are doing something different
+A class can help you make them look different.</p>
+<p>We will now add declaration blocks to different selectors.
+Selectors starting with <code class="docutils literal"><span class="pre">.</span></code> relate to classes.
+There are many great tutorials and explanations about CSS on the Web
+to help you understand the following code.
+For now, just copy and paste it into your <code class="docutils literal"><span class="pre">static/style.css</span></code> file:</p>
+<div class="highlight-css"><div class="highlight"><pre><span></span><span class="nt">body</span> <span class="p">{</span>
+    <span class="nb">font-family</span><span class="o">:</span> <span class="s1">&#39;Lucida Grande&#39;</span><span class="o">,</span> <span class="s1">&#39;Lucida Sans Unicode&#39;</span><span class="o">,</span> <span class="s1">&#39;Geneva&#39;</span><span class="o">,</span>
+                 <span class="s1">&#39;Verdana&#39;</span><span class="o">,</span> <span class="nb">sans-serif</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">header</span><span class="p">{</span>
+    <span class="nb">background-color</span><span class="o">:</span> <span class="m">#3399ff</span><span class="p">;</span>
+    <span class="nb">margin-top</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+    <span class="nb">padding</span><span class="o">:</span> <span class="m">20px</span> <span class="m">40px</span> <span class="m">20px</span> <span class="m">40px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">header</span> <span class="nt">h1</span><span class="o">,</span> <span class="nt">header</span> <span class="nt">h1</span> <span class="nt">a</span><span class="o">,</span> <span class="nt">header</span> <span class="nt">h1</span> <span class="nt">a</span><span class="nd">:visited</span><span class="o">,</span> <span class="nt">header</span> <span class="nt">h1</span> <span class="nt">a</span><span class="nd">:active</span> <span class="p">{</span>
+    <span class="nb">color</span><span class="o">:</span> <span class="m">#ffffff</span><span class="p">;</span>
+    <span class="nb">font-size</span><span class="o">:</span> <span class="m">24pt</span><span class="p">;</span>
+    <span class="nb">text-decoration</span><span class="o">:</span> <span class="nb">none</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">section</span><span class="nn">#body</span> <span class="p">{</span>
+    <span class="nb">margin</span><span class="o">:</span> <span class="m">20px</span> <span class="m">40px</span> <span class="m">20px</span> <span class="m">40px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.task</span> <span class="p">{</span>
+    <span class="nb">margin</span><span class="o">:</span> <span class="m">10px</span> <span class="m">0</span> <span class="m">10px</span> <span class="m">0</span><span class="p">;</span>
+    <span class="nb">font-size</span><span class="o">:</span> <span class="m">1.2em</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>You also need to add classes to your <code class="docutils literal"><span class="pre">task_edit.html</span></code> template:</p>
+<div class="highlight-html"><div class="highlight"><pre><span></span>{% extends &#39;layout.html&#39; %}
+
+{% block title %} : New task{% endblock %}
+
+{% block body %}
+    <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>New task<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">form</span> <span class="na">method</span><span class="o">=</span><span class="s">&quot;POST&quot;</span> <span class="na">action</span><span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">&gt;</span>
+        {% if form.errors %}
+        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;alert alert-danger&quot;</span><span class="p">&gt;</span>
+        {% for field, errors in form.errors.items() %}
+            {% for error in errors %}
+            <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>{{ form[field].label.text }}: {{ error }}<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+            {% endfor %}
+        {% endfor %}
+        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+        {% endif %}
+        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;form-group {% if form.content.errors %}has-error{% endif %}&quot;</span><span class="p">&gt;</span>
+            {{ form.content.label(class_=&#39;control-label&#39;) }}
+            {{ form.content(class_=&#39;form-control&#39;) }}
+        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;form-group&quot;</span><span class="p">&gt;</span>
+            {{ form.is_done }}
+            {{ form.is_done.label(class_=&#39;control-label&#39;) }}
+        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">input</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;btn btn-primary&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;submit&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;Create&quot;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
+{% endblock %}
+</pre></div>
+</div>
+<p>Now refresh your page ange check the result:</p>
+<img alt="_images/flask-css-complete-1.png" src="_images/flask-css-complete-1.png" />
+<img alt="_images/flask-css-complete-2.png" src="_images/flask-css-complete-2.png" />
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+       This work is licensed under a
+       <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
+       Creative Commons Attribution-ShareAlike 4.0 International License
+       </a>.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.6.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

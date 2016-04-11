@@ -1,0 +1,6 @@
+# Python object cache
+__pycache__/
+*.pyc
+
+# Sphinx docs
+docs/_build/

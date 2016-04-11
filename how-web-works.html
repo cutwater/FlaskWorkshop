@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>How Web works &mdash; Flask Workshop 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.3.6/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.3.6/css/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="Flask Workshop 0.1 documentation" href="index.html" />
+    <link rel="next" title="Installation" href="installation.html" />
+    <link rel="prev" title="Introduction" href="introduction.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body role="document">
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">
+          Flask Workshop</a>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="index.html">Tutorial navigation <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">How Web works</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cli-intro.html">Introduction to the command-line interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python-intro.html">Introduction to Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="flask-intro.html">Introduction to Flask</a></li>
+<li class="toctree-l1"><a class="reference internal" href="flask-first-app.html">Writing first application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="flask-templates.html">Flask templates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="flask-models.html">Flask models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="flask-forms.html">Flask forms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="css-bootstrap.html">Make app look fancy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="git-intro.html">Introduction to Git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="deploy.html">Deploy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="whats-next.html">What&#8217;s next?</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page navigation <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">How Web works</a><ul>
+<li><a class="reference internal" href="#history">History</a></li>
+<li><a class="reference internal" href="#simple-network">Simple network</a></li>
+<li><a class="reference internal" href="#network-of-networks">Network of networks</a></li>
+<li><a class="reference internal" href="#finding-computers">Finding computers</a></li>
+<li><a class="reference internal" href="#clients-and-servers">Clients and servers</a></li>
+<li><a class="reference internal" href="#so-what-happens-exactly">So what happens, exactly?</a></li>
+<li><a class="reference internal" href="#dns-explained">DNS explained</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="introduction.html" title="Previous Chapter: Introduction"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; Introduction</span>
+    </a>
+  </li>
+  <li>
+    <a href="installation.html" title="Next Chapter: Installation"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">Installation &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="_sources/how-web-works.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 content">
+      
+  <div class="section" id="how-web-works">
+<h1>How Web works<a class="headerlink" href="#how-web-works" title="Permalink to this headline">¶</a></h1>
+<p>The Internet is the backbone of the Web, the technical infrastructure
+that makes the Web possible. At its most basic, the Internet is a large
+network of computers which communicate all together.</p>
+<div class="section" id="history">
+<h2>History<a class="headerlink" href="#history" title="Permalink to this headline">¶</a></h2>
+<p>The history of the Internet is somewhat obscure. It began in the 1960s
+as a US-army-funded research project, then evolved into a public infrastructure
+in the 1980s with the support of many public universities and private companies.
+The various technologies that support the Internet have evolved over time,
+but the way it works hasn&#8217;t changed that much: Internet is a way to connect
+computers all together and ensure that, whatever happens, they find a way
+to stay connected.</p>
+</div>
+<div class="section" id="simple-network">
+<h2>Simple network<a class="headerlink" href="#simple-network" title="Permalink to this headline">¶</a></h2>
+<p>When two computers need to communicate, you have to link them,
+either physically (usually with an Ethernet cable) or wirelessly
+(for example with Wi-Fi or Bluetooth systems).
+All modern computers can sustain any of those connections.</p>
+<div class="admonition-todo admonition" id="index-0">
+<p class="first admonition-title">Todo</p>
+<p class="last">Insert picture</p>
+</div>
+<p>Such a network is not limited to two computers. You can connect as many
+computers as you wish. But it gets complicated quickly. If you&#8217;re trying
+to connect, for example, ten computers, you need 45 cables, with nine plugs per
+computer!</p>
+<div class="admonition-todo admonition" id="index-1">
+<p class="first admonition-title">Todo</p>
+<p class="last">Insert picture</p>
+</div>
+</div>
+<div class="section" id="network-of-networks">
+<h2>Network of networks<a class="headerlink" href="#network-of-networks" title="Permalink to this headline">¶</a></h2>
+<div class="admonition-todo admonition" id="index-2">
+<p class="first admonition-title">Todo</p>
+<p class="last">TBD</p>
+</div>
+</div>
+<div class="section" id="finding-computers">
+<h2>Finding computers<a class="headerlink" href="#finding-computers" title="Permalink to this headline">¶</a></h2>
+<p>If you want to send a message to a computer, you have to specify which one.
+Thus any computer linked to a network has a unique address to identify it,
+called an &#8220;IP address&#8221; (where IP stands for <a class="reference external" href="https://en.wikipedia.org/wiki/Internet_Protocol">Internet Protocol</a>).
+It&#8217;s an address made of a series of four numbers separated by dots,
+for example: <code class="docutils literal"><span class="pre">192.168.1.10</span></code>.</p>
+<p>That&#8217;s perfectly fine for computers, but we human beings have a hard time
+remembering that sort of address. To make things easier, we can alias
+an IP address with a human readable name called a domain name.
+For example, <code class="docutils literal"><span class="pre">google.com</span></code> is the domain name used on top of the
+IP address <code class="docutils literal"><span class="pre">216.58.214.238</span></code>. So using the domain name is the easiest
+way for us to reach a computer over the Internet.</p>
+</div>
+<div class="section" id="clients-and-servers">
+<h2>Clients and servers<a class="headerlink" href="#clients-and-servers" title="Permalink to this headline">¶</a></h2>
+<p>Computers connected to the Web are called clients and servers.
+A simplified diagram of how they interact might look like this:</p>
+<div class="admonition-todo admonition" id="index-3">
+<p class="first admonition-title">Todo</p>
+<p class="last">Insert picture</p>
+</div>
+<ul class="simple">
+<li>Clients are the typical Web user&#8217;s Internet-connected devices
+(for example, your computer connected to your Wi-Fi, or your phone
+connected to your mobile network) and Web-accessing software available
+on those devices (usually a web browser like Firefox or Chrome).</li>
+<li>Servers are computers that store web-pages, sites, or apps.
+When a client device wants to access a web-page, a copy of the web-page
+is downloaded from the server onto the client machine to be displayed
+in the user&#8217;s web browser.</li>
+</ul>
+<p>The client and server we&#8217;ve described above don&#8217;t tell the whole story.
+There are many other parts involved, and we&#8217;ll describe them below.</p>
+<p>In addition to the client and the server, we also need to say hello to:</p>
+<ul class="simple">
+<li><strong>Your Internet connection:</strong> Allows you to send and receive data on the Web.
+It&#8217;s basically like the street between your house and the shop.</li>
+<li><strong>TCP/IP:</strong> <a class="reference external" href="https://en.wikipedia.org/wiki/Transmission_Control_Protocol">Transmission Control Protocol</a> and Internet Protocol
+are communication protocols that define how data should travel
+across the Web. This is like the transport mechanisms that let you
+to place an order, go to the shop, and buy your goods.
+In our example, this is like a car or a bike (or your own two feet).</li>
+<li><strong>DNS:</strong> <a class="reference external" href="https://en.wikipedia.org/wiki/Domain_Name_System">Domain Name System</a> Servers are like an address book for websites.
+When you type a web address in your browser, the browser looks at the DNS
+before retrieving the website. The browser needs to find out which server
+the website lives on, so it can send HTTP messages to the right place
+(see below). This is like looking up the address of the shop so you can
+access it.</li>
+<li><strong>HTTP:</strong> <a class="reference external" href="https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol">Hypertext Transfer Protocol</a> is an application protocol that
+defines a language for clients and servers to speak to each other.
+This is like the language you use to order your goods.</li>
+<li><strong>Component files:</strong> A website is made up of many different files,
+which are like the different parts of the goods you buy from the shop.
+These files come in two main types:<ul>
+<li><strong>Code files:</strong> Websites are built primarily from HTML, CSS, and
+JavaScript, though you&#8217;ll meet other technologies a bit later.</li>
+<li><strong>Assets:</strong> This is a collective name for all the other stuff that makes up
+a website, such as images, music, video, Word documents, and PDFs.</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="so-what-happens-exactly">
+<h2>So what happens, exactly?<a class="headerlink" href="#so-what-happens-exactly" title="Permalink to this headline">¶</a></h2>
+<p>When you type a web address into your browser:</p>
+<ol class="arabic">
+<li><p class="first">The browser goes to the DNS server and finds the real address of the
+server that the website lives on.</p>
+</li>
+<li><p class="first">The browser sends an HTTP request message to the server asking it to
+send a copy of the website to the client.
+This message, and all other data sent between the client and the server,
+is sent across your internet connection using TCP/IP.</p>
+</li>
+<li><p class="first">Provided the server approves the client&#8217;s request, the server sends
+the client a message like:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>HTTP/1.1 200 OK
+</pre></div>
+</div>
+</li>
+<li><p class="first">The browser assembles the small chunks into a complete website and
+displays it to you.</p>
+</li>
+</ol>
+</div>
+<div class="section" id="dns-explained">
+<h2>DNS explained<a class="headerlink" href="#dns-explained" title="Permalink to this headline">¶</a></h2>
+<p>Real web addresses aren&#8217;t the nice, memorable strings you type into your
+address bar to find your favorite websites. They are strings of numbers,
+like this: <code class="docutils literal"><span class="pre">216.58.214.238</span></code>.</p>
+<p>This is called an IP address, and it represents a unique location on the Web.
+However, it&#8217;s not very easy to remember, is it?
+That&#8217;s why Domain Name Servers were invented.
+These are special servers that match up a web address you type into y
+our browser (like <code class="docutils literal"><span class="pre">google.com</span></code>) to the web-site&#8217;s real (IP) address.</p>
+<p>Websites can be reached directly via their IP addresses.
+Try going to the Google website by typing <code class="docutils literal"><span class="pre">216.58.214.238</span></code>
+into the address bar on a new browser tab.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Based on articles by Mozilla Contributors
+licensed under <a class="reference external" href="http://creativecommons.org/licenses/by-sa/2.5/">CC-BY-SA 2.5</a>:</p>
+<ul class="last simple">
+<li><a class="reference external" href="https://developer.mozilla.org/en-US/Learn/Common_questions/How_does_the_Internet_work">How does the Internet work?</a></li>
+<li><a class="reference external" href="https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/How_the_Web_works">How the Web works</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+       This work is licensed under a
+       <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
+       Creative Commons Attribution-ShareAlike 4.0 International License
+       </a>.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.6.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

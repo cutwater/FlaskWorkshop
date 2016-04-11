@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Installation &mdash; Flask Workshop 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.3.6/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.3.6/css/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="Flask Workshop 0.1 documentation" href="index.html" />
+    <link rel="next" title="Introduction to the command-line interface" href="cli-intro.html" />
+    <link rel="prev" title="How Web works" href="how-web-works.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body role="document">
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">
+          Flask Workshop</a>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="index.html">Tutorial navigation <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="how-web-works.html">How Web works</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cli-intro.html">Introduction to the command-line interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python-intro.html">Introduction to Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="flask-intro.html">Introduction to Flask</a></li>
+<li class="toctree-l1"><a class="reference internal" href="flask-first-app.html">Writing first application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="flask-templates.html">Flask templates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="flask-models.html">Flask models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="flask-forms.html">Flask forms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="css-bootstrap.html">Make app look fancy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="git-intro.html">Introduction to Git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="deploy.html">Deploy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="whats-next.html">What&#8217;s next?</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page navigation <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">Installation</a><ul>
+<li><a class="reference internal" href="#python">Python</a><ul>
+<li><a class="reference internal" href="#windows">Windows</a></li>
+<li><a class="reference internal" href="#macos">MacOS</a><ul>
+<li><a class="reference internal" href="#homebrew-preferred">Homebrew (preferred)</a></li>
+<li><a class="reference internal" href="#package">Package</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#linux">Linux</a><ul>
+<li><a class="reference internal" href="#setuptools-pip">Setuptools &amp; Pip</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#flask">Flask</a></li>
+<li><a class="reference internal" href="#code-editors">Code editors</a><ul>
+<li><a class="reference internal" href="#atom">Atom</a></li>
+<li><a class="reference internal" href="#sublime-text-3">Sublime Text 3</a></li>
+<li><a class="reference internal" href="#pycharm">PyCharm</a></li>
+<li><a class="reference internal" href="#why-are-we-installing-a-code-editor">Why are we installing a code editor?</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="how-web-works.html" title="Previous Chapter: How Web works"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; How Web works</span>
+    </a>
+  </li>
+  <li>
+    <a href="cli-intro.html" title="Next Chapter: Introduction to the command-line interface"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">Introduction ... &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="_sources/installation.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 content">
+      
+  <div class="section" id="installation">
+<h1>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="python">
+<h2>Python<a class="headerlink" href="#python" title="Permalink to this headline">¶</a></h2>
+<p><strong>Python</strong> is a widely used <a class="reference external" href="https://en.wikipedia.org/wiki/High-level_programming_language">high-level</a>,
+<a class="reference external" href="https://en.wikipedia.org/wiki/General-purpose_programming_language">general-purpose</a>,
+<a class="reference external" href="https://en.wikipedia.org/wiki/Interpreter_%28computing%29">interpreted</a>,
+<a class="reference external" href="https://en.wikipedia.org/wiki/Dynamic_programming_language">dynamic programming language</a>.</p>
+<p><em>Python</em> was conceived in the late 1980s,and its implementation was started in
+December 1989 by <a class="reference external" href="https://en.wikipedia.org/wiki/Guido_van_Rossum">Guido van Rossum</a>
+at CWI in the Netherlands as a successor to the <a class="reference external" href="https://en.wikipedia.org/wiki/ABC_%28programming_language%29">ABC language</a>
+(itself inspired by SETL).</p>
+<p>Van Rossum is Python&#8217;s principal author, and his continuing central role in deciding
+the direction of Python is reflected in the title given to him by the Python community.</p>
+<p><em>Python</em> has a large <a class="reference external" href="https://en.wikipedia.org/wiki/Standard_library">standard library</a>,
+commonly cited as one of Python&#8217;s greatest strengths, providing tools suited to many tasks.</p>
+<p><em>Python</em> is intended to be a highly readable language.</p>
+<p><em>Python</em> uses <a class="reference external" href="https://en.wikipedia.org/wiki/Whitespace_character">whitespace</a>
+indentation, rather than <a class="reference external" href="https://en.wikipedia.org/wiki/Curly_bracket_programming_language">curly braces</a>
+or keywords, to delimit <a class="reference external" href="https://en.wikipedia.org/wiki/Block_%28programming%29">blocks</a> ;
+this feature is also termed the off-side rule. An increase in indentation comes
+after certain statements; a decrease in indentation signifies the end of the current block.</p>
+<div class="section" id="windows">
+<span id="install-windows"></span><h3>Windows<a class="headerlink" href="#windows" title="Permalink to this headline">¶</a></h3>
+<p>First, you need to download Python for Windows from the official Website
+<a class="reference external" href="https://www.python.org/ftp/python/3.5.1/python-3.5.1-amd64.exe">https://www.python.org/ftp/python/3.5.1/python-3.5.1-amd64.exe</a>.</p>
+<p>The Windows version is provided as an executable installer (<strong>.exe</strong> file).
+To install it manually, just double-click the file.
+It&#8217;s important to remember the path (the directory) where you installed Python.
+It&#8217;ll be needed later.</p>
+<p>By design, Python installs to a directory with the version number embedded,
+e.g. Python version 3.5 will install at <code class="docutils literal"><span class="pre">C:\Python35\</span></code>,
+so that you can have multiple versions of Python on the same system without
+conflicts.</p>
+</div>
+<div class="section" id="macos">
+<span id="install-macos"></span><h3>MacOS<a class="headerlink" href="#macos" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="homebrew-preferred">
+<h4>Homebrew (preferred)<a class="headerlink" href="#homebrew-preferred" title="Permalink to this headline">¶</a></h4>
+<p>First, you need to install a package manager <a class="reference external" href="http://brew.sh/">Homebrew</a>.</p>
+<p>To install Homebrew, open Terminal or your favorite OSX terminal emulator
+and run:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>$ /usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;
+</pre></div>
+</div>
+<p>Now, you can install Python 3.5:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>$ brew install python
+</pre></div>
+</div>
+<p>This will take a minute or more.</p>
+</div>
+<div class="section" id="package">
+<h4>Package<a class="headerlink" href="#package" title="Permalink to this headline">¶</a></h4>
+<p>You need to download Python for MacOS from the official Website
+<a class="reference external" href="https://www.python.org/ftp/python/3.5.1/python-3.5.1-macosx10.6.pkg">python-3.5.1-macosx10.6.pkg</a></p>
+<p>After that double-click to open it and than double-click
+<code class="docutils literal"><span class="pre">python-3.5.1-macosx10.6.pkg</span></code> to run the installer.</p>
+<p>For verify that installation was completed successful you should
+open <em>Terminal</em> application and run the command:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>$ python3 --version
+</pre></div>
+</div>
+<p>You must see something like this:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>$ python --version
+Python 3.5.1
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="linux">
+<span id="install-linux"></span><h3>Linux<a class="headerlink" href="#linux" title="Permalink to this headline">¶</a></h3>
+<p>It&#8217;s very likely that you already have Python installed out of the box.
+To check if you have installed and see which version of Python you have,
+open a console and type the following command:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>$ python3 --version
+</pre></div>
+</div>
+<p>You must see something like this <code class="docutils literal"><span class="pre">Python</span> <span class="pre">3.5.1</span></code>.</p>
+<p>You do not need to install or configure anything else to use Python.</p>
+<div class="section" id="setuptools-pip">
+<span id="install-pip"></span><h4>Setuptools &amp; Pip<a class="headerlink" href="#setuptools-pip" title="Permalink to this headline">¶</a></h4>
+<p>You can download, install and uninstall any compliant Python software product
+with a single command.
+It also enables you to add this network installation capability to your own
+Python software with very little work.</p>
+<p>Python 2.7.9 and later (on the python2 series), and Python 3.4 and later
+include <em>pip</em> by default. To see if <em>pip</em> is installed, open a console and run:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>$ which pip
+</pre></div>
+</div>
+<p>To install <em>pip</em>, follow the official pip
+<a class="reference external" href="https://pip.pypa.io/en/latest/installing/">installation guide</a>.</p>
+<p>This will automatically install the latest version of setuptools.</p>
+</div>
+</div>
+</div>
+<div class="section" id="flask">
+<span id="install-virtualenv"></span><h2>Flask<a class="headerlink" href="#flask" title="Permalink to this headline">¶</a></h2>
+<p><strong>Virtualenv</strong> is probably what you want to use during development.</p>
+<p>Most Linux distributions provide a package for virtualenv. For example,
+Ubuntu users can install it with this command:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>$ sudo apt-get install python-virtualenv
+</pre></div>
+</div>
+<p>If you are using Mac OS, then you can install virtualenv using easy_install:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>$ sudo easy_install virtualenv
+</pre></div>
+</div>
+<p>If you are using Microsoft Windows or any operating system that does not
+provide an official virtualenv package, then you have a slightly more
+complicated install procedure.</p>
+<p>After <code class="docutils literal"><span class="pre">virtualenv</span></code> has been installed, simply run the console and create your
+own environment.</p>
+<p>Usually in such cases, I create the <code class="docutils literal"><span class="pre">project</span> <span class="pre">folder</span></code>, and in it - a  <code class="docutils literal"><span class="pre">venv</span></code>
+folder within:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>$ mkdir myproject
+
+$ cd myproject
+
+$ virtualenv venv
+New python executable in venv/bin/python
+Installing distribute............done.
+</pre></div>
+</div>
+<p>You have to activate the corresponding environment. On MacOS and Linux, do
+the following:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>$ source venv/bin/activate
+</pre></div>
+</div>
+<p>If you are a Windows user, the following command is for you:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>$ venv\scripts\activate
+</pre></div>
+</div>
+<p>Either way, you should now be using your virtualenv.</p>
+<p>Now you can just enter the following command to get Flask activated in your
+virtualenv:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>$ pip install Flask
+</pre></div>
+</div>
+<p>A few seconds later and you are good to go.</p>
+</div>
+<div class="section" id="code-editors">
+<span id="code-editors-section"></span><h2>Code editors<a class="headerlink" href="#code-editors" title="Permalink to this headline">¶</a></h2>
+<p>Now is time to write your first line of code, so it&#8217;s time to download a code
+editor.</p>
+<p>There are a lot of different editors and it largely boils down to personal
+preference.</p>
+<p>Most Python programmers use complex but extremely powerful IDEs (Integrated
+Development Environments),such as PyCharm.</p>
+<div class="section" id="atom">
+<h3>Atom<a class="headerlink" href="#atom" title="Permalink to this headline">¶</a></h3>
+<p><strong>Atom</strong> is a cross-platform code editor created by developers for developers.</p>
+<p>It is open source, and much like WordPress, Atom users can submit packages and
+themes for the software.</p>
+<p>It looks pretty and you can change the appearance by installing themes.</p>
+<p>It comes with built-in package manager to extend it, smart autocompletion,
+file system browser, multiple panes, find and replace.</p>
+<p>You may download from the official web-site <a class="reference external" href="https://atom.io/">Atom</a></p>
+<img alt="_images/atom.png" src="_images/atom.png" />
+</div>
+<div class="section" id="sublime-text-3">
+<h3>Sublime Text 3<a class="headerlink" href="#sublime-text-3" title="Permalink to this headline">¶</a></h3>
+<p><strong>Sublime Text</strong> is a cross-platform code editor for Mac, Windows, and Linux.</p>
+<p>It comes with all the features you would expect from a powerful code editor and
+then some more.</p>
+<p>It looks beautiful and you can tweak the appearance to make it more comfortable
+for you.</p>
+<p><code class="docutils literal"><span class="pre">Sublime</span> <span class="pre">Text</span></code> comes with advanced code editor features which allow you to
+autofill, autocomplete, reference function in a file, multiple selection,
+split editing, and many more.</p>
+<p>You may download from the official web-site <a class="reference external" href="https://www.sublimetext.com/">Sublime Text</a></p>
+<img alt="_images/sublimetext.png" src="_images/sublimetext.png" />
+</div>
+<div class="section" id="pycharm">
+<h3>PyCharm<a class="headerlink" href="#pycharm" title="Permalink to this headline">¶</a></h3>
+<p><strong>PyCharm</strong> editor is a powerful tool for creating and modifying source code.</p>
+<p><code class="docutils literal"><span class="pre">PyCharm</span></code> is designed by programmers, for programmers. It provides code analysis,
+a graphical debugger, an integrated unit tester, integration with version control
+systems (VCSes), and supports web development with Django.</p>
+<p><code class="docutils literal"><span class="pre">PyCharm</span></code> is developed by the Czech company JetBrains.</p>
+<p><code class="docutils literal"><span class="pre">PyCharm</span></code> is an Integrated Development Environment (IDE) used for programming
+in Python.</p>
+<p>You may download from the official web-site <a class="reference external" href="https://www.jetbrains.com/pycharm/download/">Pycharm</a></p>
+<img alt="_images/pycharm.jpg" src="_images/pycharm.jpg" />
+</div>
+<div class="section" id="why-are-we-installing-a-code-editor">
+<h3>Why are we installing a code editor?<a class="headerlink" href="#why-are-we-installing-a-code-editor" title="Permalink to this headline">¶</a></h3>
+<p>You might be wondering why we are installing this special code editor software,
+rather than using something like Word or Notepad.</p>
+<p>The first is that code needs to be plain text, and the problem with programs like
+Word and Textedit is that they don&#8217;t actually produce plain text, they produce
+rich text (with fonts and formatting), using custom formats like RTF (Rich Text Format).</p>
+<p>The second reason is that code editors are specialised for editing code, so they
+can provide helpful features like highlighting code with colour according to its
+meaning, or automatically closing quotes for you.</p>
+</div>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+       This work is licensed under a
+       <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
+       Creative Commons Attribution-ShareAlike 4.0 International License
+       </a>.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.6.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

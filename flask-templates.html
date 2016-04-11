@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Flask templates &mdash; Flask Workshop 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.3.6/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.3.6/css/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="Flask Workshop 0.1 documentation" href="index.html" />
+    <link rel="next" title="Flask models" href="flask-models.html" />
+    <link rel="prev" title="Writing first application" href="flask-first-app.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body role="document">
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">
+          Flask Workshop</a>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="index.html">Tutorial navigation <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="how-web-works.html">How Web works</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cli-intro.html">Introduction to the command-line interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python-intro.html">Introduction to Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="flask-intro.html">Introduction to Flask</a></li>
+<li class="toctree-l1"><a class="reference internal" href="flask-first-app.html">Writing first application</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Flask templates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="flask-models.html">Flask models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="flask-forms.html">Flask forms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="css-bootstrap.html">Make app look fancy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="git-intro.html">Introduction to Git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="deploy.html">Deploy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="whats-next.html">What&#8217;s next?</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page navigation <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">Flask templates</a><ul>
+<li><a class="reference internal" href="#what-s-html">What&#8217;s HTML?</a></li>
+<li><a class="reference internal" href="#your-first-template">Your first template</a></li>
+<li><a class="reference internal" href="#head-body">Head &amp; body</a></li>
+<li><a class="reference internal" href="#a-complete-example">A complete example</a><ul>
+<li><a class="reference internal" href="#document-type">Document type</a></li>
+<li><a class="reference internal" href="#character-set">Character set</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#customizing-template">Customizing template</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="flask-first-app.html" title="Previous Chapter: Writing first application"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; Writing first...</span>
+    </a>
+  </li>
+  <li>
+    <a href="flask-models.html" title="Next Chapter: Flask models"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">Flask models &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="_sources/flask-templates.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 content">
+      
+  <div class="section" id="flask-templates">
+<h1>Flask templates<a class="headerlink" href="#flask-templates" title="Permalink to this headline">¶</a></h1>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Based on tutorial <a class="reference external" href="http://tutorial.djangogirls.org/en/">Django Girls</a>
+licensed under <a class="reference external" href="http://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA 4.0</a>:</p>
+</div>
+<p>A template is a file that we can re-use to present different information
+in a consistent format - for example, you could use a template to help
+you write a letter, because although each letter might contain a different
+message and be addressed to a different person, they will share
+the same format.</p>
+<p>A Flask template&#8217;s format is described in a language called HTML.</p>
+<div class="section" id="what-s-html">
+<h2>What&#8217;s HTML?<a class="headerlink" href="#what-s-html" title="Permalink to this headline">¶</a></h2>
+<p>HTML is a simple code that is interpreted by your web browser - such as Chrome,
+Firefox or Safari - to display a webpage for the user.</p>
+<p>HTML stands for &#8220;HyperText Markup Language&#8221;. <em>HyperText</em> means it&#8217;s a type of
+text that supports hyperlinks between pages. <em>Markup</em> means we have taken a
+document and marked it up with code to tell something (in this case, a browser)
+how to interpret the page. HTML code is built with <em>tags</em>, each one starting
+with &lt; and ending with &gt;. These tags represent markup <em>elements</em>.</p>
+</div>
+<div class="section" id="your-first-template">
+<h2>Your first template<a class="headerlink" href="#your-first-template" title="Permalink to this headline">¶</a></h2>
+<p>Creating a template means creating a template file.
+Everything is a file, right? You have probably noticed this already.</p>
+<p>Templates are saved in <code class="docutils literal"><span class="pre">templates</span></code> directory.
+So create directory <code class="docutils literal"><span class="pre">templates</span></code> near your <code class="docutils literal"><span class="pre">app.py</span></code> file.
+Now create file <code class="docutils literal"><span class="pre">templates/index.html</span></code> and add the following code to your
+template file:</p>
+<div class="highlight-html"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Hi there!<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>It works!<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>Now we need tell Flask to display this template. Update your <code class="docutils literal"><span class="pre">app.py</span></code>:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span>
+<span class="hll"><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">render_template</span>
+</span>
+<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="n">__name__</span><span class="p">)</span>
+
+
+<span class="nd">@app.route</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">index</span><span class="p">():</span>
+<span class="hll">    <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s1">&#39;index.html&#39;</span><span class="p">)</span>
+</span>
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Now run <code class="docutils literal"><span class="pre">app.py</span></code> and see how your website looks now: <a class="reference external" href="http://127.0.0.1:5000/">http://127.0.0.1:5000/</a></p>
+<img alt="_images/flask-first-template-1.png" src="_images/flask-first-template-1.png" />
+<p>It worked! Nice work there :)</p>
+<ul class="simple">
+<li>The most basic tag, <code class="docutils literal"><span class="pre">&lt;html&gt;</span></code>, is always the beginning of any webpage
+and <code class="docutils literal"><span class="pre">&lt;/html&gt;</span></code> is always the end. As you can see, the whole content
+of the website goes between the beginning tag <code class="docutils literal"><span class="pre">&lt;html&gt;</span></code> and closing tag
+<code class="docutils literal"><span class="pre">&lt;/html&gt;</span></code>.</li>
+<li><code class="docutils literal"><span class="pre">&lt;p&gt;</span></code> is a tag for paragraph elements; <code class="docutils literal"><span class="pre">&lt;/p&gt;</span></code> closes each paragraph.</li>
+</ul>
+</div>
+<div class="section" id="head-body">
+<h2>Head &amp; body<a class="headerlink" href="#head-body" title="Permalink to this headline">¶</a></h2>
+<p>Each HTML page is also divided into two elements: <strong>head</strong> and <strong>body</strong>.</p>
+<ul class="simple">
+<li><strong>head</strong> is an element that contains information about the document that
+is not displayed on the screen.</li>
+<li><strong>body</strong> is an element that contains everything else that is displayed
+as part of the web page.</li>
+</ul>
+<p>We use <code class="docutils literal"><span class="pre">&lt;head&gt;</span></code> to tell the browser about the configuration of the page,
+and <code class="docutils literal"><span class="pre">&lt;body&gt;</span></code> to tell it what&#8217;s actually on the page.</p>
+<p>For example, you can put a webpage title element inside the &lt;head&gt;, like this:</p>
+<div class="highlight-html"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>My First Template<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Hi there!<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>It works!<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<img alt="_images/flask-first-template-2.png" src="_images/flask-first-template-2.png" />
+<p>Notice how the browser has understood that &#8220;My First template&#8221; is the title
+of your page? It has interpreted <code class="docutils literal"><span class="pre">&lt;title&gt;My</span> <span class="pre">First</span> <span class="pre">Template&lt;/title&gt;</span></code>
+and placed the text in the title bar of your browser
+(it will also be used for bookmarks and so on).</p>
+<p>Probably you have also noticed that each opening tag is matched
+by a closing tag, with a /, and that elements are nested
+(i.e. you can&#8217;t close a particular tag until all the ones that were
+inside it have been closed too).</p>
+<p>It&#8217;s like putting things into boxes. You have one big box, <code class="docutils literal"><span class="pre">&lt;html&gt;&lt;/html&gt;</span></code>;
+inside it there is <code class="docutils literal"><span class="pre">&lt;body&gt;&lt;/body&gt;</span></code>, and that contains still smaller boxes:
+<code class="docutils literal"><span class="pre">&lt;p&gt;&lt;/p&gt;</span></code>.</p>
+<p>You need to follow these rules of closing tags, and of nesting
+elements - if you don&#8217;t, the browser may not be able to interpret
+them properly and your page will display incorrectly.</p>
+</div>
+<div class="section" id="a-complete-example">
+<h2>A complete example<a class="headerlink" href="#a-complete-example" title="Permalink to this headline">¶</a></h2>
+<p>The example above was not complete. Many browsers will display this page
+in a correct way. This happens because browsers trying to be
+tolerant to code mistakes or missing parts. The following example shows
+how valid HTML page should look like:</p>
+<div class="highlight-html"><div class="highlight"><pre><span></span><span class="hll"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+</span><span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;en&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="hll">    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
+</span>    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>My First Template<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Hi there!<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>It works!<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<div class="section" id="document-type">
+<h3>Document type<a class="headerlink" href="#document-type" title="Permalink to this headline">¶</a></h3>
+<p>The doctype for HTML5 is very simple.
+To indicate that your HTML content uses HTML5, simply use:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>&lt;!DOCTYPE html&gt;
+</pre></div>
+</div>
+<p>Doing so will cause even browsers that don&#8217;t presently support HTML5
+to enter into standards mode, which means that they&#8217;ll interpret
+the long-established parts of HTML in an HTML5-compliant way while
+ignoring the new features of HTML5 they don&#8217;t support.</p>
+<p>This is much simpler than the former doctypes, and shorter,
+making it easier to remember and reducing the amount of bytes
+that must be downloaded.</p>
+</div>
+<div class="section" id="character-set">
+<h3>Character set<a class="headerlink" href="#character-set" title="Permalink to this headline">¶</a></h3>
+<p>The first thing done on a page is usually indicating the character
+set that is used. In previous versions of HTML, it was done using
+a very complex <code class="docutils literal"><span class="pre">&lt;meta&gt;</span></code> element. Now, it is very simple:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>&lt;meta charset=&quot;UTF-8&quot;&gt;
+</pre></div>
+</div>
+<p>Place this right after your <code class="docutils literal"><span class="pre">&lt;head&gt;</span></code>, as some browsers restart the parsing
+of an HTML document if the declared charset is different from what they
+had anticipated. Also, if you are not currently using <code class="docutils literal"><span class="pre">UTF-8</span></code>, it&#8217;s
+recommended that you switch to it in your Web pages, as it simplifies
+character handling in documents using different scripts.</p>
+</div>
+</div>
+<div class="section" id="customizing-template">
+<h2>Customizing template<a class="headerlink" href="#customizing-template" title="Permalink to this headline">¶</a></h2>
+<p>You can now have a little fun and try to customize your template!
+Here are a few useful tags for that:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">&lt;h1&gt;A</span> <span class="pre">heading&lt;/h1&gt;</span></code> - for your most important heading</li>
+<li><code class="docutils literal"><span class="pre">&lt;h2&gt;A</span> <span class="pre">sub-heading&lt;/h2&gt;</span></code> for a heading at the next level</li>
+<li><code class="docutils literal"><span class="pre">&lt;h3&gt;A</span> <span class="pre">sub-sub-heading&lt;/h3&gt;</span></code> ... and so on, up to <code class="docutils literal"><span class="pre">&lt;h6&gt;</span></code></li>
+<li><code class="docutils literal"><span class="pre">&lt;em&gt;text&lt;/em&gt;</span></code> emphasizes your text</li>
+<li><code class="docutils literal"><span class="pre">&lt;strong&gt;text&lt;/strong&gt;</span></code> strongly emphasizes your text</li>
+<li><code class="docutils literal"><span class="pre">&lt;br</span> <span class="pre">/&gt;</span></code> goes to another line (you can&#8217;t put anything inside br)</li>
+<li><code class="docutils literal"><span class="pre">&lt;a</span> <span class="pre">href=&quot;http://google.com&quot;&gt;link&lt;/a&gt;</span></code> creates a link</li>
+<li><code class="docutils literal"><span class="pre">&lt;ul&gt;&lt;li&gt;first</span> <span class="pre">item&lt;/li&gt;&lt;li&gt;second</span> <span class="pre">item&lt;/li&gt;&lt;/ul&gt;</span></code>
+makes a list, just like this one!</li>
+<li><code class="docutils literal"><span class="pre">&lt;div&gt;&lt;/div&gt;</span></code> defines a section of the page</li>
+</ul>
+<div class="highlight-html"><div class="highlight"><pre><span></span><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;en&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>My First Template<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">&gt;</span>TODO App<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;checkbox&quot;</span><span class="p">&gt;</span>
+        Write static template with items.
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;checkbox&quot;</span><span class="p">&gt;</span>
+        Display items from the database.
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;checkbox&quot;</span><span class="p">&gt;</span>
+        Add items using form.
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;checkbox&quot;</span> <span class="na">checked</span><span class="p">&gt;</span>
+        Create first Flask application.
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>We&#8217;ve created three one <code class="docutils literal"><span class="pre">h1</span></code> and four <code class="docutils literal"><span class="pre">div</span></code> sections here.</p>
+<ul class="simple">
+<li>The <code class="docutils literal"><span class="pre">h1</span></code> element contains the title of our application.</li>
+<li>Four <code class="docutils literal"><span class="pre">div</span></code> elements contain our tasks with text,
+and a checkbox to mark task as done or not done.</li>
+</ul>
+<p>It gives us this effect:</p>
+<img alt="_images/todo-index-1.png" src="_images/todo-index-1.png" />
+<p>Looks nice. But so far, our template only ever displays exactly the same
+information - whereas earlier we were talking about templates as allowing
+us to display different information in the same format.</p>
+<p>What we really want to do is display real tasks
+and that&#8217;s where we&#8217;re going next.</p>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+       This work is licensed under a
+       <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
+       Creative Commons Attribution-ShareAlike 4.0 International License
+       </a>.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.6.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>
