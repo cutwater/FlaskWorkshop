@@ -81,6 +81,15 @@ And template ``task_edit.html``:
     </body>
     </html>
 
+Now just add:
+
+.. code-block:: html+jinja
+
+    <a href="{{ url_for('create_task') }}">New task</a>
+
+to your ``index.html``.
+
+.. todo:: Describe the magic.
 
 .. _WTForms: http://wtforms.readthedocs.org/en/latest/
 .. _Flask-WTF: https://flask-wtf.readthedocs.org/en/latest/
