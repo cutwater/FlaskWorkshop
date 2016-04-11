@@ -29,6 +29,7 @@ or keywords, to delimit `blocks <https://en.wikipedia.org/wiki/Block_%28programm
 this feature is also termed the off-side rule. An increase in indentation comes
 after certain statements; a decrease in indentation signifies the end of the current block.
 
+.. _install-windows:
 
 Windows
 -------
@@ -46,6 +47,7 @@ e.g. Python version 3.5 will install at ``C:\Python35\``,
 so that you can have multiple versions of Python on the same system without
 conflicts.
 
+.. _install-macos:
 
 MacOS
 -----
@@ -85,6 +87,8 @@ You must see something like this::
     $ python --version
     Python 3.5.1
 
+.. _install-linux:
+
 Linux
 -----
 
@@ -97,6 +101,8 @@ open a console and type the following command::
 You must see something like this ``Python 3.5.1``.
 
 You do not need to install or configure anything else to use Python.
+
+.. _install-pip:
 
 Setuptools & Pip
 ^^^^^^^^^^^^^^^^
@@ -235,6 +241,45 @@ in Python.
 You may download from the official web-site `Pycharm <https://www.jetbrains.com/pycharm/download/>`_
 
 .. image:: image/pycharm.jpg
+
+
+Git
+====
+
+**Git** is a widely used `source code management system <https://en.wikipedia.org/wiki/Version_control_system>`_
+for `software development<https://en.wikipedia.org/wiki/Software_development>`_.
+
+**Git** was initially designed and developed in 2005 by Linux kernel developers
+(including Linus Torvalds) for Linux kernel development.
+
+Windows
+-------
+
+You can download and install Git from the official web-cite `<https://git-scm.com/>`_
+and follow the steps.
+
+**Attention** in the 5th step "Adjusting your PATH environment", choose
+*"Run Git and associated Unix tools from the Windows command-line"* (the bottom option).
+Other than that, the defaults are fine. Checkout Windows-style, commit Unix-style
+line endings is good.
+
+MacOS
+-----
+
+You may download from the official web-site `<https://git-scm.com/>`_
+
+Linux
+-----
+
+If it isn't installed already, should be available via your package manager::
+
+    $ sudo apt-get install git
+
+Create a GitHub account
+=======================
+
+You should go to `GitHub <https://github.com/>`_ and sign up account.
+
 
 
 Why are we installing a code editor?
