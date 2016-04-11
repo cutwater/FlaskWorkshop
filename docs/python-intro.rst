@@ -51,7 +51,7 @@ commands like::
     5 - 1
     40 / 2
 
-Have fun with this for a little while and then get back here :).
+Have fun with this for a little while and then get back here.
 
 As you can see, Python is a great calculator. If you're wondering what else
 you can do...
@@ -59,7 +59,7 @@ you can do...
 Strings
 =======
 
-How about your name? Type your first name in quotes like this::
+What about your name? Type your first name in quotes like this::
 
     >>> "Ola"
     'Ola'
@@ -180,7 +180,7 @@ hit ``enter``::
     >>> name
     'Ola'
 
-Yippee! Your first variable :)! You can always change what it refers to::
+Yippee! Your first variable! You can always change what it refers to::
 
     >>> name = "Sonja"
     >>> name
@@ -242,7 +242,7 @@ Lists
 
 Beside strings and integers, Python has all sorts of different types of
 objects. Now we're going to introduce one called **list**. Lists are exactly
-what you think they are: objects which are lists of other objects :)
+what you think they are: objects which are lists of other objects.
 
 Go ahead and create a list::
 
@@ -389,7 +389,7 @@ of key-value pairs in the dictionary. Go ahead and type in the command::
     >>> len(participant)
     4
 
-I hope it makes sense up to now. :) Ready for some more fun with dictionaries?
+I hope it makes sense up to now. Ready for some more fun with dictionaries?
 Hop onto the next line for some amazing things.
 
 You can use the ``del`` command to delete an item in the dictionary. Say, if
@@ -411,7 +411,7 @@ key in the dictionary. Type::
     {'country': 'Germany', 'favorite_language': 'Python', 'name': 'Ola'}
 
 As you can see, the value of the key ``'country'`` has been altered from
-``'Poland'`` to ``'Germany'``. :) Exciting? Hurrah! You just learnt another
+``'Poland'`` to ``'Germany'``. Exciting? Hurrah! You just learnt another
 amazing thing.
 
 Summary
@@ -427,7 +427,7 @@ about:
 * **lists** - lists of objects stored in a particular order
 * **dictionaries** - objects stored as key-value pairs
 
-Excited for the next part? :)
+Excited for the next part?
 
 Compare things
 ==============
@@ -513,7 +513,7 @@ There are only two Boolean objects:
 * False
 
 But for Python to understand this, you need to always write it as 'True' (first
-letter uppercased, with the rest of the letter lowercased). **true, TRUE, tRUE
+letter uppercase, with the rest of the letter lowercase). **true, TRUE, tRUE
 won't work -- only True is correct.** (The same applies to 'False' as well, of
 course.)
 
@@ -586,7 +586,7 @@ anything we want, but the important part here is to make sure the file ends in
           useful feature when coding. The colour of things will give you hints,
           such as unclosed strings or a typo in a keyword name (like the
           ``def`` in a function, which we'll see below). This is one of the
-          reasons we use a code editor :)
+          reasons we use a code editor.
 
 
 With the file saved, it's time to run it! Using the skills you've learned in
@@ -594,16 +594,16 @@ the command line section, use the terminal to **change directories** to the
 desktop. (**Note**:  Replace ``<your_name>`` including the ``<`` and ``>`` with
 your user name)
 
-On a Mac, the command will look something like this::
+On a **Mac**, the command will look something like this::
 
     $ cd /Users/<your_name>/Desktop
 
-On Linux, it will be like this (the word "Desktop" might be translated to your
+On **Linux**, it will be like this (the word "Desktop" might be translated to your
 language)::
 
     $ cd /home/<your_name>/Desktop
 
-And on windows, it will be like this::
+And on **windows**, it will be like this::
 
     > cd C:\Users\<your_name>\Desktop
 
